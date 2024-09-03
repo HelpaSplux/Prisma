@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("../Space.jpg"), #141414;
+    background-position: center;
+    min-height: 100vh;
+}
+
+body::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background:  url("../Space.jpg"), #000;
+background-position: center;
+background-size: cover;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    line-height: 0px;
+}
+  
+button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.top_panel {
+    display: flex;
+    width: calc(100% - 30px);
+    border-radius: 8px;
+    text-align: center;
+    margin-left:15px;
+    margin-bottom: 5px;
+    height: 30px;
+    background-color: rgba(22, 22, 22, 0.438);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+}
+
+.tool_bar {
+    width: 231px;
+}
+
+.context_menu_link {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.context_menu_button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-size: 20px;
+    height: 10px;
+    width: 10px;
+    padding-left: 2px;
+    padding-right: 19px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin: 4px;
+    margin-right:0px;
+    border-radius: 6px;
+}
+
+.context_menu_button_active {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-size: 20px;
+    height: 10px;
+    width: 10px;
+    padding-left: 2px;
+    padding-right: 19px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin: 4px;
+    margin-right:0px;
+    border-radius: 6px;
+}
+
+.search_link {
+    position: absolute;
+    top: 0px;
+    left: 29px;
+}
+
+.search_button {
+    text-align: center;
+    font-size: 17px;
+    height: 10px;
+    width: 70px;
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin: 4px;
+    margin-right:0px;
+    border-radius: 6px;
+}
+
+.some_link {
+    position: absolute;
+    top: 0px;
+    left: 103px;
+}
+
+.some_button {
+    text-align: center;
+    font-size: 17px;
+    height: 10px;
+    width: 75px;
+    padding-left: 7px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin: 4px;
+    margin-right:0px;
+    border-radius: 6px;
+}
+
+.separator {
+    color: #fff;
+    width: 15px;
+    font-weight: 900;
+    padding-top: 2px;
+}
+
+.tab_bar {
+    display: flex;
+    width: calc(100% - 246px);
+    
+}
+
+.tab_button_active {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "--";
+    color: #fff;
+    border-color: #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 13px;
+    padding: 8px 12px;
+    padding-bottom: 9px;
+}
+
+.tab {
+    padding: 2px;
+}
+
+.tab_button {
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    white-space: nowrap;
+    text-overflow: "--";
+    margin-left: 5px;
+    font-size: 13px;
+    padding: 8px 12px;
+    padding-bottom: 9px;
+}
+
+.file-creation-form {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 300px;
+    min-height: 120px;
+    white-space: nowrap;
+    border-radius: 10px;
+    background: rgba(22, 22, 22, 0.863);
+    font-size: 13px;
+    padding: 8px 12px;
+    padding-bottom: 9px;
+}
+
+.file-creation-form button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.file-creation-input{
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+
+.file-creation-input label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.file-creation-input input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+  }
+
+.file-creation-input input:focus~label,
+.file-creation-input input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+
+
+.content {
+    display: flex;
+}
+
+.bottom_left_panel {
+    position: absolute;
+    width: 230px;
+    border-radius: 8px;
+    text-align: center;
+    margin:15px;
+    margin-top: 0px;
+    margin-right: 0px;
+    height: 92vh;
+    background-color: rgba(22, 22, 22, 0.438);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+}
+
+.bottom_right_panel {
+    position: absolute;
+    right: 0px;
+    width: calc(100% - 280px);
+    border-radius: 8px;
+    text-align: center;
+    margin:15px;
+    margin-top: 0px;
+    height: 92vh;
+    background-color: rgba(22, 22, 22, 0.438);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+}
+
+
+.create_button {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "--";
+    margin-top: 10px;
+}
+
+
+/* list with files */
+.file_list {
+    overflow: auto;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.file_button {
+    margin-top: 10px;
+    width: 190px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "--";
+}
+
+.file_button_active {
+    margin-top: 10px;
+    width: 190px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "--";
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+
+/* file redacting interface */
+.input-field {
+    text-align: center;
+    
+}
+
+.label_field {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
+}
+
+.content_field {
+    margin-top:20px;
+    height: 77vh;
+}
+
+.input-field textarea {
+    width: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    color: #fff;
+    resize: none;
+}
+
+.close_file_button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    padding-top: 4px;
+    padding-bottom: 9px;
+    padding-right: 1px;
+    padding-left: 1px;
+    border-radius: 12px;
+
+}
+
+.delete_file_button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-right: 1px;
+    padding-left: 2px;
+    border-radius: 12px;
+
+}
+
+.delete_file_button:hover {
+    color: rgb(253, 35, 35);
+    border-color: #fff;
+    background: #fff;
+}

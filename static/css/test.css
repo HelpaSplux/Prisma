@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    line-height: 0px;
+}
+  
+button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+.boxes {
+    fill:transparent;
+    stroke:black;
+    stroke-width:5;
+}
+
+.rows {
+    stroke: #000;
+}
+
+.context_menu_button {
+    padding: 1px;
+}
+
+.context_menu_button:hover > svg g.boxes {
+    stroke: whitesmoke;
+}
+
+.context_menu_button:hover > svg g.rows {
+    stroke: whitesmoke;
+    fill: whitesmoke;
+}
