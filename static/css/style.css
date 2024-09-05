@@ -242,6 +242,39 @@ button:hover {
     transform: translateY(-120%);
 }
 
+.success_message {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px rgb(73, 255, 73) solid;
+    border-radius: 10px;
+    background-color: rgb(73, 255, 73);
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.error_message {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px rgb(255, 73, 73) solid;
+    border-radius: 10px;
+    background-color: rgb(255, 73, 73);
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 .content {
@@ -288,7 +321,10 @@ button:hover {
 
 /* list with files */
 .file_list {
-    overflow: auto;
+    overflow: scroll;
+    height: 82vh;
+    scrollbar-color: rgba(92, 92, 92, 0) rgba(255, 255, 255, 0);
+    scrollbar-width: 10px;
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;

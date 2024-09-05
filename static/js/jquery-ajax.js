@@ -59,14 +59,20 @@ $("form#id-file-creation-form").submit(function(e) {
     success: function(data) {
       $(".file-creation-form").animate({top: "-40%"});
       $(".file-name-input").blur(); 
-
-      successMessage.html(data.message);
-      successMessage.fadeIn(400);
-      // setTimeout(() => {
-        
-      //   }, 300);
-
+      console.log(data)
+      $("#success_message_id").html(data.message);
+      $("#success_message_id").animate({bottom: "20px"});
       $(".file_list").append(data.new_file);
+      setTimeout(() => {
+        $("#success_message_id").animate({bottom: "-50px"});
+      }, 3000);
+    },
+    error: function(data) {
+      $("#error_message_id").html(data.responseJSON.message);
+      $("#error_message_id").animate({bottom: "20px"});
+      setTimeout(() => {
+        $("#error_message_id").animate({bottom: "-50px"});
+      }, 3000);
     }
   });
   return false

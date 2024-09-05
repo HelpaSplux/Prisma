@@ -43,8 +43,8 @@ class FileCreationFormView(FormView):
         # if it's not create a auser in table Users and try to create object in table Notes  
         try:
             if Notes.objects.filter(label=label, user_id_id=session_key).exists():
-                response_data = {"message": "File with this label already exists."}
-                return JsonResponse(data=response_data, status=200)
+                response_data = {"message": "The file with this label already exists."}
+                return JsonResponse(data=response_data, status=400)
             
             Notes.objects.create(label=label, user_id_id=session_key)
         except IntegrityError:
@@ -59,7 +59,7 @@ class FileCreationFormView(FormView):
         # Create response data and pass it to response
         new_file_button = render_to_string("work_space/new-button.html", context=context)  
         response_data = {
-            "message":"File has been created successfuly.",
+            "message":"The file was successfully created.",
             "new_file": new_file_button
         }
         return JsonResponse(data=response_data, status=200) 
