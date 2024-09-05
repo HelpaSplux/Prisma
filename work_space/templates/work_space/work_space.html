@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nebula Note</title>
+  <title>Prisma</title>
   <link rel="stylesheet" href={% static "css/style.css" %}>
 </head>
 <body>
@@ -39,12 +39,9 @@
         
 
       <ol class="file_list">
-        <a class="file_link" href="#">
-          <button class="file_button" type="button">Gwyn, Lord of Sunlight</button>
-        </a>
-        <a class="file_link" href="#">
-          <button class="file_button_active" type="button">Gwynevere</button>
-        </a>
+        {% for file in files %}
+          <button class="file_button" id="{{ file.label }}_id" type="button">{{ file.label }}</button>
+        {% endfor %}
       </ol>
     </div>
 
@@ -80,13 +77,14 @@
   </div>
 
   <div class="file-creation-form">
-    <form action="" method="post">
+    <form id="id-file-creation-form" action="{% url "work-space:file-creation-form" %}" method="post">{% csrf_token %}
       <div class="file-creation-input">
-        <input class="file-name-input" type="text" name="file_name" required>
+        <input class="file-name-input" type="text" name="label" required>
         <label>File name</label>
+
       </div>
 
-      <button type="submit">Create</button>
+      <button type="submit" id="file-creation-form-submit">Create</button>
     </form>
   </div>
 

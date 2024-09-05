@@ -43,3 +43,31 @@ if(!$target.closest('.file-creation-form').length && !$(".file-creation-form").c
     $(".file-name-input").blur(); 
 }        
 });
+
+
+// Sends ajax query when file creation form submited and hide form
+$("form#id-file-creation-form").submit(function(e) {
+  var url = $(this).attr("action");
+
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: {
+      'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val(),
+      'label': $(".file-name-input").val(),
+    },
+    success: function(data) {
+      $(".file-creation-form").animate({top: "-40%"});
+      $(".file-name-input").blur(); 
+
+      successMessage.html(data.message);
+      successMessage.fadeIn(400);
+      // setTimeout(() => {
+        
+      //   }, 300);
+
+      $(".file_list").append(data.new_file);
+    }
+  });
+  return false
+});
