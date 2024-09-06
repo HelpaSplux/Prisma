@@ -295,9 +295,12 @@ button:hover {
     backdrop-filter: blur(9px);
 }
 
+
+
 .bottom_right_panel {
+    display:none;
     position: absolute;
-    right: 0px;
+    right: 0%;
     width: calc(100% - 280px);
     border-radius: 8px;
     text-align: center;

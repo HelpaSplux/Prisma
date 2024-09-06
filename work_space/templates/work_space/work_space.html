@@ -38,7 +38,7 @@
         <button class="create_button" type="button">+</button>
         
 
-      <ol class="file_list">
+      <ol class="file_list" href="{% url "work-space:opened-file" %}">
         {% for file in files %}
           <button class="file_button" id="{{ file.label }}_id" type="button">{{ file.label }}</button>
         {% endfor %}
@@ -47,33 +47,7 @@
 
 
 
-    <div class="bottom_right_panel">
-      <form action="#" method="post">
-        <div class="input-field">
-          <textarea class="label_field" type="textarea" name="label" value="Untitled" required>Gwynevere</textarea>
-        </div>
-
-        <div class="input-field">
-          <textarea class="content_field" type="textarea" name="content" value=""  required>
-            Gwynevere is the first daughter of Gwyn, Lord of Sunlight and one of the deities who resided in Anor Londo during the Age of Fire[1]. She was worshiped by the humans as the "goddess of sunlight" and a symbol of "blessing and good harvest", while she was also cherished by all the other gods[2]. As a goddess of sunlight, her miracles of Bountiful Sunlight and Soothing Sunlight were able to convey the sun's rays to heal and she granted her blessing to many warriors[3]. She also taught her miracles to her maidens and created holy water with healing properties thanks to her light[4]. Gwynevere was venerated in a cathedral alongside the main one in Anor Londo and the structure was also used to contain the Painted World of Ariamis, protected by the Painting Guardians[5][6].
-            
-            After her father Gwyn linked the First Flame[7], his throne passed to his firstborn son who, however, chose to "ally" with the dragons, the ancient enemies of the gods, and was therefore dethroned, exiled and his name eradicated from history[8], she abandoned Anor Londo together with nearly all of the other deities and moved to an unknown location[9] At some point she married Flame God Flann[10] and became the mother of several children of noble lineage[11].
-            Gwynevere Full Body
-            
-            The illusion of Gwynevere inside Anor Londo.
-            
-            After her escape the only deity left to protect Anor Londo was her younger brother Dark Sun Gwyndolin[12]. However, he was more than aware of his fragile, repulsive appearance and was therefore psychologically unfit to become the next ruler, still playing the feminine role imposed on him by his father Gwyn[13]. For this reason, Gwyndolin created an illusion of Gwynevere to help him maintain some semblance of divinity and control over the ancient capital[14]. Over time this illusion of the goddess would become a key component in the system that sough a worthy champion to link the First Flame again and took on the role of guiding and manipulating potential Chosen Undead, as Kingseeker Frampt would invite them to reach Anor Londo and visit her[15]. The false goddess would welcome the Undead after they defeated Dragon Slayer Ornstein and Executioner Smough, the cathedral guards, and proved that they was strong enough to fulfill their destiny[16]. Gwynevere's illusion would reward them with her divine presence and the Lordvessel needed to reach the Kiln of the First Flame, inducing them with her words to succeed Gwyn and link the fading Flame[17]. The illusion of the goddess would even be used to accept Undead into its covenant of the Princess's Guard, in order to constitute a line of defense against the deception of which they were unaware in exchange for the possibility of using the miracles of the goddess[18]. 
-          </textarea>
-        </div>
-      </form>
-      <a href="#">
-        <button class="close_file_button" type="button">x</button>
-      </a>
-
-      <a href="#">
-        <button class="delete_file_button" type="button">D</button>
-      </a>
-    </div>
+    
   </div>
 
   <div class="file-creation-form">

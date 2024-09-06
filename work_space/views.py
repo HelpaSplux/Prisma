@@ -53,13 +53,28 @@ class FileCreationFormView(FormView):
     
         # Create a context for 'render_to_string' function
         context = {
-            "file": Notes.objects.filter(label=label, user_id_id=session_key).values('label')[0]["label"]
+            "note": Notes.objects.filter(label=label, user_id_id=session_key).first()
         }
         
         # Create response data and pass it to response
         new_file_button = render_to_string("work_space/new-button.html", context=context)  
         response_data = {
             "message":"The file was successfully created.",
-            "new_file": new_file_button
+            "new_file": new_file_button,
+            "label_id": f"#{label}_id"
         }
         return JsonResponse(data=response_data, status=200) 
+    
+    
+class OpenedFileView(TemplateView):
+    template_name = "work_space/right_panel.html"
+
+    def get_context_data(self, **kwargs) -> dict:
+        session = self.request.session.session_key
+        label = self.request.GET["label"]
+        note = Notes.objects.filter(label=label, user_id_id=session).first()
+
+        context = super().get_context_data(**kwargs)
+        context["note"] = note
+        return context
+    
