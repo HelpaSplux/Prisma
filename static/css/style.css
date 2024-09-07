@@ -156,11 +156,27 @@ button:hover {
     
 }
 
+.tab_button {
+    display: none;
+    max-width: 200px;
+    max-height: 22px;
+    margin: 3px;
+    overflow: hidden;
+    border-radius: 10px;
+    white-space: nowrap;
+    text-overflow: "";
+    font-size: 13px;
+    padding: 8px 12px;
+    padding-bottom: 9px;
+}
+
 .tab_button_active {
     max-width: 200px;
+    max-height: 22px;
+    margin: 3px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: "--";
+    text-overflow: "";
     color: #fff;
     border-color: #fff;
     border-radius: 10px;
@@ -170,21 +186,7 @@ button:hover {
     padding-bottom: 9px;
 }
 
-.tab {
-    padding: 2px;
-}
 
-.tab_button {
-    max-width: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    white-space: nowrap;
-    text-overflow: "--";
-    margin-left: 5px;
-    font-size: 13px;
-    padding: 8px 12px;
-    padding-bottom: 9px;
-}
 
 .file-creation-form {
     position: absolute;
@@ -317,7 +319,7 @@ button:hover {
     width: 200px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: "--";
+    text-overflow: "";
     margin-top: 10px;
 }
 
@@ -338,7 +340,7 @@ button:hover {
     width: 190px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: "--";
+    text-overflow: "";
 }
 
 .file_button_active {
@@ -346,7 +348,7 @@ button:hover {
     width: 190px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: "--";
+    text-overflow: "";
     color: #fff;
     border-color: #fff;
     background: rgba(255, 255, 255, 0.15);

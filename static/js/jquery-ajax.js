@@ -37,7 +37,6 @@ $(document).ready(function () {
   // Play hide animation for the file creation form on click outside of this element 
   $(document).click(function(event) { 
   var $target = $(event.target);
-  console.log($target)
   if(!$target.closest('.file-creation-form').length && !$(".file-creation-form").css("top").includes("-")) {
       $(".file-creation-form").animate({top: "-40%"});
       $(".file-name-input").blur(); 
@@ -45,16 +44,18 @@ $(document).ready(function () {
   });
 
 
-  // Sends ajax query when file creation form submited and hide form
+  // Sends ajax query when file creation form submited and hide form after
   $("form#id-file-creation-form").submit(function(e) {
     var url = $(this).attr("action");
+    var label = $(".file-name-input").val()
+    var file_button_id = label.replaceAll(" ", "_") + "_button_id";
 
     $.ajax({
       type: "POST",
       url: url,
       data: {
         'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val(),
-        'label': $(".file-name-input").val(),
+        'label': label,
       },
       success: function(data) {
         // Shows creation form
@@ -66,13 +67,15 @@ $(document).ready(function () {
         $("#success_message_id").html(data.message);
         $("#success_message_id").animate({bottom: "20px"});
 
+
         // Add file button to the list
         // scroll to it and highlits it
-        $(".file_list").append(data.new_file);
-        $(".file_list").animate({scrollTop: $(data.label_id).offset().top});
-        $(data.label_id).addClass("file_button_active");
+        var button = `<button class="file_button" id="${file_button_id}" type="button">${label}</button>` 
+        $(".file_list").append(button);
+        $(".file_list").animate({scrollTop: $("#" + file_button_id).offset().top});
+        $("#" + file_button_id).addClass("file_button_active");
         setTimeout(() => {
-          $(data.label_id).removeClass("file_button_active");
+          $("#" + file_button_id).removeClass("file_button_active");
         }, 1500);
 
         // Hides message
@@ -96,43 +99,74 @@ $(document).ready(function () {
   });
 
 
-  $(document).on("click", ".file_button", function(event) {
+  $(document).on("click", ".file_button, .tab_button", function(event) {
     var file_label = $(event.target).text();
-    var element = file_label + "_panel_id"
-    element = element.replace(" ", "_")   
-    console.log(element)
 
-    if (!$("#" + element).length) {
+    var replaced_label = file_label.replaceAll(" ", "_");
+    var panel_id = replaced_label + "_panel_id";
+    var tab_id = replaced_label + "_tab_id";
+    var file_button_id = replaced_label + "_button_id";
+
+    if (!$("#" + panel_id).length) {
       $.get($(".file_list").attr("href"), {label: file_label}, function(data, status) {
         if (status == "success") {
+
+          // Hides all panels.
+          // Added new panel.
+          // Shows current (new) panel.
           $(".bottom_right_panel").fadeOut(100);
           setTimeout(function () {
             $(".content").append(data);
-            console.log(element)
-            $("#panel_id").attr("id", element);
           },100);
-
-
           setTimeout(function () {
-            $("#" + element).fadeIn(100);
+            $("#" + panel_id).fadeIn(100);
           },100);
-          console.log($("#" + element));
-  
-          $(".file_button").removeClass("file_button_active");
-          $(event.target).toggleClass("file_button_active");
           
+          // Added tab.
+          // Make inactive other tabs.
+          // Make new tab active.
+          // Shows current tab.
+          setTimeout(function () {
+            $(".tab_bar").append(`<button id="${tab_id}" class="tab_button" type="button">${file_label}</button>`);
+            $(".tab_button").removeClass("tab_button_active");
+            $(`#${tab_id}`).addClass("tab_button_active");
+          }, 100);
+          setTimeout(function () {
+            $(`#${tab_id}`).fadeIn(100)
+          }, 100);
+
+          // Makes inative all file buttons.
+          // Makes active current button.
+          $(".file_button").removeClass("file_button_active");
+          $(`#${file_button_id}`).toggleClass("file_button_active");
+
+
         }    
         
       });
     } else {
+      
+      // Hides all panels
+      // Shows current panel
       $(".bottom_right_panel").fadeOut(100);
       setTimeout(function () {
-        $("#" + element).fadeIn(100);
+        $("#" + panel_id).fadeIn(100);
       },100);
-
+      
+      // Makes inative all file buttons.
+      // Makes active current button.
+      // Scroll to active button.
       $(".file_button").removeClass("file_button_active");
-      $(event.target).toggleClass("file_button_active");
+      $(`#${file_button_id}`).toggleClass("file_button_active");
+      $(".file_list").animate({scrollTop: ($(".file_list").scrollTop() + $("#" + file_button_id).position().top) - 40});
+
+      // Make inactive other tabs.
+      // Make new tab active.
+      $(".tab_button").removeClass("tab_button_active");
+      $(`#${tab_id}`).addClass("tab_button_active");
     };
+
+
   });
 
 });

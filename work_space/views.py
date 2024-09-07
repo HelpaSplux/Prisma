@@ -19,9 +19,18 @@ class WorkSpaceView(TemplateView):
         session.save()
         session_key = session.session_key
         
+        # Creates a list with tuples.
+        # Each tuple contain note's button id and note's lable
+        notes = []
+        db_notes = Notes.objects.filter(user_id_id=session_key)
+        for note in db_notes:
+            note_label = note.label
+            note_button_id = note.label.replace(" ", "_") + "_button_id"
+            notes.append((note_label, note_button_id))
+        
         # Add data to context
         context = super().get_context_data(**kwargs)
-        context["files"] = Notes.objects.filter(user_id_id=session_key)
+        context["notes"] = notes
         return context
     
 
@@ -50,18 +59,10 @@ class FileCreationFormView(FormView):
         except IntegrityError:
             Users.objects.create(user=session_key)
             Notes.objects.create(label=label, user_id_id=session_key)
-    
-        # Create a context for 'render_to_string' function
-        context = {
-            "note": Notes.objects.filter(label=label, user_id_id=session_key).first()
-        }
-        
+
         # Create response data and pass it to response
-        new_file_button = render_to_string("work_space/new-button.html", context=context)  
         response_data = {
             "message":"The file was successfully created.",
-            "new_file": new_file_button,
-            "label_id": f"#{label}_id"
         }
         return JsonResponse(data=response_data, status=200) 
     
@@ -75,6 +76,7 @@ class OpenedFileView(TemplateView):
         note = Notes.objects.filter(label=label, user_id_id=session).first()
 
         context = super().get_context_data(**kwargs)
+        context["panel_id"] = note.label.replace(" ", "_") + "_panel_id"
         context["note"] = note
         return context
     

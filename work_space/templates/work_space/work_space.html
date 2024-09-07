@@ -21,15 +21,7 @@
 
     <span class="separator">·</span>
 
-    <ol class="tab_bar">
-      <a href="#" class="tab">
-        <button class="tab_button_active" type="button">Gwynevere</button>
-      </a>
-
-      <a href="#" class="tab">
-        <button class="tab_button" type="button">Gwyn, Lord of Sunlight</button>
-      </a>
-    </ol>
+    <ol class="tab_bar"></ol>
   </div>  
 
   <div class="content">
@@ -39,8 +31,8 @@
         
 
       <ol class="file_list" href="{% url "work-space:opened-file" %}">
-        {% for file in files %}
-          <button class="file_button" id="{{ file.label }}_id" type="button">{{ file.label }}</button>
+        {% for label, id in notes %}
+          <button class="file_button" id="{{ id }}" type="button">{{ label }}</button>
         {% endfor %}
       </ol>
     </div>
