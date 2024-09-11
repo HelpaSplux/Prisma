@@ -169,4 +169,85 @@ $(document).ready(function () {
 
   });
 
+  // Automatically change label field's height to fit the content inside
+  $(document).on('input', '.label_field, .content_field', function () {
+    var step = $(this).css("min-height").replace("px", "")
+    var scroll_height = $(this).prop("scrollHeight")
+    var style_height = $(this).css("height").replace("px","")
+    
+    if (scroll_height > style_height) {
+      $(this).css("height", `${scroll_height}px`)
+
+    }
+    
+    while (scroll_height == style_height && style_height > 32) {
+      $(this).css("height", `${+style_height - +step}px`);
+      style_height = $(this).css("height").replace("px","")
+      scroll_height = $(this).prop("scrollHeight")
+
+      if (scroll_height > style_height) {
+        
+        $(this).css("height", `${+style_height + +step}px`);
+        break
+
+      }
+
+    }
+    
+  });
+
 });
+
+// function autoHeight(element) {
+//   console.log("\n\n Function starts...\n\n")
+//   var step = $(element).css("min-height").replace("px", "")
+//   var scroll_height = $(element).prop("scrollHeight")
+//   var style_height = $(element).css("height").replace("px","")
+  
+
+//   var scroll = scroll_height.toString().padEnd(5);
+//   var style = style_height.toString().padEnd(5);
+//   var scroll_type = (typeof scroll_height).padEnd(9);
+//   var style_type = (typeof style_height).padEnd(9);
+//   console.log("In progress...")
+  
+//   // console.log("In progress...")
+//   console.log(`_______________________________\n\
+// | element | Value | Data type |\n\
+// |---------|-------|-----------|\n\
+// | Scroll  | ${scroll} | ${scroll_type} |\n\
+// | Style   | ${style} | ${style_type} |`)
+//   console.log(scroll_height, style_height)
+//   // console.log(`Scroll: Value - ${scroll_height}, Data type - ${typeof scroll_height}`)
+//   // console.log(`Style: Value - ${style_height}, Data type - ${typeof scroll_height}`)
+//   // console.log(scroll_height, style_height)
+  
+//   // if (scroll_height > style_height) {
+//   //   console.log("scroll_height > style_height")
+//   //   console.log(`${scroll_height}px`)
+//   //   $(element).css("height", `${scroll_height}px`)
+//   // }
+//   $(element).animate({height: `${scroll_height}px`}, 0)
+//   console.log(element.style.height)
+//   // $(element).css("height", `${scroll_height}px`)
+//   // while (scroll_height == style_height && style_height > 32) {
+    
+//   //   console.log("Комбоджо")
+    
+//   //   $(element).css("height", `${+style_height - +step}px`);
+//   //   style_height = $(element).css("height").replace("px","")
+//   //   scroll_height = $(element).prop("scrollHeight")
+    
+//   //   console.log(`After determining a new style:\n scroll height - ${scroll_height},\n style_height  - ${style_height}`)
+    
+//   //   if (scroll_height > style_height) {
+//   //     console.log("Break condition is true.")
+//   //     $(element).css("height", `${+style_height + +step}px`);
+      
+//   //     console.log(+style_height + +step)
+      
+//   //     break
+//   //   }
+//   // }
+
+// }

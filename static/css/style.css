@@ -362,16 +362,40 @@ button:hover {
     
 }
 
+.file-update-form {
+    margin: 10px;
+    margin-right: 3px;
+    overflow: scroll;
+    height: calc(100% - 20px);
+
+    scrollbar-color: #fff #00000000;
+    scrollbar-width: thin;
+}
+
+.file-update-form::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 100px; 
+}
+
+.file-update-form::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
+
 .label_field {
     margin-top: 10px;
     text-align: center;
-    font-size: 30px;
-    height: 40px;
+    font-size: 23px;
+    height: 32px;
+    min-height: 32px;
+    overflow:hidden;
 }
 
 .content_field {
     margin-top:20px;
-    height: 77vh;
+    height: 100%;
+    overflow: hidden;
+    min-height: 32px;
 }
 
 .input-field textarea {
@@ -382,7 +406,10 @@ button:hover {
     font-weight: 900;
     color: #fff;
     resize: none;
+    padding-right: 13px;
+    padding-left: 13px;
 }
+
 
 .close_file_button {
     position: absolute;
