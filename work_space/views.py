@@ -1,6 +1,5 @@
 from django.http import JsonResponse
 from django.views.generic import TemplateView, FormView
-from django.template.loader import render_to_string
 from django.db.utils import IntegrityError
 
 from work_space.forms import FileCreationForm
@@ -15,14 +14,17 @@ class WorkSpaceView(TemplateView):
     def get_context_data(self, **kwargs) -> dict:
         
         # Save session data and get session key
+        print(f"[WorkSpaceView] [COOKIES] [{self.request.COOKIES}]")
+        print(f"[WorkSpaceView] [session_key] [{self.request.session.session_key}]")
         session = self.request.session
-        session.save()
+        # session.save()
         session_key = session.session_key
         
         # Creates a list with tuples.
         # Each tuple contain note's button id and note's lable
         notes = []
         db_notes = Notes.objects.filter(user_id_id=session_key)
+        print(f"[WorkSpaceView] [db_notes] [{db_notes}]")
         for note in db_notes:
             note_label = note.label
             note_button_id = note.label.replace(" ", "_") + "_button_id"
