@@ -1,0 +1,1308 @@
+Start testing.
+[Cookies] [...]
+[Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[Session key] [umvahqwhh23op39nqcjl4m4mqad9ujaj]
+[Interaction with session was occured]
+[Cookies] [Set-Cookie: sessionid=umvahqwhh23op39nqcjl4m4mqad9ujaj]
+[Session key] [umvahqwhh23op39nqcjl4m4mqad9ujaj]
+Two users was added into a table 'users'
+Four notes was added into a table 'notes'
+Sending request...
+The response was recived.
+[Session key] [umvahqwhh23op39nqcjl4m4mqad9ujaj]
+[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+Cheking values...
+All checks have been completed successfuly.
+End testing.
+Start testing.
+[Cookies] [...]
+[Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[Session key] [bk3fct69ge765bo5pfwuyykq95cmjoxv]
+[Interaction with session was occured]
+[Cookies] [Set-Cookie: sessionid=bk3fct69ge765bo5pfwuyykq95cmjoxv]
+[Session key] [bk3fct69ge765bo5pfwuyykq95cmjoxv]
+User was added into a table 'users'
+Two notes was added into a table 'notes'
+Sending request...
+The response was recived.
+[Session key] [bk3fct69ge765bo5pfwuyykq95cmjoxv]
+[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[response.context['notes']] [[]]
+Cheking values...
+All checks have been completed successfuly.
+End testing.
+2024-09-14 09:46:18,800 INFO tests.py test_existing_user() Start testing.
+2024-09-14 09:46:18,800 DEBUG tests.py test_existing_user() [Cookies] [...]
+2024-09-14 09:46:18,800 DEBUG tests.py test_existing_user() [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+2024-09-14 09:46:18,805 DEBUG tests.py test_existing_user() [Session key] [6jp1q2q2ncnoih0d7hvqocpbqyagf0q3]
+2024-09-14 09:46:18,805 DEBUG tests.py test_existing_user() [Interaction with session was occured]
+2024-09-14 09:46:18,805 DEBUG tests.py test_existing_user() [Cookies] [Set-Cookie: sessionid=6jp1q2q2ncnoih0d7hvqocpbqyagf0q3]
+2024-09-14 09:46:18,805 DEBUG tests.py test_existing_user() [Session key] [6jp1q2q2ncnoih0d7hvqocpbqyagf0q3]
+2024-09-14 09:46:18,807 INFO tests.py test_existing_user() Two users was added into a table 'users'
+2024-09-14 09:46:18,809 INFO tests.py test_existing_user() Four notes was added into a table 'notes'
+2024-09-14 09:46:18,810 INFO tests.py test_existing_user() Sending request...
+2024-09-14 09:46:18,833 INFO tests.py test_existing_user() The response was recived.
+2024-09-14 09:46:18,833 DEBUG tests.py test_existing_user() [Session key] [6jp1q2q2ncnoih0d7hvqocpbqyagf0q3]
+2024-09-14 09:46:18,833 DEBUG tests.py test_existing_user() [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+2024-09-14 09:46:18,834 DEBUG tests.py test_existing_user() [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+2024-09-14 09:46:18,834 INFO tests.py test_existing_user() Cheking values...
+2024-09-14 09:46:18,834 INFO tests.py test_existing_user() All checks have been completed successfuly.
+2024-09-14 09:46:18,834 INFO tests.py test_existing_user() End testing.
+2024-09-14 09:46:18,837 INFO tests.py test_not_existing_user() Start testing.
+2024-09-14 09:46:18,837 DEBUG tests.py test_not_existing_user() [Cookies] [...]
+2024-09-14 09:46:18,837 DEBUG tests.py test_not_existing_user() [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+2024-09-14 09:46:18,842 DEBUG tests.py test_not_existing_user() [Session key] [3zzgp0kgl9rx1j3uocmzjdyxlc83dwh2]
+2024-09-14 09:46:18,842 DEBUG tests.py test_not_existing_user() [Interaction with session was occured]
+2024-09-14 09:46:18,843 DEBUG tests.py test_not_existing_user() [Cookies] [Set-Cookie: sessionid=3zzgp0kgl9rx1j3uocmzjdyxlc83dwh2]
+2024-09-14 09:46:18,843 DEBUG tests.py test_not_existing_user() [Session key] [3zzgp0kgl9rx1j3uocmzjdyxlc83dwh2]
+2024-09-14 09:46:18,844 INFO tests.py test_not_existing_user() User was added into a table 'users'
+2024-09-14 09:46:18,845 INFO tests.py test_not_existing_user() Two notes was added into a table 'notes'
+2024-09-14 09:46:18,846 INFO tests.py test_not_existing_user() Sending request...
+2024-09-14 09:46:18,853 INFO tests.py test_not_existing_user() The response was recived.
+2024-09-14 09:46:18,853 DEBUG tests.py test_not_existing_user() [Session key] [3zzgp0kgl9rx1j3uocmzjdyxlc83dwh2]
+2024-09-14 09:46:18,853 DEBUG tests.py test_not_existing_user() [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+2024-09-14 09:46:18,853 DEBUG tests.py test_not_existing_user() [response.context['notes']] [[]]
+2024-09-14 09:46:18,853 INFO tests.py test_not_existing_user() Cheking values...
+2024-09-14 09:46:18,854 INFO tests.py test_not_existing_user() All checks have been completed successfuly.
+2024-09-14 09:46:18,854 INFO tests.py test_not_existing_user() End testing.
+2024-09-14 09:46:59,644 INFO     tests.py test_existing_user() Start testing.
+2024-09-14 09:46:59,645 DEBUG    tests.py test_existing_user() [Cookies] [...]
+2024-09-14 09:46:59,645 DEBUG    tests.py test_existing_user() [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+2024-09-14 09:46:59,651 DEBUG    tests.py test_existing_user() [Session key] [7g6pxbis3or4pb5gqjyuna1yzjuiy3tn]
+2024-09-14 09:46:59,651 DEBUG    tests.py test_existing_user() [Interaction with session was occured]
+2024-09-14 09:46:59,652 DEBUG    tests.py test_existing_user() [Cookies] [Set-Cookie: sessionid=7g6pxbis3or4pb5gqjyuna1yzjuiy3tn]
+2024-09-14 09:46:59,652 DEBUG    tests.py test_existing_user() [Session key] [7g6pxbis3or4pb5gqjyuna1yzjuiy3tn]
+2024-09-14 09:46:59,654 INFO     tests.py test_existing_user() Two users was added into a table 'users'
+2024-09-14 09:46:59,656 INFO     tests.py test_existing_user() Four notes was added into a table 'notes'
+2024-09-14 09:46:59,656 INFO     tests.py test_existing_user() Sending request...
+2024-09-14 09:46:59,687 INFO     tests.py test_existing_user() The response was recived.
+2024-09-14 09:46:59,687 DEBUG    tests.py test_existing_user() [Session key] [7g6pxbis3or4pb5gqjyuna1yzjuiy3tn]
+2024-09-14 09:46:59,687 DEBUG    tests.py test_existing_user() [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+2024-09-14 09:46:59,687 DEBUG    tests.py test_existing_user() [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+2024-09-14 09:46:59,688 INFO     tests.py test_existing_user() Cheking values...
+2024-09-14 09:46:59,688 INFO     tests.py test_existing_user() All checks have been completed successfuly.
+2024-09-14 09:46:59,688 INFO     tests.py test_existing_user() End testing.
+2024-09-14 09:46:59,692 INFO     tests.py test_not_existing_user() Start testing.
+2024-09-14 09:46:59,692 DEBUG    tests.py test_not_existing_user() [Cookies] [...]
+2024-09-14 09:46:59,692 DEBUG    tests.py test_not_existing_user() [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+2024-09-14 09:46:59,697 DEBUG    tests.py test_not_existing_user() [Session key] [n0q8m16p6ecteumqcsuwdhelk62mhaeh]
+2024-09-14 09:46:59,697 DEBUG    tests.py test_not_existing_user() [Interaction with session was occured]
+2024-09-14 09:46:59,697 DEBUG    tests.py test_not_existing_user() [Cookies] [Set-Cookie: sessionid=n0q8m16p6ecteumqcsuwdhelk62mhaeh]
+2024-09-14 09:46:59,698 DEBUG    tests.py test_not_existing_user() [Session key] [n0q8m16p6ecteumqcsuwdhelk62mhaeh]
+2024-09-14 09:46:59,698 INFO     tests.py test_not_existing_user() User was added into a table 'users'
+2024-09-14 09:46:59,700 INFO     tests.py test_not_existing_user() Two notes was added into a table 'notes'
+2024-09-14 09:46:59,700 INFO     tests.py test_not_existing_user() Sending request...
+2024-09-14 09:46:59,710 INFO     tests.py test_not_existing_user() The response was recived.
+2024-09-14 09:46:59,710 DEBUG    tests.py test_not_existing_user() [Session key] [n0q8m16p6ecteumqcsuwdhelk62mhaeh]
+2024-09-14 09:46:59,710 DEBUG    tests.py test_not_existing_user() [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+2024-09-14 09:46:59,710 DEBUG    tests.py test_not_existing_user() [response.context['notes']] [[]]
+2024-09-14 09:46:59,710 INFO     tests.py test_not_existing_user() Cheking values...
+2024-09-14 09:46:59,711 INFO     tests.py test_not_existing_user() All checks have been completed successfuly.
+2024-09-14 09:46:59,711 INFO     tests.py test_not_existing_user() End testing.
+[2024-09-14 09:47:37,982] [INFO    ] [tests.py] [test_existing_user()] [Start testing.]
+[2024-09-14 09:47:37,982] [DEBUG   ] [tests.py] [test_existing_user()] [[Cookies] [...]]
+[2024-09-14 09:47:37,982] [DEBUG   ] [tests.py] [test_existing_user()] [[Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 09:47:37,986] [DEBUG   ] [tests.py] [test_existing_user()] [[Session key] [tucng5dndmdb14fjn2anndjj7xphkmab]]
+[2024-09-14 09:47:37,986] [DEBUG   ] [tests.py] [test_existing_user()] [[Interaction with session was occured]]
+[2024-09-14 09:47:37,986] [DEBUG   ] [tests.py] [test_existing_user()] [[Cookies] [Set-Cookie: sessionid=tucng5dndmdb14fjn2anndjj7xphkmab]]
+[2024-09-14 09:47:37,987] [DEBUG   ] [tests.py] [test_existing_user()] [[Session key] [tucng5dndmdb14fjn2anndjj7xphkmab]]
+[2024-09-14 09:47:37,988] [INFO    ] [tests.py] [test_existing_user()] [Two users was added into a table 'users']
+[2024-09-14 09:47:37,990] [INFO    ] [tests.py] [test_existing_user()] [Four notes was added into a table 'notes']
+[2024-09-14 09:47:37,990] [INFO    ] [tests.py] [test_existing_user()] [Sending request...]
+[2024-09-14 09:47:38,015] [INFO    ] [tests.py] [test_existing_user()] [The response was recived.]
+[2024-09-14 09:47:38,015] [DEBUG   ] [tests.py] [test_existing_user()] [[Session key] [tucng5dndmdb14fjn2anndjj7xphkmab]]
+[2024-09-14 09:47:38,015] [DEBUG   ] [tests.py] [test_existing_user()] [[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 09:47:38,015] [DEBUG   ] [tests.py] [test_existing_user()] [[response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]]
+[2024-09-14 09:47:38,015] [INFO    ] [tests.py] [test_existing_user()] [Cheking values...]
+[2024-09-14 09:47:38,015] [INFO    ] [tests.py] [test_existing_user()] [All checks have been completed successfuly.]
+[2024-09-14 09:47:38,015] [INFO    ] [tests.py] [test_existing_user()] [End testing.]
+[2024-09-14 09:47:38,019] [INFO    ] [tests.py] [test_not_existing_user()] [Start testing.]
+[2024-09-14 09:47:38,019] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Cookies] [...]]
+[2024-09-14 09:47:38,019] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 09:47:38,025] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Session key] [bpkhxudzs5284x7ohdyaz2roa2dxhlfr]]
+[2024-09-14 09:47:38,025] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Interaction with session was occured]]
+[2024-09-14 09:47:38,025] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Cookies] [Set-Cookie: sessionid=bpkhxudzs5284x7ohdyaz2roa2dxhlfr]]
+[2024-09-14 09:47:38,025] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Session key] [bpkhxudzs5284x7ohdyaz2roa2dxhlfr]]
+[2024-09-14 09:47:38,026] [INFO    ] [tests.py] [test_not_existing_user()] [User was added into a table 'users']
+[2024-09-14 09:47:38,028] [INFO    ] [tests.py] [test_not_existing_user()] [Two notes was added into a table 'notes']
+[2024-09-14 09:47:38,029] [INFO    ] [tests.py] [test_not_existing_user()] [Sending request...]
+[2024-09-14 09:47:38,037] [INFO    ] [tests.py] [test_not_existing_user()] [The response was recived.]
+[2024-09-14 09:47:38,037] [DEBUG   ] [tests.py] [test_not_existing_user()] [[Session key] [bpkhxudzs5284x7ohdyaz2roa2dxhlfr]]
+[2024-09-14 09:47:38,038] [DEBUG   ] [tests.py] [test_not_existing_user()] [[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 09:47:38,038] [DEBUG   ] [tests.py] [test_not_existing_user()] [[response.context['notes']] [[]]]
+[2024-09-14 09:47:38,039] [INFO    ] [tests.py] [test_not_existing_user()] [Cheking values...]
+[2024-09-14 09:47:38,039] [INFO    ] [tests.py] [test_not_existing_user()] [All checks have been completed successfuly.]
+[2024-09-14 09:47:38,039] [INFO    ] [tests.py] [test_not_existing_user()] [End testing.]
+[2024-09-14 09:48:23,367] [INFO] [tests.py] [test_existing_user()] [Start testing.]
+[2024-09-14 09:48:23,368] [DEBUG] [tests.py] [test_existing_user()] [[Cookies] [...]]
+[2024-09-14 09:48:23,368] [DEBUG] [tests.py] [test_existing_user()] [[Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 09:48:23,374] [DEBUG] [tests.py] [test_existing_user()] [[Session key] [ah0n6irp1nkxmourd8l0s1is888wurha]]
+[2024-09-14 09:48:23,374] [DEBUG] [tests.py] [test_existing_user()] [[Interaction with session was occured]]
+[2024-09-14 09:48:23,374] [DEBUG] [tests.py] [test_existing_user()] [[Cookies] [Set-Cookie: sessionid=ah0n6irp1nkxmourd8l0s1is888wurha]]
+[2024-09-14 09:48:23,374] [DEBUG] [tests.py] [test_existing_user()] [[Session key] [ah0n6irp1nkxmourd8l0s1is888wurha]]
+[2024-09-14 09:48:23,375] [INFO] [tests.py] [test_existing_user()] [Two users was added into a table 'users']
+[2024-09-14 09:48:23,379] [INFO] [tests.py] [test_existing_user()] [Four notes was added into a table 'notes']
+[2024-09-14 09:48:23,379] [INFO] [tests.py] [test_existing_user()] [Sending request...]
+[2024-09-14 09:48:23,411] [INFO] [tests.py] [test_existing_user()] [The response was recived.]
+[2024-09-14 09:48:23,411] [DEBUG] [tests.py] [test_existing_user()] [[Session key] [ah0n6irp1nkxmourd8l0s1is888wurha]]
+[2024-09-14 09:48:23,411] [DEBUG] [tests.py] [test_existing_user()] [[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 09:48:23,411] [DEBUG] [tests.py] [test_existing_user()] [[response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]]
+[2024-09-14 09:48:23,411] [INFO] [tests.py] [test_existing_user()] [Cheking values...]
+[2024-09-14 09:48:23,411] [INFO] [tests.py] [test_existing_user()] [All checks have been completed successfuly.]
+[2024-09-14 09:48:23,412] [INFO] [tests.py] [test_existing_user()] [End testing.]
+[2024-09-14 09:48:23,417] [INFO] [tests.py] [test_not_existing_user()] [Start testing.]
+[2024-09-14 09:48:23,418] [DEBUG] [tests.py] [test_not_existing_user()] [[Cookies] [...]]
+[2024-09-14 09:48:23,418] [DEBUG] [tests.py] [test_not_existing_user()] [[Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 09:48:23,424] [DEBUG] [tests.py] [test_not_existing_user()] [[Session key] [eguwlnneuzfy7zou02ne9kcvhufhrkvx]]
+[2024-09-14 09:48:23,424] [DEBUG] [tests.py] [test_not_existing_user()] [[Interaction with session was occured]]
+[2024-09-14 09:48:23,425] [DEBUG] [tests.py] [test_not_existing_user()] [[Cookies] [Set-Cookie: sessionid=eguwlnneuzfy7zou02ne9kcvhufhrkvx]]
+[2024-09-14 09:48:23,425] [DEBUG] [tests.py] [test_not_existing_user()] [[Session key] [eguwlnneuzfy7zou02ne9kcvhufhrkvx]]
+[2024-09-14 09:48:23,426] [INFO] [tests.py] [test_not_existing_user()] [User was added into a table 'users']
+[2024-09-14 09:48:23,429] [INFO] [tests.py] [test_not_existing_user()] [Two notes was added into a table 'notes']
+[2024-09-14 09:48:23,429] [INFO] [tests.py] [test_not_existing_user()] [Sending request...]
+[2024-09-14 09:48:23,438] [INFO] [tests.py] [test_not_existing_user()] [The response was recived.]
+[2024-09-14 09:48:23,438] [DEBUG] [tests.py] [test_not_existing_user()] [[Session key] [eguwlnneuzfy7zou02ne9kcvhufhrkvx]]
+[2024-09-14 09:48:23,438] [DEBUG] [tests.py] [test_not_existing_user()] [[response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 09:48:23,438] [DEBUG] [tests.py] [test_not_existing_user()] [[response.context['notes']] [[]]]
+[2024-09-14 09:48:23,438] [INFO] [tests.py] [test_not_existing_user()] [Cheking values...]
+[2024-09-14 09:48:23,438] [INFO] [tests.py] [test_not_existing_user()] [All checks have been completed successfuly.]
+[2024-09-14 09:48:23,438] [INFO] [tests.py] [test_not_existing_user()] [End testing.]
+[2024-09-14 09:50:30,193] [INFO    ] [tests.py] [test_existing_user()] Start testing.
+[2024-09-14 09:50:30,193] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [...]
+[2024-09-14 09:50:30,193] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 09:50:30,197] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [n47qn99xpf9qv5ymdsypcjyy42d8d5mb]
+[2024-09-14 09:50:30,197] [DEBUG   ] [tests.py] [test_existing_user()] [Interaction with session was occured]
+[2024-09-14 09:50:30,198] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [Set-Cookie: sessionid=n47qn99xpf9qv5ymdsypcjyy42d8d5mb]
+[2024-09-14 09:50:30,198] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [n47qn99xpf9qv5ymdsypcjyy42d8d5mb]
+[2024-09-14 09:50:30,199] [INFO    ] [tests.py] [test_existing_user()] Two users was added into a table 'users'
+[2024-09-14 09:50:30,201] [INFO    ] [tests.py] [test_existing_user()] Four notes was added into a table 'notes'
+[2024-09-14 09:50:30,202] [INFO    ] [tests.py] [test_existing_user()] Sending request...
+[2024-09-14 09:50:30,219] [INFO    ] [tests.py] [test_existing_user()] The response was recived.
+[2024-09-14 09:50:30,220] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [n47qn99xpf9qv5ymdsypcjyy42d8d5mb]
+[2024-09-14 09:50:30,220] [DEBUG   ] [tests.py] [test_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 09:50:30,220] [DEBUG   ] [tests.py] [test_existing_user()] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 09:50:30,220] [INFO    ] [tests.py] [test_existing_user()] Cheking values...
+[2024-09-14 09:50:30,220] [INFO    ] [tests.py] [test_existing_user()] All checks have been completed successfuly.
+[2024-09-14 09:50:30,220] [INFO    ] [tests.py] [test_existing_user()] End testing.
+[2024-09-14 09:50:30,222] [INFO    ] [tests.py] [test_not_existing_user()] Start testing.
+[2024-09-14 09:50:30,223] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [...]
+[2024-09-14 09:50:30,223] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 09:50:30,225] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [m8wzh6i8wmpijlp01mgpd0hxasu0j3d2]
+[2024-09-14 09:50:30,226] [DEBUG   ] [tests.py] [test_not_existing_user()] [Interaction with session was occured]
+[2024-09-14 09:50:30,226] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [Set-Cookie: sessionid=m8wzh6i8wmpijlp01mgpd0hxasu0j3d2]
+[2024-09-14 09:50:30,226] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [m8wzh6i8wmpijlp01mgpd0hxasu0j3d2]
+[2024-09-14 09:50:30,227] [INFO    ] [tests.py] [test_not_existing_user()] User was added into a table 'users'
+[2024-09-14 09:50:30,228] [INFO    ] [tests.py] [test_not_existing_user()] Two notes was added into a table 'notes'
+[2024-09-14 09:50:30,228] [INFO    ] [tests.py] [test_not_existing_user()] Sending request...
+[2024-09-14 09:50:30,233] [INFO    ] [tests.py] [test_not_existing_user()] The response was recived.
+[2024-09-14 09:50:30,233] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [m8wzh6i8wmpijlp01mgpd0hxasu0j3d2]
+[2024-09-14 09:50:30,233] [DEBUG   ] [tests.py] [test_not_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 09:50:30,233] [DEBUG   ] [tests.py] [test_not_existing_user()] [response.context['notes']] [[]]
+[2024-09-14 09:50:30,233] [INFO    ] [tests.py] [test_not_existing_user()] Cheking values...
+[2024-09-14 09:50:30,233] [INFO    ] [tests.py] [test_not_existing_user()] All checks have been completed successfuly.
+[2024-09-14 09:50:30,234] [INFO    ] [tests.py] [test_not_existing_user()] End testing.
+[2024-09-14 09:50:59,189] [INFO    ] [tests.py] [test_existing_user()] Start testing.
+[2024-09-14 09:50:59,189] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [...]
+[2024-09-14 09:50:59,189] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 09:50:59,198] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [ut37o7w3l4cgrx6zv5ctauieqyim6634]
+[2024-09-14 09:50:59,198] [DEBUG   ] [tests.py] [test_existing_user()] [Interaction with session was occured]
+[2024-09-14 09:50:59,198] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [Set-Cookie: sessionid=ut37o7w3l4cgrx6zv5ctauieqyim6634]
+[2024-09-14 09:50:59,198] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [ut37o7w3l4cgrx6zv5ctauieqyim6634]
+[2024-09-14 09:50:59,200] [INFO    ] [tests.py] [test_existing_user()] Two users was added into a table 'users'
+[2024-09-14 09:50:59,206] [INFO    ] [tests.py] [test_existing_user()] Four notes was added into a table 'notes'
+[2024-09-14 09:50:59,206] [INFO    ] [tests.py] [test_existing_user()] Sending request...
+[2024-09-14 09:50:59,235] [INFO    ] [tests.py] [test_existing_user()] The response was recived.
+[2024-09-14 09:50:59,235] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [ut37o7w3l4cgrx6zv5ctauieqyim6634]
+[2024-09-14 09:50:59,235] [DEBUG   ] [tests.py] [test_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 09:50:59,235] [DEBUG   ] [tests.py] [test_existing_user()] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 09:50:59,236] [INFO    ] [tests.py] [test_existing_user()] Cheking values...
+[2024-09-14 09:50:59,236] [INFO    ] [tests.py] [test_existing_user()] All checks have been completed successfuly.
+[2024-09-14 09:50:59,236] [INFO    ] [tests.py] [test_existing_user()] End testing.
+[2024-09-14 09:50:59,240] [INFO    ] [tests.py] [test_not_existing_user()] Start testing.
+[2024-09-14 09:50:59,240] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [...]
+[2024-09-14 09:50:59,240] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 09:50:59,247] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [90tpyav92gv6fzwdsp6b73d945sulsnw]
+[2024-09-14 09:50:59,247] [DEBUG   ] [tests.py] [test_not_existing_user()] [Interaction with session was occured]
+[2024-09-14 09:50:59,247] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [Set-Cookie: sessionid=90tpyav92gv6fzwdsp6b73d945sulsnw]
+[2024-09-14 09:50:59,247] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [90tpyav92gv6fzwdsp6b73d945sulsnw]
+[2024-09-14 09:50:59,249] [INFO    ] [tests.py] [test_not_existing_user()] User was added into a table 'users'
+[2024-09-14 09:50:59,250] [INFO    ] [tests.py] [test_not_existing_user()] Two notes was added into a table 'notes'
+[2024-09-14 09:50:59,251] [INFO    ] [tests.py] [test_not_existing_user()] Sending request...
+[2024-09-14 09:50:59,262] [INFO    ] [tests.py] [test_not_existing_user()] The response was recived.
+[2024-09-14 09:50:59,262] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [90tpyav92gv6fzwdsp6b73d945sulsnw]
+[2024-09-14 09:50:59,263] [DEBUG   ] [tests.py] [test_not_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 09:50:59,263] [DEBUG   ] [tests.py] [test_not_existing_user()] [response.context['notes']] [[]]
+[2024-09-14 09:50:59,263] [INFO    ] [tests.py] [test_not_existing_user()] Cheking values...
+[2024-09-14 09:50:59,263] [INFO    ] [tests.py] [test_not_existing_user()] All checks have been completed successfuly.
+[2024-09-14 09:50:59,263] [INFO    ] [tests.py] [test_not_existing_user()] End testing.
+[2024-09-14 10:02:23,361] [INFO    ] [tests] [test_existing_user()] Start testing.
+[2024-09-14 10:02:23,361] [DEBUG   ] [tests] [test_existing_user()] [Cookies] [...]
+[2024-09-14 10:02:23,361] [DEBUG   ] [tests] [test_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:02:23,368] [DEBUG   ] [tests] [test_existing_user()] [Session key] [qujnsnawna25pw6ennm25i1en1wsv8ex]
+[2024-09-14 10:02:23,368] [DEBUG   ] [tests] [test_existing_user()] [Interaction with session was occured]
+[2024-09-14 10:02:23,368] [DEBUG   ] [tests] [test_existing_user()] [Cookies] [Set-Cookie: sessionid=qujnsnawna25pw6ennm25i1en1wsv8ex]
+[2024-09-14 10:02:23,368] [DEBUG   ] [tests] [test_existing_user()] [Session key] [qujnsnawna25pw6ennm25i1en1wsv8ex]
+[2024-09-14 10:02:23,370] [INFO    ] [tests] [test_existing_user()] Two users was added into a table 'users'
+[2024-09-14 10:02:23,373] [INFO    ] [tests] [test_existing_user()] Four notes was added into a table 'notes'
+[2024-09-14 10:02:23,374] [INFO    ] [tests] [test_existing_user()] Sending request...
+[2024-09-14 10:02:23,401] [INFO    ] [tests] [test_existing_user()] The response was recived.
+[2024-09-14 10:02:23,402] [DEBUG   ] [tests] [test_existing_user()] [Session key] [qujnsnawna25pw6ennm25i1en1wsv8ex]
+[2024-09-14 10:02:23,402] [DEBUG   ] [tests] [test_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:02:23,402] [DEBUG   ] [tests] [test_existing_user()] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:02:23,402] [INFO    ] [tests] [test_existing_user()] Cheking values...
+[2024-09-14 10:02:23,402] [INFO    ] [tests] [test_existing_user()] All checks have been completed successfuly.
+[2024-09-14 10:02:23,402] [INFO    ] [tests] [test_existing_user()] End testing.
+[2024-09-14 10:02:23,405] [INFO    ] [tests] [test_not_existing_user()] Start testing.
+[2024-09-14 10:02:23,406] [DEBUG   ] [tests] [test_not_existing_user()] [Cookies] [...]
+[2024-09-14 10:02:23,406] [DEBUG   ] [tests] [test_not_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:02:23,412] [DEBUG   ] [tests] [test_not_existing_user()] [Session key] [iz17otavarzr2w4cov29mim2z19ax56p]
+[2024-09-14 10:02:23,412] [DEBUG   ] [tests] [test_not_existing_user()] [Interaction with session was occured]
+[2024-09-14 10:02:23,412] [DEBUG   ] [tests] [test_not_existing_user()] [Cookies] [Set-Cookie: sessionid=iz17otavarzr2w4cov29mim2z19ax56p]
+[2024-09-14 10:02:23,413] [DEBUG   ] [tests] [test_not_existing_user()] [Session key] [iz17otavarzr2w4cov29mim2z19ax56p]
+[2024-09-14 10:02:23,414] [INFO    ] [tests] [test_not_existing_user()] User was added into a table 'users'
+[2024-09-14 10:02:23,415] [INFO    ] [tests] [test_not_existing_user()] Two notes was added into a table 'notes'
+[2024-09-14 10:02:23,415] [INFO    ] [tests] [test_not_existing_user()] Sending request...
+[2024-09-14 10:02:23,422] [INFO    ] [tests] [test_not_existing_user()] The response was recived.
+[2024-09-14 10:02:23,422] [DEBUG   ] [tests] [test_not_existing_user()] [Session key] [iz17otavarzr2w4cov29mim2z19ax56p]
+[2024-09-14 10:02:23,422] [DEBUG   ] [tests] [test_not_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:02:23,422] [DEBUG   ] [tests] [test_not_existing_user()] [response.context['notes']] [[]]
+[2024-09-14 10:02:23,422] [INFO    ] [tests] [test_not_existing_user()] Cheking values...
+[2024-09-14 10:02:23,423] [INFO    ] [tests] [test_not_existing_user()] All checks have been completed successfuly.
+[2024-09-14 10:02:23,423] [INFO    ] [tests] [test_not_existing_user()] End testing.
+[2024-09-14 10:02:46,957] [INFO    ] [tests.py] [test_existing_user()] Start testing.
+[2024-09-14 10:02:46,958] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [...]
+[2024-09-14 10:02:46,958] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:02:46,964] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [vjwg3g3agphzzqge5f3jooydnpeqg4o8]
+[2024-09-14 10:02:46,964] [DEBUG   ] [tests.py] [test_existing_user()] [Interaction with session was occured]
+[2024-09-14 10:02:46,965] [DEBUG   ] [tests.py] [test_existing_user()] [Cookies] [Set-Cookie: sessionid=vjwg3g3agphzzqge5f3jooydnpeqg4o8]
+[2024-09-14 10:02:46,965] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [vjwg3g3agphzzqge5f3jooydnpeqg4o8]
+[2024-09-14 10:02:46,966] [INFO    ] [tests.py] [test_existing_user()] Two users was added into a table 'users'
+[2024-09-14 10:02:46,968] [INFO    ] [tests.py] [test_existing_user()] Four notes was added into a table 'notes'
+[2024-09-14 10:02:46,968] [INFO    ] [tests.py] [test_existing_user()] Sending request...
+[2024-09-14 10:02:46,989] [INFO    ] [tests.py] [test_existing_user()] The response was recived.
+[2024-09-14 10:02:46,989] [DEBUG   ] [tests.py] [test_existing_user()] [Session key] [vjwg3g3agphzzqge5f3jooydnpeqg4o8]
+[2024-09-14 10:02:46,990] [DEBUG   ] [tests.py] [test_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:02:46,990] [DEBUG   ] [tests.py] [test_existing_user()] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:02:46,990] [INFO    ] [tests.py] [test_existing_user()] Cheking values...
+[2024-09-14 10:02:46,990] [INFO    ] [tests.py] [test_existing_user()] All checks have been completed successfuly.
+[2024-09-14 10:02:46,990] [INFO    ] [tests.py] [test_existing_user()] End testing.
+[2024-09-14 10:02:46,992] [INFO    ] [tests.py] [test_not_existing_user()] Start testing.
+[2024-09-14 10:02:46,993] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [...]
+[2024-09-14 10:02:46,993] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:02:46,996] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [soqbff5vyrvepwxjo4iikafh81758mfq]
+[2024-09-14 10:02:46,996] [DEBUG   ] [tests.py] [test_not_existing_user()] [Interaction with session was occured]
+[2024-09-14 10:02:46,997] [DEBUG   ] [tests.py] [test_not_existing_user()] [Cookies] [Set-Cookie: sessionid=soqbff5vyrvepwxjo4iikafh81758mfq]
+[2024-09-14 10:02:46,997] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [soqbff5vyrvepwxjo4iikafh81758mfq]
+[2024-09-14 10:02:46,998] [INFO    ] [tests.py] [test_not_existing_user()] User was added into a table 'users'
+[2024-09-14 10:02:47,000] [INFO    ] [tests.py] [test_not_existing_user()] Two notes was added into a table 'notes'
+[2024-09-14 10:02:47,000] [INFO    ] [tests.py] [test_not_existing_user()] Sending request...
+[2024-09-14 10:02:47,005] [INFO    ] [tests.py] [test_not_existing_user()] The response was recived.
+[2024-09-14 10:02:47,006] [DEBUG   ] [tests.py] [test_not_existing_user()] [Session key] [soqbff5vyrvepwxjo4iikafh81758mfq]
+[2024-09-14 10:02:47,006] [DEBUG   ] [tests.py] [test_not_existing_user()] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:02:47,006] [DEBUG   ] [tests.py] [test_not_existing_user()] [response.context['notes']] [[]]
+[2024-09-14 10:02:47,006] [INFO    ] [tests.py] [test_not_existing_user()] Cheking values...
+[2024-09-14 10:02:47,006] [INFO    ] [tests.py] [test_not_existing_user()] All checks have been completed successfuly.
+[2024-09-14 10:02:47,006] [INFO    ] [tests.py] [test_not_existing_user()] End testing.
+[2024-09-14 10:06:43,599] [tests.py] [test_existing_user()] [INFO] Start testing.
+[2024-09-14 10:06:43,599] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:06:43,600] [tests.py] [test_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:06:43,607] [tests.py] [test_existing_user()] [DEBUG] [Session key] [uc7sokzotwx1nyl74y9cq72rhrbe6jhl]
+[2024-09-14 10:06:43,607] [tests.py] [test_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:06:43,608] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=uc7sokzotwx1nyl74y9cq72rhrbe6jhl]
+[2024-09-14 10:06:43,608] [tests.py] [test_existing_user()] [DEBUG] [Session key] [uc7sokzotwx1nyl74y9cq72rhrbe6jhl]
+[2024-09-14 10:06:43,609] [tests.py] [test_existing_user()] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:06:43,612] [tests.py] [test_existing_user()] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:06:43,612] [tests.py] [test_existing_user()] [INFO] Sending request...
+[2024-09-14 10:06:43,640] [tests.py] [test_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [DEBUG] [Session key] [uc7sokzotwx1nyl74y9cq72rhrbe6jhl]
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:06:43,641] [tests.py] [test_existing_user()] [INFO] End testing.
+[2024-09-14 10:06:43,644] [tests.py] [test_not_existing_user()] [INFO] Start testing.
+[2024-09-14 10:06:43,644] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:06:43,644] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:06:43,649] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [mr5d8adfyq0j4hxfdm6ua1ywsclwnriw]
+[2024-09-14 10:06:43,649] [tests.py] [test_not_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:06:43,649] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=mr5d8adfyq0j4hxfdm6ua1ywsclwnriw]
+[2024-09-14 10:06:43,649] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [mr5d8adfyq0j4hxfdm6ua1ywsclwnriw]
+[2024-09-14 10:06:43,650] [tests.py] [test_not_existing_user()] [INFO] User was added into a table 'users'
+[2024-09-14 10:06:43,651] [tests.py] [test_not_existing_user()] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:06:43,651] [tests.py] [test_not_existing_user()] [INFO] Sending request...
+[2024-09-14 10:06:43,656] [tests.py] [test_not_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:06:43,656] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [mr5d8adfyq0j4hxfdm6ua1ywsclwnriw]
+[2024-09-14 10:06:43,657] [tests.py] [test_not_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:06:43,657] [tests.py] [test_not_existing_user()] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:06:43,657] [tests.py] [test_not_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:06:43,657] [tests.py] [test_not_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:06:43,657] [tests.py] [test_not_existing_user()] [INFO] End testing.
+[2024-09-14 10:07:08,183] [tests.py] [test_existing_user()] [INFO] Start testing.
+[2024-09-14 10:07:08,183] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:07:08,183] [tests.py] [test_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:07:08,187] [tests.py] [test_existing_user()] [DEBUG] [Session key] [slh1rddy3ftro2vsnhybhf0ye4257d4m]
+[2024-09-14 10:07:08,187] [tests.py] [test_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:07:08,188] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=slh1rddy3ftro2vsnhybhf0ye4257d4m]
+[2024-09-14 10:07:08,188] [tests.py] [test_existing_user()] [DEBUG] [Session key] [slh1rddy3ftro2vsnhybhf0ye4257d4m]
+[2024-09-14 10:07:08,189] [tests.py] [test_existing_user()] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:07:08,191] [tests.py] [test_existing_user()] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:07:08,191] [tests.py] [test_existing_user()] [INFO] Sending request...
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [DEBUG] [Session key] [slh1rddy3ftro2vsnhybhf0ye4257d4m]
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:07:08,215] [tests.py] [test_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:07:08,216] [tests.py] [test_existing_user()] [INFO] End testing.
+[2024-09-14 10:07:08,218] [tests.py] [test_not_existing_user()] [INFO] Start testing.
+[2024-09-14 10:07:08,218] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:07:08,219] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:07:08,222] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [oth99id2xftivb2n4tzkn2zhos09wjli]
+[2024-09-14 10:07:08,222] [tests.py] [test_not_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:07:08,223] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=oth99id2xftivb2n4tzkn2zhos09wjli]
+[2024-09-14 10:07:08,223] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [oth99id2xftivb2n4tzkn2zhos09wjli]
+[2024-09-14 10:07:08,224] [tests.py] [test_not_existing_user()] [INFO] User was added into a table 'users'
+[2024-09-14 10:07:08,225] [tests.py] [test_not_existing_user()] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:07:08,225] [tests.py] [test_not_existing_user()] [INFO] Sending request...
+[2024-09-14 10:07:08,232] [tests.py] [test_not_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:07:08,232] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [oth99id2xftivb2n4tzkn2zhos09wjli]
+[2024-09-14 10:07:08,232] [tests.py] [test_not_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:07:08,232] [tests.py] [test_not_existing_user()] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:07:08,233] [tests.py] [test_not_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:07:08,233] [tests.py] [test_not_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:07:08,233] [tests.py] [test_not_existing_user()] [INFO] End testing.
+[2024-09-14 10:09:15,517] [tests.py] [test_existing_user() - 23] [INFO] Start testing.
+[2024-09-14 10:09:15,518] [tests.py] [test_existing_user() - 24] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:15,518] [tests.py] [test_existing_user() - 25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:15,526] [tests.py] [test_existing_user() - 26] [DEBUG] [Session key] [98irpnr7r0qfs1d7686mpvsdnp5tgkgj]
+[2024-09-14 10:09:15,526] [tests.py] [test_existing_user() - 27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:15,526] [tests.py] [test_existing_user() - 32] [DEBUG] [Cookies] [Set-Cookie: sessionid=98irpnr7r0qfs1d7686mpvsdnp5tgkgj]
+[2024-09-14 10:09:15,527] [tests.py] [test_existing_user() - 33] [DEBUG] [Session key] [98irpnr7r0qfs1d7686mpvsdnp5tgkgj]
+[2024-09-14 10:09:15,529] [tests.py] [test_existing_user() - 43] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:09:15,531] [tests.py] [test_existing_user() - 55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:09:15,531] [tests.py] [test_existing_user() - 56] [INFO] Sending request...
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 61] [INFO] The response was recived.
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 62] [DEBUG] [Session key] [98irpnr7r0qfs1d7686mpvsdnp5tgkgj]
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 65] [INFO] Cheking values...
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 80] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:15,549] [tests.py] [test_existing_user() - 81] [INFO] End testing.
+[2024-09-14 10:09:15,552] [tests.py] [test_not_existing_user() - 94] [INFO] Start testing.
+[2024-09-14 10:09:15,552] [tests.py] [test_not_existing_user() - 95] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:15,552] [tests.py] [test_not_existing_user() - 96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:15,555] [tests.py] [test_not_existing_user() - 97] [DEBUG] [Session key] [phv3u62i2v8jjqguutpb16nwvthf7f5x]
+[2024-09-14 10:09:15,556] [tests.py] [test_not_existing_user() - 98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:15,556] [tests.py] [test_not_existing_user() - 103] [DEBUG] [Cookies] [Set-Cookie: sessionid=phv3u62i2v8jjqguutpb16nwvthf7f5x]
+[2024-09-14 10:09:15,556] [tests.py] [test_not_existing_user() - 104] [DEBUG] [Session key] [phv3u62i2v8jjqguutpb16nwvthf7f5x]
+[2024-09-14 10:09:15,557] [tests.py] [test_not_existing_user() - 113] [INFO] User was added into a table 'users'
+[2024-09-14 10:09:15,558] [tests.py] [test_not_existing_user() - 123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:09:15,558] [tests.py] [test_not_existing_user() - 124] [INFO] Sending request...
+[2024-09-14 10:09:15,563] [tests.py] [test_not_existing_user() - 129] [INFO] The response was recived.
+[2024-09-14 10:09:15,563] [tests.py] [test_not_existing_user() - 130] [DEBUG] [Session key] [phv3u62i2v8jjqguutpb16nwvthf7f5x]
+[2024-09-14 10:09:15,563] [tests.py] [test_not_existing_user() - 131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:15,564] [tests.py] [test_not_existing_user() - 132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:09:15,564] [tests.py] [test_not_existing_user() - 133] [INFO] Cheking values...
+[2024-09-14 10:09:15,564] [tests.py] [test_not_existing_user() - 138] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:15,564] [tests.py] [test_not_existing_user() - 139] [INFO] End testing.
+[2024-09-14 10:09:25,854] [tests.py] [test_existing_user() - 23] [INFO] Start testing.
+[2024-09-14 10:09:25,855] [tests.py] [test_existing_user() - 24] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:25,855] [tests.py] [test_existing_user() - 25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:25,861] [tests.py] [test_existing_user() - 26] [DEBUG] [Session key] [x1w8yqh21mmzgwnt2hl4arxslf0o5ad5]
+[2024-09-14 10:09:25,861] [tests.py] [test_existing_user() - 27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:25,861] [tests.py] [test_existing_user() - 32] [DEBUG] [Cookies] [Set-Cookie: sessionid=x1w8yqh21mmzgwnt2hl4arxslf0o5ad5]
+[2024-09-14 10:09:25,861] [tests.py] [test_existing_user() - 33] [DEBUG] [Session key] [x1w8yqh21mmzgwnt2hl4arxslf0o5ad5]
+[2024-09-14 10:09:25,863] [tests.py] [test_existing_user() - 43] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:09:25,865] [tests.py] [test_existing_user() - 55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:09:25,865] [tests.py] [test_existing_user() - 56] [INFO] Sending request...
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 61] [INFO] The response was recived.
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 62] [DEBUG] [Session key] [x1w8yqh21mmzgwnt2hl4arxslf0o5ad5]
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 65] [INFO] Cheking values...
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 80] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:25,883] [tests.py] [test_existing_user() - 81] [INFO] End testing.
+[2024-09-14 10:09:25,886] [tests.py] [test_not_existing_user() - 94] [INFO] Start testing.
+[2024-09-14 10:09:25,886] [tests.py] [test_not_existing_user() - 95] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:25,886] [tests.py] [test_not_existing_user() - 96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:25,889] [tests.py] [test_not_existing_user() - 97] [DEBUG] [Session key] [siyhagf1qovd5htmgwpv93h1lwm2uvfx]
+[2024-09-14 10:09:25,890] [tests.py] [test_not_existing_user() - 98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:25,890] [tests.py] [test_not_existing_user() - 103] [DEBUG] [Cookies] [Set-Cookie: sessionid=siyhagf1qovd5htmgwpv93h1lwm2uvfx]
+[2024-09-14 10:09:25,890] [tests.py] [test_not_existing_user() - 104] [DEBUG] [Session key] [siyhagf1qovd5htmgwpv93h1lwm2uvfx]
+[2024-09-14 10:09:25,891] [tests.py] [test_not_existing_user() - 113] [INFO] User was added into a table 'users'
+[2024-09-14 10:09:25,892] [tests.py] [test_not_existing_user() - 123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:09:25,892] [tests.py] [test_not_existing_user() - 124] [INFO] Sending request...
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 129] [INFO] The response was recived.
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 130] [DEBUG] [Session key] [siyhagf1qovd5htmgwpv93h1lwm2uvfx]
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 133] [INFO] Cheking values...
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 138] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:25,898] [tests.py] [test_not_existing_user() - 139] [INFO] End testing.
+[2024-09-14 10:09:57,432] [tests.py: 23] [test_existing_user()] [INFO] Start testing.
+[2024-09-14 10:09:57,433] [tests.py: 24] [test_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:57,433] [tests.py: 25] [test_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:57,438] [tests.py: 26] [test_existing_user()] [DEBUG] [Session key] [zpav3sz1j0fxocdk9rtab8nssdu942og]
+[2024-09-14 10:09:57,439] [tests.py: 27] [test_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:57,439] [tests.py: 32] [test_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=zpav3sz1j0fxocdk9rtab8nssdu942og]
+[2024-09-14 10:09:57,439] [tests.py: 33] [test_existing_user()] [DEBUG] [Session key] [zpav3sz1j0fxocdk9rtab8nssdu942og]
+[2024-09-14 10:09:57,440] [tests.py: 43] [test_existing_user()] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:09:57,442] [tests.py: 55] [test_existing_user()] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:09:57,442] [tests.py: 56] [test_existing_user()] [INFO] Sending request...
+[2024-09-14 10:09:57,459] [tests.py: 61] [test_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:09:57,459] [tests.py: 62] [test_existing_user()] [DEBUG] [Session key] [zpav3sz1j0fxocdk9rtab8nssdu942og]
+[2024-09-14 10:09:57,459] [tests.py: 63] [test_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:57,460] [tests.py: 64] [test_existing_user()] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:09:57,460] [tests.py: 65] [test_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:09:57,460] [tests.py: 80] [test_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:57,460] [tests.py: 81] [test_existing_user()] [INFO] End testing.
+[2024-09-14 10:09:57,463] [tests.py: 94] [test_not_existing_user()] [INFO] Start testing.
+[2024-09-14 10:09:57,463] [tests.py: 95] [test_not_existing_user()] [DEBUG] [Cookies] [...]
+[2024-09-14 10:09:57,463] [tests.py: 96] [test_not_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:09:57,467] [tests.py: 97] [test_not_existing_user()] [DEBUG] [Session key] [3f02xf9ylcluvv57gnquhl8dmy9flm3c]
+[2024-09-14 10:09:57,467] [tests.py: 98] [test_not_existing_user()] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:09:57,467] [tests.py: 103] [test_not_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=3f02xf9ylcluvv57gnquhl8dmy9flm3c]
+[2024-09-14 10:09:57,468] [tests.py: 104] [test_not_existing_user()] [DEBUG] [Session key] [3f02xf9ylcluvv57gnquhl8dmy9flm3c]
+[2024-09-14 10:09:57,469] [tests.py: 113] [test_not_existing_user()] [INFO] User was added into a table 'users'
+[2024-09-14 10:09:57,470] [tests.py: 123] [test_not_existing_user()] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:09:57,470] [tests.py: 124] [test_not_existing_user()] [INFO] Sending request...
+[2024-09-14 10:09:57,477] [tests.py: 129] [test_not_existing_user()] [INFO] The response was recived.
+[2024-09-14 10:09:57,477] [tests.py: 130] [test_not_existing_user()] [DEBUG] [Session key] [3f02xf9ylcluvv57gnquhl8dmy9flm3c]
+[2024-09-14 10:09:57,477] [tests.py: 131] [test_not_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:09:57,477] [tests.py: 132] [test_not_existing_user()] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:09:57,477] [tests.py: 133] [test_not_existing_user()] [INFO] Cheking values...
+[2024-09-14 10:09:57,477] [tests.py: 138] [test_not_existing_user()] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:09:57,477] [tests.py: 139] [test_not_existing_user()] [INFO] End testing.
+[2024-09-14 10:10:43,004] [tests.py] [test_existing_user()] [23] [INFO] Start testing.
+[2024-09-14 10:10:43,004] [tests.py] [test_existing_user()] [24] [DEBUG] [Cookies] [...]
+[2024-09-14 10:10:43,004] [tests.py] [test_existing_user()] [25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:10:43,009] [tests.py] [test_existing_user()] [26] [DEBUG] [Session key] [lfofu0mnfpuebtfmrcf6mr7y60ugb97g]
+[2024-09-14 10:10:43,009] [tests.py] [test_existing_user()] [27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:10:43,010] [tests.py] [test_existing_user()] [32] [DEBUG] [Cookies] [Set-Cookie: sessionid=lfofu0mnfpuebtfmrcf6mr7y60ugb97g]
+[2024-09-14 10:10:43,010] [tests.py] [test_existing_user()] [33] [DEBUG] [Session key] [lfofu0mnfpuebtfmrcf6mr7y60ugb97g]
+[2024-09-14 10:10:43,012] [tests.py] [test_existing_user()] [43] [INFO] Two users was added into a table 'users'
+[2024-09-14 10:10:43,014] [tests.py] [test_existing_user()] [55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 10:10:43,014] [tests.py] [test_existing_user()] [56] [INFO] Sending request...
+[2024-09-14 10:10:43,035] [tests.py] [test_existing_user()] [61] [INFO] The response was recived.
+[2024-09-14 10:10:43,035] [tests.py] [test_existing_user()] [62] [DEBUG] [Session key] [lfofu0mnfpuebtfmrcf6mr7y60ugb97g]
+[2024-09-14 10:10:43,035] [tests.py] [test_existing_user()] [63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:10:43,036] [tests.py] [test_existing_user()] [64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:10:43,036] [tests.py] [test_existing_user()] [65] [INFO] Cheking values...
+[2024-09-14 10:10:43,036] [tests.py] [test_existing_user()] [80] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:10:43,036] [tests.py] [test_existing_user()] [81] [INFO] End testing.
+[2024-09-14 10:10:43,038] [tests.py] [test_not_existing_user()] [94] [INFO] Start testing.
+[2024-09-14 10:10:43,039] [tests.py] [test_not_existing_user()] [95] [DEBUG] [Cookies] [...]
+[2024-09-14 10:10:43,039] [tests.py] [test_not_existing_user()] [96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:10:43,042] [tests.py] [test_not_existing_user()] [97] [DEBUG] [Session key] [9kedbh2338hnzomqrqvzck6rzobl2pnu]
+[2024-09-14 10:10:43,042] [tests.py] [test_not_existing_user()] [98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 10:10:43,042] [tests.py] [test_not_existing_user()] [103] [DEBUG] [Cookies] [Set-Cookie: sessionid=9kedbh2338hnzomqrqvzck6rzobl2pnu]
+[2024-09-14 10:10:43,042] [tests.py] [test_not_existing_user()] [104] [DEBUG] [Session key] [9kedbh2338hnzomqrqvzck6rzobl2pnu]
+[2024-09-14 10:10:43,043] [tests.py] [test_not_existing_user()] [113] [INFO] User was added into a table 'users'
+[2024-09-14 10:10:43,044] [tests.py] [test_not_existing_user()] [123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 10:10:43,044] [tests.py] [test_not_existing_user()] [124] [INFO] Sending request...
+[2024-09-14 10:10:43,049] [tests.py] [test_not_existing_user()] [129] [INFO] The response was recived.
+[2024-09-14 10:10:43,049] [tests.py] [test_not_existing_user()] [130] [DEBUG] [Session key] [9kedbh2338hnzomqrqvzck6rzobl2pnu]
+[2024-09-14 10:10:43,050] [tests.py] [test_not_existing_user()] [131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:10:43,050] [tests.py] [test_not_existing_user()] [132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 10:10:43,050] [tests.py] [test_not_existing_user()] [133] [INFO] Cheking values...
+[2024-09-14 10:10:43,050] [tests.py] [test_not_existing_user()] [138] [INFO] All checks have been completed successfuly.
+[2024-09-14 10:10:43,050] [tests.py] [test_not_existing_user()] [139] [INFO] End testing.
+[2024-09-14 10:12:19,288] [tests.py] [test_existing_user()] [INFO] [23: Start testing.]
+[2024-09-14 10:12:19,289] [tests.py] [test_existing_user()] [DEBUG] [24: [Cookies] [...]]
+[2024-09-14 10:12:19,289] [tests.py] [test_existing_user()] [DEBUG] [25: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 10:12:19,294] [tests.py] [test_existing_user()] [DEBUG] [26: [Session key] [p1sxcn6srx31s0e97eepcjvwavl48vgj]]
+[2024-09-14 10:12:19,294] [tests.py] [test_existing_user()] [DEBUG] [27: [Interaction with session was occured]]
+[2024-09-14 10:12:19,294] [tests.py] [test_existing_user()] [DEBUG] [32: [Cookies] [Set-Cookie: sessionid=p1sxcn6srx31s0e97eepcjvwavl48vgj]]
+[2024-09-14 10:12:19,294] [tests.py] [test_existing_user()] [DEBUG] [33: [Session key] [p1sxcn6srx31s0e97eepcjvwavl48vgj]]
+[2024-09-14 10:12:19,296] [tests.py] [test_existing_user()] [INFO] [43: Two users was added into a table 'users']
+[2024-09-14 10:12:19,298] [tests.py] [test_existing_user()] [INFO] [55: Four notes was added into a table 'notes']
+[2024-09-14 10:12:19,298] [tests.py] [test_existing_user()] [INFO] [56: Sending request...]
+[2024-09-14 10:12:19,316] [tests.py] [test_existing_user()] [INFO] [61: The response was recived.]
+[2024-09-14 10:12:19,316] [tests.py] [test_existing_user()] [DEBUG] [62: [Session key] [p1sxcn6srx31s0e97eepcjvwavl48vgj]]
+[2024-09-14 10:12:19,316] [tests.py] [test_existing_user()] [DEBUG] [63: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 10:12:19,316] [tests.py] [test_existing_user()] [DEBUG] [64: [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]]
+[2024-09-14 10:12:19,317] [tests.py] [test_existing_user()] [INFO] [65: Cheking values...]
+[2024-09-14 10:12:19,317] [tests.py] [test_existing_user()] [INFO] [80: All checks have been completed successfuly.]
+[2024-09-14 10:12:19,317] [tests.py] [test_existing_user()] [INFO] [81: End testing.]
+[2024-09-14 10:12:19,319] [tests.py] [test_not_existing_user()] [INFO] [94: Start testing.]
+[2024-09-14 10:12:19,319] [tests.py] [test_not_existing_user()] [DEBUG] [95: [Cookies] [...]]
+[2024-09-14 10:12:19,320] [tests.py] [test_not_existing_user()] [DEBUG] [96: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]]
+[2024-09-14 10:12:19,323] [tests.py] [test_not_existing_user()] [DEBUG] [97: [Session key] [b8u44fo613c5eqg3qffnxtmshznltehn]]
+[2024-09-14 10:12:19,323] [tests.py] [test_not_existing_user()] [DEBUG] [98: [Interaction with session was occured]]
+[2024-09-14 10:12:19,323] [tests.py] [test_not_existing_user()] [DEBUG] [103: [Cookies] [Set-Cookie: sessionid=b8u44fo613c5eqg3qffnxtmshznltehn]]
+[2024-09-14 10:12:19,323] [tests.py] [test_not_existing_user()] [DEBUG] [104: [Session key] [b8u44fo613c5eqg3qffnxtmshznltehn]]
+[2024-09-14 10:12:19,324] [tests.py] [test_not_existing_user()] [INFO] [113: User was added into a table 'users']
+[2024-09-14 10:12:19,326] [tests.py] [test_not_existing_user()] [INFO] [123: Two notes was added into a table 'notes']
+[2024-09-14 10:12:19,326] [tests.py] [test_not_existing_user()] [INFO] [124: Sending request...]
+[2024-09-14 10:12:19,331] [tests.py] [test_not_existing_user()] [INFO] [129: The response was recived.]
+[2024-09-14 10:12:19,331] [tests.py] [test_not_existing_user()] [DEBUG] [130: [Session key] [b8u44fo613c5eqg3qffnxtmshznltehn]]
+[2024-09-14 10:12:19,331] [tests.py] [test_not_existing_user()] [DEBUG] [131: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]]
+[2024-09-14 10:12:19,332] [tests.py] [test_not_existing_user()] [DEBUG] [132: [response.context['notes']] [[]]]
+[2024-09-14 10:12:19,332] [tests.py] [test_not_existing_user()] [INFO] [133: Cheking values...]
+[2024-09-14 10:12:19,332] [tests.py] [test_not_existing_user()] [INFO] [138: All checks have been completed successfuly.]
+[2024-09-14 10:12:19,332] [tests.py] [test_not_existing_user()] [INFO] [139: End testing.]
+[2024-09-14 10:13:19,201] [tests.py] [test_existing_user()] [INFO] Start testing. [23]
+[2024-09-14 10:13:19,202] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [...] [24]
+[2024-09-14 10:13:19,202] [tests.py] [test_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>] [25]
+[2024-09-14 10:13:19,210] [tests.py] [test_existing_user()] [DEBUG] [Session key] [7u7us8mccgwyf60xuq5zty92f0l0pnmi] [26]
+[2024-09-14 10:13:19,210] [tests.py] [test_existing_user()] [DEBUG] [Interaction with session was occured] [27]
+[2024-09-14 10:13:19,210] [tests.py] [test_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=7u7us8mccgwyf60xuq5zty92f0l0pnmi] [32]
+[2024-09-14 10:13:19,210] [tests.py] [test_existing_user()] [DEBUG] [Session key] [7u7us8mccgwyf60xuq5zty92f0l0pnmi] [33]
+[2024-09-14 10:13:19,212] [tests.py] [test_existing_user()] [INFO] Two users was added into a table 'users' [43]
+[2024-09-14 10:13:19,214] [tests.py] [test_existing_user()] [INFO] Four notes was added into a table 'notes' [55]
+[2024-09-14 10:13:19,215] [tests.py] [test_existing_user()] [INFO] Sending request... [56]
+[2024-09-14 10:13:19,240] [tests.py] [test_existing_user()] [INFO] The response was recived. [61]
+[2024-09-14 10:13:19,240] [tests.py] [test_existing_user()] [DEBUG] [Session key] [7u7us8mccgwyf60xuq5zty92f0l0pnmi] [62]
+[2024-09-14 10:13:19,240] [tests.py] [test_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">] [63]
+[2024-09-14 10:13:19,240] [tests.py] [test_existing_user()] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]] [64]
+[2024-09-14 10:13:19,241] [tests.py] [test_existing_user()] [INFO] Cheking values... [65]
+[2024-09-14 10:13:19,241] [tests.py] [test_existing_user()] [INFO] All checks have been completed successfuly. [80]
+[2024-09-14 10:13:19,241] [tests.py] [test_existing_user()] [INFO] End testing. [81]
+[2024-09-14 10:13:19,244] [tests.py] [test_not_existing_user()] [INFO] Start testing. [94]
+[2024-09-14 10:13:19,244] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [...] [95]
+[2024-09-14 10:13:19,244] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>] [96]
+[2024-09-14 10:13:19,249] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [03ic6rf9ctszxwh6nqpl3ulkgyoxr0gm] [97]
+[2024-09-14 10:13:19,249] [tests.py] [test_not_existing_user()] [DEBUG] [Interaction with session was occured] [98]
+[2024-09-14 10:13:19,250] [tests.py] [test_not_existing_user()] [DEBUG] [Cookies] [Set-Cookie: sessionid=03ic6rf9ctszxwh6nqpl3ulkgyoxr0gm] [103]
+[2024-09-14 10:13:19,250] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [03ic6rf9ctszxwh6nqpl3ulkgyoxr0gm] [104]
+[2024-09-14 10:13:19,252] [tests.py] [test_not_existing_user()] [INFO] User was added into a table 'users' [113]
+[2024-09-14 10:13:19,256] [tests.py] [test_not_existing_user()] [INFO] Two notes was added into a table 'notes' [123]
+[2024-09-14 10:13:19,256] [tests.py] [test_not_existing_user()] [INFO] Sending request... [124]
+[2024-09-14 10:13:19,266] [tests.py] [test_not_existing_user()] [INFO] The response was recived. [129]
+[2024-09-14 10:13:19,266] [tests.py] [test_not_existing_user()] [DEBUG] [Session key] [03ic6rf9ctszxwh6nqpl3ulkgyoxr0gm] [130]
+[2024-09-14 10:13:19,266] [tests.py] [test_not_existing_user()] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">] [131]
+[2024-09-14 10:13:19,266] [tests.py] [test_not_existing_user()] [DEBUG] [response.context['notes']] [[]] [132]
+[2024-09-14 10:13:19,267] [tests.py] [test_not_existing_user()] [INFO] Cheking values... [133]
+[2024-09-14 10:13:19,267] [tests.py] [test_not_existing_user()] [INFO] All checks have been completed successfuly. [138]
+[2024-09-14 10:13:19,267] [tests.py] [test_not_existing_user()] [INFO] End testing. [139]
+[2024-09-14 10:14:24,609] [tests.py] [test_existing_user()] [INFO] 23: Start testing.
+[2024-09-14 10:14:24,609] [tests.py] [test_existing_user()] [DEBUG] 24: [Cookies] [...]
+[2024-09-14 10:14:24,610] [tests.py] [test_existing_user()] [DEBUG] 25: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:14:24,614] [tests.py] [test_existing_user()] [DEBUG] 26: [Session key] [ejclx5behy0mps8can0c3uh98cjhdr65]
+[2024-09-14 10:14:24,614] [tests.py] [test_existing_user()] [DEBUG] 27: [Interaction with session was occured]
+[2024-09-14 10:14:24,615] [tests.py] [test_existing_user()] [DEBUG] 32: [Cookies] [Set-Cookie: sessionid=ejclx5behy0mps8can0c3uh98cjhdr65]
+[2024-09-14 10:14:24,615] [tests.py] [test_existing_user()] [DEBUG] 33: [Session key] [ejclx5behy0mps8can0c3uh98cjhdr65]
+[2024-09-14 10:14:24,616] [tests.py] [test_existing_user()] [INFO] 43: Two users was added into a table 'users'
+[2024-09-14 10:14:24,618] [tests.py] [test_existing_user()] [INFO] 55: Four notes was added into a table 'notes'
+[2024-09-14 10:14:24,618] [tests.py] [test_existing_user()] [INFO] 56: Sending request...
+[2024-09-14 10:14:24,635] [tests.py] [test_existing_user()] [INFO] 61: The response was recived.
+[2024-09-14 10:14:24,635] [tests.py] [test_existing_user()] [DEBUG] 62: [Session key] [ejclx5behy0mps8can0c3uh98cjhdr65]
+[2024-09-14 10:14:24,635] [tests.py] [test_existing_user()] [DEBUG] 63: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:14:24,636] [tests.py] [test_existing_user()] [DEBUG] 64: [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 10:14:24,636] [tests.py] [test_existing_user()] [INFO] 65: Cheking values...
+[2024-09-14 10:14:24,636] [tests.py] [test_existing_user()] [INFO] 80: All checks have been completed successfuly.
+[2024-09-14 10:14:24,636] [tests.py] [test_existing_user()] [INFO] 81: End testing.
+[2024-09-14 10:14:24,639] [tests.py] [test_not_existing_user()] [INFO] 94: Start testing.
+[2024-09-14 10:14:24,639] [tests.py] [test_not_existing_user()] [DEBUG] 95: [Cookies] [...]
+[2024-09-14 10:14:24,639] [tests.py] [test_not_existing_user()] [DEBUG] 96: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 10:14:24,642] [tests.py] [test_not_existing_user()] [DEBUG] 97: [Session key] [291rg1ixe53qv03n8f3tq1eif8shwzty]
+[2024-09-14 10:14:24,642] [tests.py] [test_not_existing_user()] [DEBUG] 98: [Interaction with session was occured]
+[2024-09-14 10:14:24,642] [tests.py] [test_not_existing_user()] [DEBUG] 103: [Cookies] [Set-Cookie: sessionid=291rg1ixe53qv03n8f3tq1eif8shwzty]
+[2024-09-14 10:14:24,642] [tests.py] [test_not_existing_user()] [DEBUG] 104: [Session key] [291rg1ixe53qv03n8f3tq1eif8shwzty]
+[2024-09-14 10:14:24,643] [tests.py] [test_not_existing_user()] [INFO] 113: User was added into a table 'users'
+[2024-09-14 10:14:24,644] [tests.py] [test_not_existing_user()] [INFO] 123: Two notes was added into a table 'notes'
+[2024-09-14 10:14:24,644] [tests.py] [test_not_existing_user()] [INFO] 124: Sending request...
+[2024-09-14 10:14:24,649] [tests.py] [test_not_existing_user()] [INFO] 129: The response was recived.
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [DEBUG] 130: [Session key] [291rg1ixe53qv03n8f3tq1eif8shwzty]
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [DEBUG] 131: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [DEBUG] 132: [response.context['notes']] [[]]
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [INFO] 133: Cheking values...
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [INFO] 138: All checks have been completed successfuly.
+[2024-09-14 10:14:24,650] [tests.py] [test_not_existing_user()] [INFO] 139: End testing.
+[2024-09-14 12:06:36,195] [tests.py] [test_existing_user()] [INFO] 23: Start testing.
+[2024-09-14 12:06:36,195] [tests.py] [test_existing_user()] [DEBUG] 24: [Cookies] [...]
+[2024-09-14 12:06:36,195] [tests.py] [test_existing_user()] [DEBUG] 25: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:06:36,201] [tests.py] [test_existing_user()] [DEBUG] 26: [Session key] [mynnhe6tcxxmrnul0psa1m79rwjpvbhy]
+[2024-09-14 12:06:36,201] [tests.py] [test_existing_user()] [DEBUG] 27: [Interaction with session was occured]
+[2024-09-14 12:06:36,201] [tests.py] [test_existing_user()] [DEBUG] 32: [Cookies] [Set-Cookie: sessionid=mynnhe6tcxxmrnul0psa1m79rwjpvbhy]
+[2024-09-14 12:06:36,201] [tests.py] [test_existing_user()] [DEBUG] 33: [Session key] [mynnhe6tcxxmrnul0psa1m79rwjpvbhy]
+[2024-09-14 12:06:36,203] [tests.py] [test_existing_user()] [INFO] 43: Two users was added into a table 'users'
+[2024-09-14 12:06:36,205] [tests.py] [test_existing_user()] [INFO] 55: Four notes was added into a table 'notes'
+[2024-09-14 12:06:36,205] [tests.py] [test_existing_user()] [INFO] 56: Sending request...
+[2024-09-14 12:06:36,235] [tests.py] [test_existing_user()] [INFO] 61: The response was recived.
+[2024-09-14 12:06:36,235] [tests.py] [test_existing_user()] [DEBUG] 62: [Session key] [mynnhe6tcxxmrnul0psa1m79rwjpvbhy]
+[2024-09-14 12:06:36,235] [tests.py] [test_existing_user()] [DEBUG] 63: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:06:36,235] [tests.py] [test_existing_user()] [DEBUG] 64: [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 12:06:36,235] [tests.py] [test_existing_user()] [INFO] 65: Cheking values...
+[2024-09-14 12:06:36,236] [tests.py] [test_existing_user()] [INFO] 80: All checks have been completed successfuly.
+[2024-09-14 12:06:36,236] [tests.py] [test_existing_user()] [INFO] 81: End testing.
+[2024-09-14 12:06:36,242] [tests.py] [test_not_existing_user()] [INFO] 93: Start testing.
+[2024-09-14 12:06:36,242] [tests.py] [test_not_existing_user()] [DEBUG] 94: [Cookies] [...]
+[2024-09-14 12:06:36,242] [tests.py] [test_not_existing_user()] [DEBUG] 95: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:06:36,248] [tests.py] [test_not_existing_user()] [DEBUG] 96: [Session key] [kfdvh7y7ng1iuv2elhxfj70n27azf9sh]
+[2024-09-14 12:06:36,249] [tests.py] [test_not_existing_user()] [DEBUG] 97: [Interaction with session was occured]
+[2024-09-14 12:06:36,249] [tests.py] [test_not_existing_user()] [DEBUG] 102: [Cookies] [Set-Cookie: sessionid=kfdvh7y7ng1iuv2elhxfj70n27azf9sh]
+[2024-09-14 12:06:36,249] [tests.py] [test_not_existing_user()] [DEBUG] 103: [Session key] [kfdvh7y7ng1iuv2elhxfj70n27azf9sh]
+[2024-09-14 12:06:36,251] [tests.py] [test_not_existing_user()] [INFO] 112: User was added into a table 'users'
+[2024-09-14 12:06:36,253] [tests.py] [test_not_existing_user()] [INFO] 122: Two notes was added into a table 'notes'
+[2024-09-14 12:06:36,253] [tests.py] [test_not_existing_user()] [INFO] 123: Sending request...
+[2024-09-14 12:06:36,260] [tests.py] [test_not_existing_user()] [INFO] 128: The response was recived.
+[2024-09-14 12:06:36,260] [tests.py] [test_not_existing_user()] [DEBUG] 129: [Session key] [kfdvh7y7ng1iuv2elhxfj70n27azf9sh]
+[2024-09-14 12:06:36,260] [tests.py] [test_not_existing_user()] [DEBUG] 130: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:06:36,260] [tests.py] [test_not_existing_user()] [DEBUG] 131: [response.context['notes']] [[]]
+[2024-09-14 12:06:36,260] [tests.py] [test_not_existing_user()] [INFO] 132: Cheking values...
+[2024-09-14 12:06:36,261] [tests.py] [test_not_existing_user()] [INFO] 137: All checks have been completed successfuly.
+[2024-09-14 12:06:36,261] [tests.py] [test_not_existing_user()] [INFO] 138: End testing.
+[2024-09-14 12:07:14,963] [tests.py] [test_existing_user()] [INFO] 23: Start testing.
+[2024-09-14 12:07:14,963] [tests.py] [test_existing_user()] [DEBUG] 24: [Cookies] [...]
+[2024-09-14 12:07:14,963] [tests.py] [test_existing_user()] [DEBUG] 25: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:07:14,969] [tests.py] [test_existing_user()] [DEBUG] 26: [Session key] [23irenvtaggh0jhqtmlr1aybufmf9n4k]
+[2024-09-14 12:07:14,969] [tests.py] [test_existing_user()] [DEBUG] 27: [Interaction with session was occured]
+[2024-09-14 12:07:14,969] [tests.py] [test_existing_user()] [DEBUG] 32: [Cookies] [Set-Cookie: sessionid=23irenvtaggh0jhqtmlr1aybufmf9n4k]
+[2024-09-14 12:07:14,969] [tests.py] [test_existing_user()] [DEBUG] 33: [Session key] [23irenvtaggh0jhqtmlr1aybufmf9n4k]
+[2024-09-14 12:07:14,970] [tests.py] [test_existing_user()] [INFO] 43: Two users was added into a table 'users'
+[2024-09-14 12:07:14,973] [tests.py] [test_existing_user()] [INFO] 55: Four notes was added into a table 'notes'
+[2024-09-14 12:07:14,973] [tests.py] [test_existing_user()] [INFO] 56: Sending request...
+[2024-09-14 12:07:14,996] [tests.py] [test_existing_user()] [INFO] 61: The response was recived.
+[2024-09-14 12:07:14,996] [tests.py] [test_existing_user()] [DEBUG] 62: [Session key] [23irenvtaggh0jhqtmlr1aybufmf9n4k]
+[2024-09-14 12:07:14,996] [tests.py] [test_existing_user()] [DEBUG] 63: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:07:14,996] [tests.py] [test_existing_user()] [DEBUG] 64: [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 12:07:14,997] [tests.py] [test_existing_user()] [INFO] 65: Cheking values...
+[2024-09-14 12:07:14,997] [tests.py] [test_existing_user()] [INFO] 81: All checks have been completed successfuly.
+[2024-09-14 12:07:14,997] [tests.py] [test_existing_user()] [INFO] 82: End testing.
+[2024-09-14 12:07:15,000] [tests.py] [test_not_existing_user()] [INFO] 94: Start testing.
+[2024-09-14 12:07:15,001] [tests.py] [test_not_existing_user()] [DEBUG] 95: [Cookies] [...]
+[2024-09-14 12:07:15,001] [tests.py] [test_not_existing_user()] [DEBUG] 96: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:07:15,005] [tests.py] [test_not_existing_user()] [DEBUG] 97: [Session key] [wdy96z6iixwl2he9vsen4l2vxjzh9top]
+[2024-09-14 12:07:15,005] [tests.py] [test_not_existing_user()] [DEBUG] 98: [Interaction with session was occured]
+[2024-09-14 12:07:15,005] [tests.py] [test_not_existing_user()] [DEBUG] 103: [Cookies] [Set-Cookie: sessionid=wdy96z6iixwl2he9vsen4l2vxjzh9top]
+[2024-09-14 12:07:15,005] [tests.py] [test_not_existing_user()] [DEBUG] 104: [Session key] [wdy96z6iixwl2he9vsen4l2vxjzh9top]
+[2024-09-14 12:07:15,007] [tests.py] [test_not_existing_user()] [INFO] 113: User was added into a table 'users'
+[2024-09-14 12:07:15,009] [tests.py] [test_not_existing_user()] [INFO] 123: Two notes was added into a table 'notes'
+[2024-09-14 12:07:15,009] [tests.py] [test_not_existing_user()] [INFO] 124: Sending request...
+[2024-09-14 12:07:15,016] [tests.py] [test_not_existing_user()] [INFO] 129: The response was recived.
+[2024-09-14 12:07:15,016] [tests.py] [test_not_existing_user()] [DEBUG] 130: [Session key] [wdy96z6iixwl2he9vsen4l2vxjzh9top]
+[2024-09-14 12:07:15,017] [tests.py] [test_not_existing_user()] [DEBUG] 131: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:07:15,017] [tests.py] [test_not_existing_user()] [DEBUG] 132: [response.context['notes']] [[]]
+[2024-09-14 12:07:15,017] [tests.py] [test_not_existing_user()] [INFO] 133: Cheking values...
+[2024-09-14 12:07:15,017] [tests.py] [test_not_existing_user()] [INFO] 138: All checks have been completed successfuly.
+[2024-09-14 12:07:15,017] [tests.py] [test_not_existing_user()] [INFO] 139: End testing.
+[2024-09-14 12:21:28,004] [tests.py] [test_existing_user()] [INFO]   23: Start testing.
+[2024-09-14 12:21:28,005] [tests.py] [test_existing_user()] [DEBUG]   24: [Cookies] [...]
+[2024-09-14 12:21:28,005] [tests.py] [test_existing_user()] [DEBUG]   25: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:21:28,011] [tests.py] [test_existing_user()] [DEBUG]   26: [Session key] [arg91djwk3b2bvlvf9xn2ml3ozj08hex]
+[2024-09-14 12:21:28,011] [tests.py] [test_existing_user()] [DEBUG]   27: [Interaction with session was occured]
+[2024-09-14 12:21:28,012] [tests.py] [test_existing_user()] [DEBUG]   32: [Cookies] [Set-Cookie: sessionid=arg91djwk3b2bvlvf9xn2ml3ozj08hex]
+[2024-09-14 12:21:28,012] [tests.py] [test_existing_user()] [DEBUG]   33: [Session key] [arg91djwk3b2bvlvf9xn2ml3ozj08hex]
+[2024-09-14 12:21:28,013] [tests.py] [test_existing_user()] [INFO]   43: Two users was added into a table 'users'
+[2024-09-14 12:21:28,016] [tests.py] [test_existing_user()] [INFO]   55: Four notes was added into a table 'notes'
+[2024-09-14 12:21:28,016] [tests.py] [test_existing_user()] [INFO]   56: Sending request...
+[2024-09-14 12:21:28,046] [tests.py] [test_existing_user()] [INFO]   61: The response was recived.
+[2024-09-14 12:21:28,046] [tests.py] [test_existing_user()] [DEBUG]   62: [Session key] [arg91djwk3b2bvlvf9xn2ml3ozj08hex]
+[2024-09-14 12:21:28,046] [tests.py] [test_existing_user()] [DEBUG]   63: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:21:28,047] [tests.py] [test_existing_user()] [DEBUG]   64: [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 12:21:28,047] [tests.py] [test_existing_user()] [INFO]   65: Cheking values...
+[2024-09-14 12:21:28,047] [tests.py] [test_existing_user()] [INFO]   81: All checks have been completed successfuly.
+[2024-09-14 12:21:28,047] [tests.py] [test_existing_user()] [INFO]   82: End testing.
+[2024-09-14 12:21:28,050] [tests.py] [test_not_existing_user()] [INFO]   94: Start testing.
+[2024-09-14 12:21:28,050] [tests.py] [test_not_existing_user()] [DEBUG]   95: [Cookies] [...]
+[2024-09-14 12:21:28,050] [tests.py] [test_not_existing_user()] [DEBUG]   96: [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 12:21:28,056] [tests.py] [test_not_existing_user()] [DEBUG]   97: [Session key] [fsi469ql1iktkivjv2p2gsbawc2mofvk]
+[2024-09-14 12:21:28,056] [tests.py] [test_not_existing_user()] [DEBUG]   98: [Interaction with session was occured]
+[2024-09-14 12:21:28,056] [tests.py] [test_not_existing_user()] [DEBUG]  103: [Cookies] [Set-Cookie: sessionid=fsi469ql1iktkivjv2p2gsbawc2mofvk]
+[2024-09-14 12:21:28,056] [tests.py] [test_not_existing_user()] [DEBUG]  104: [Session key] [fsi469ql1iktkivjv2p2gsbawc2mofvk]
+[2024-09-14 12:21:28,058] [tests.py] [test_not_existing_user()] [INFO]  113: User was added into a table 'users'
+[2024-09-14 12:21:28,060] [tests.py] [test_not_existing_user()] [INFO]  123: Two notes was added into a table 'notes'
+[2024-09-14 12:21:28,060] [tests.py] [test_not_existing_user()] [INFO]  124: Sending request...
+[2024-09-14 12:21:28,068] [tests.py] [test_not_existing_user()] [INFO]  129: The response was recived.
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [DEBUG]  130: [Session key] [fsi469ql1iktkivjv2p2gsbawc2mofvk]
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [DEBUG]  131: [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [DEBUG]  132: [response.context['notes']] [[]]
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [INFO]  133: Cheking values...
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [INFO]  138: All checks have been completed successfuly.
+[2024-09-14 12:21:28,069] [tests.py] [test_not_existing_user()] [INFO]  139: End testing.
+[2024-09-14 13:16:05,772] [tests.py] [test_existing_user()] [23   ] [INFO] : Start testing.
+[2024-09-14 13:16:05,772] [tests.py] [test_existing_user()] [24   ] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:16:05,772] [tests.py] [test_existing_user()] [25   ] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:16:05,780] [tests.py] [test_existing_user()] [26   ] [DEBUG] : [Session key] [xirwbpoy4c1swvnh23naan7sfqxpo5wo]
+[2024-09-14 13:16:05,781] [tests.py] [test_existing_user()] [27   ] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:16:05,781] [tests.py] [test_existing_user()] [32   ] [DEBUG] : [Cookies] [Set-Cookie: sessionid=xirwbpoy4c1swvnh23naan7sfqxpo5wo]
+[2024-09-14 13:16:05,781] [tests.py] [test_existing_user()] [33   ] [DEBUG] : [Session key] [xirwbpoy4c1swvnh23naan7sfqxpo5wo]
+[2024-09-14 13:16:05,783] [tests.py] [test_existing_user()] [43   ] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:16:05,785] [tests.py] [test_existing_user()] [55   ] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:16:05,785] [tests.py] [test_existing_user()] [56   ] [INFO] : Sending request...
+[2024-09-14 13:16:05,821] [tests.py] [test_existing_user()] [61   ] [INFO] : The response was recived.
+[2024-09-14 13:16:05,821] [tests.py] [test_existing_user()] [62   ] [DEBUG] : [Session key] [xirwbpoy4c1swvnh23naan7sfqxpo5wo]
+[2024-09-14 13:16:05,821] [tests.py] [test_existing_user()] [63   ] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:16:05,822] [tests.py] [test_existing_user()] [64   ] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:16:05,822] [tests.py] [test_existing_user()] [65   ] [INFO] : Cheking values...
+[2024-09-14 13:16:05,822] [tests.py] [test_existing_user()] [81   ] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:16:05,822] [tests.py] [test_existing_user()] [82   ] [INFO] : End testing.
+[2024-09-14 13:16:05,826] [tests.py] [test_not_existing_user()] [94   ] [INFO] : Start testing.
+[2024-09-14 13:16:05,826] [tests.py] [test_not_existing_user()] [95   ] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:16:05,826] [tests.py] [test_not_existing_user()] [96   ] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:16:05,832] [tests.py] [test_not_existing_user()] [97   ] [DEBUG] : [Session key] [rfdk7ocms8yep96ny50a1evl6v9u7qmp]
+[2024-09-14 13:16:05,832] [tests.py] [test_not_existing_user()] [98   ] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:16:05,832] [tests.py] [test_not_existing_user()] [103  ] [DEBUG] : [Cookies] [Set-Cookie: sessionid=rfdk7ocms8yep96ny50a1evl6v9u7qmp]
+[2024-09-14 13:16:05,832] [tests.py] [test_not_existing_user()] [104  ] [DEBUG] : [Session key] [rfdk7ocms8yep96ny50a1evl6v9u7qmp]
+[2024-09-14 13:16:05,834] [tests.py] [test_not_existing_user()] [113  ] [INFO] : User was added into a table 'users'
+[2024-09-14 13:16:05,835] [tests.py] [test_not_existing_user()] [123  ] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:16:05,835] [tests.py] [test_not_existing_user()] [124  ] [INFO] : Sending request...
+[2024-09-14 13:16:05,840] [tests.py] [test_not_existing_user()] [129  ] [INFO] : The response was recived.
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [130  ] [DEBUG] : [Session key] [rfdk7ocms8yep96ny50a1evl6v9u7qmp]
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [131  ] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [132  ] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [133  ] [INFO] : Cheking values...
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [138  ] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:16:05,841] [tests.py] [test_not_existing_user()] [139  ] [INFO] : End testing.
+[2024-09-14 13:16:44,870] [tests.py] [test_existing_user()] [23___] [INFO] : Start testing.
+[2024-09-14 13:16:44,871] [tests.py] [test_existing_user()] [24___] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:16:44,871] [tests.py] [test_existing_user()] [25___] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:16:44,878] [tests.py] [test_existing_user()] [26___] [DEBUG] : [Session key] [6aef0ifnqkrnfgipn8szmsdwlnqifz72]
+[2024-09-14 13:16:44,878] [tests.py] [test_existing_user()] [27___] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:16:44,878] [tests.py] [test_existing_user()] [32___] [DEBUG] : [Cookies] [Set-Cookie: sessionid=6aef0ifnqkrnfgipn8szmsdwlnqifz72]
+[2024-09-14 13:16:44,878] [tests.py] [test_existing_user()] [33___] [DEBUG] : [Session key] [6aef0ifnqkrnfgipn8szmsdwlnqifz72]
+[2024-09-14 13:16:44,881] [tests.py] [test_existing_user()] [43___] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:16:44,884] [tests.py] [test_existing_user()] [55___] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:16:44,884] [tests.py] [test_existing_user()] [56___] [INFO] : Sending request...
+[2024-09-14 13:16:44,917] [tests.py] [test_existing_user()] [61___] [INFO] : The response was recived.
+[2024-09-14 13:16:44,917] [tests.py] [test_existing_user()] [62___] [DEBUG] : [Session key] [6aef0ifnqkrnfgipn8szmsdwlnqifz72]
+[2024-09-14 13:16:44,917] [tests.py] [test_existing_user()] [63___] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:16:44,918] [tests.py] [test_existing_user()] [64___] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:16:44,918] [tests.py] [test_existing_user()] [65___] [INFO] : Cheking values...
+[2024-09-14 13:16:44,918] [tests.py] [test_existing_user()] [81___] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:16:44,918] [tests.py] [test_existing_user()] [82___] [INFO] : End testing.
+[2024-09-14 13:16:44,921] [tests.py] [test_not_existing_user()] [94___] [INFO] : Start testing.
+[2024-09-14 13:16:44,921] [tests.py] [test_not_existing_user()] [95___] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:16:44,921] [tests.py] [test_not_existing_user()] [96___] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:16:44,928] [tests.py] [test_not_existing_user()] [97___] [DEBUG] : [Session key] [obke25v8j7lx7ajchibdwik62vfa3tpj]
+[2024-09-14 13:16:44,928] [tests.py] [test_not_existing_user()] [98___] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:16:44,929] [tests.py] [test_not_existing_user()] [103__] [DEBUG] : [Cookies] [Set-Cookie: sessionid=obke25v8j7lx7ajchibdwik62vfa3tpj]
+[2024-09-14 13:16:44,929] [tests.py] [test_not_existing_user()] [104__] [DEBUG] : [Session key] [obke25v8j7lx7ajchibdwik62vfa3tpj]
+[2024-09-14 13:16:44,931] [tests.py] [test_not_existing_user()] [113__] [INFO] : User was added into a table 'users'
+[2024-09-14 13:16:44,933] [tests.py] [test_not_existing_user()] [123__] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:16:44,933] [tests.py] [test_not_existing_user()] [124__] [INFO] : Sending request...
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [129__] [INFO] : The response was recived.
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [130__] [DEBUG] : [Session key] [obke25v8j7lx7ajchibdwik62vfa3tpj]
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [131__] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [132__] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [133__] [INFO] : Cheking values...
+[2024-09-14 13:16:44,938] [tests.py] [test_not_existing_user()] [138__] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:16:44,939] [tests.py] [test_not_existing_user()] [139__] [INFO] : End testing.
+[2024-09-14 13:17:05,420] [tests.py] [test_existing_user()] [23000] [INFO] : Start testing.
+[2024-09-14 13:17:05,420] [tests.py] [test_existing_user()] [24000] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:17:05,420] [tests.py] [test_existing_user()] [25000] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:17:05,426] [tests.py] [test_existing_user()] [26000] [DEBUG] : [Session key] [075wv8mszgodur0nwxt3w2w9f4riovx3]
+[2024-09-14 13:17:05,427] [tests.py] [test_existing_user()] [27000] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:17:05,427] [tests.py] [test_existing_user()] [32000] [DEBUG] : [Cookies] [Set-Cookie: sessionid=075wv8mszgodur0nwxt3w2w9f4riovx3]
+[2024-09-14 13:17:05,427] [tests.py] [test_existing_user()] [33000] [DEBUG] : [Session key] [075wv8mszgodur0nwxt3w2w9f4riovx3]
+[2024-09-14 13:17:05,428] [tests.py] [test_existing_user()] [43000] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:17:05,431] [tests.py] [test_existing_user()] [55000] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:17:05,431] [tests.py] [test_existing_user()] [56000] [INFO] : Sending request...
+[2024-09-14 13:17:05,466] [tests.py] [test_existing_user()] [61000] [INFO] : The response was recived.
+[2024-09-14 13:17:05,466] [tests.py] [test_existing_user()] [62000] [DEBUG] : [Session key] [075wv8mszgodur0nwxt3w2w9f4riovx3]
+[2024-09-14 13:17:05,467] [tests.py] [test_existing_user()] [63000] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:17:05,467] [tests.py] [test_existing_user()] [64000] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:17:05,467] [tests.py] [test_existing_user()] [65000] [INFO] : Cheking values...
+[2024-09-14 13:17:05,467] [tests.py] [test_existing_user()] [81000] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:17:05,467] [tests.py] [test_existing_user()] [82000] [INFO] : End testing.
+[2024-09-14 13:17:05,471] [tests.py] [test_not_existing_user()] [94000] [INFO] : Start testing.
+[2024-09-14 13:17:05,471] [tests.py] [test_not_existing_user()] [95000] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:17:05,471] [tests.py] [test_not_existing_user()] [96000] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:17:05,477] [tests.py] [test_not_existing_user()] [97000] [DEBUG] : [Session key] [jiyfahcboipvyrhshxaukxf6lxh97g8y]
+[2024-09-14 13:17:05,478] [tests.py] [test_not_existing_user()] [98000] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:17:05,478] [tests.py] [test_not_existing_user()] [10300] [DEBUG] : [Cookies] [Set-Cookie: sessionid=jiyfahcboipvyrhshxaukxf6lxh97g8y]
+[2024-09-14 13:17:05,478] [tests.py] [test_not_existing_user()] [10400] [DEBUG] : [Session key] [jiyfahcboipvyrhshxaukxf6lxh97g8y]
+[2024-09-14 13:17:05,481] [tests.py] [test_not_existing_user()] [11300] [INFO] : User was added into a table 'users'
+[2024-09-14 13:17:05,483] [tests.py] [test_not_existing_user()] [12300] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:17:05,483] [tests.py] [test_not_existing_user()] [12400] [INFO] : Sending request...
+[2024-09-14 13:17:05,492] [tests.py] [test_not_existing_user()] [12900] [INFO] : The response was recived.
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13000] [DEBUG] : [Session key] [jiyfahcboipvyrhshxaukxf6lxh97g8y]
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13100] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13200] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13300] [INFO] : Cheking values...
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13800] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:17:05,493] [tests.py] [test_not_existing_user()] [13900] [INFO] : End testing.
+[2024-09-14 13:17:21,789] [tests.py] [test_existing_user()] [00023] [INFO] : Start testing.
+[2024-09-14 13:17:21,790] [tests.py] [test_existing_user()] [00024] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:17:21,790] [tests.py] [test_existing_user()] [00025] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:17:21,796] [tests.py] [test_existing_user()] [00026] [DEBUG] : [Session key] [i87z2g6ghq2sfwzt7r415h6mqbu7pm9d]
+[2024-09-14 13:17:21,796] [tests.py] [test_existing_user()] [00027] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:17:21,797] [tests.py] [test_existing_user()] [00032] [DEBUG] : [Cookies] [Set-Cookie: sessionid=i87z2g6ghq2sfwzt7r415h6mqbu7pm9d]
+[2024-09-14 13:17:21,797] [tests.py] [test_existing_user()] [00033] [DEBUG] : [Session key] [i87z2g6ghq2sfwzt7r415h6mqbu7pm9d]
+[2024-09-14 13:17:21,798] [tests.py] [test_existing_user()] [00043] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:17:21,801] [tests.py] [test_existing_user()] [00055] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:17:21,801] [tests.py] [test_existing_user()] [00056] [INFO] : Sending request...
+[2024-09-14 13:17:21,835] [tests.py] [test_existing_user()] [00061] [INFO] : The response was recived.
+[2024-09-14 13:17:21,835] [tests.py] [test_existing_user()] [00062] [DEBUG] : [Session key] [i87z2g6ghq2sfwzt7r415h6mqbu7pm9d]
+[2024-09-14 13:17:21,835] [tests.py] [test_existing_user()] [00063] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:17:21,836] [tests.py] [test_existing_user()] [00064] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:17:21,836] [tests.py] [test_existing_user()] [00065] [INFO] : Cheking values...
+[2024-09-14 13:17:21,836] [tests.py] [test_existing_user()] [00081] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:17:21,836] [tests.py] [test_existing_user()] [00082] [INFO] : End testing.
+[2024-09-14 13:17:21,842] [tests.py] [test_not_existing_user()] [00094] [INFO] : Start testing.
+[2024-09-14 13:17:21,842] [tests.py] [test_not_existing_user()] [00095] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:17:21,842] [tests.py] [test_not_existing_user()] [00096] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:17:21,846] [tests.py] [test_not_existing_user()] [00097] [DEBUG] : [Session key] [ywx50kjq94b1ekt2bn51u3psr249x7el]
+[2024-09-14 13:17:21,846] [tests.py] [test_not_existing_user()] [00098] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:17:21,846] [tests.py] [test_not_existing_user()] [00103] [DEBUG] : [Cookies] [Set-Cookie: sessionid=ywx50kjq94b1ekt2bn51u3psr249x7el]
+[2024-09-14 13:17:21,846] [tests.py] [test_not_existing_user()] [00104] [DEBUG] : [Session key] [ywx50kjq94b1ekt2bn51u3psr249x7el]
+[2024-09-14 13:17:21,848] [tests.py] [test_not_existing_user()] [00113] [INFO] : User was added into a table 'users'
+[2024-09-14 13:17:21,850] [tests.py] [test_not_existing_user()] [00123] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:17:21,850] [tests.py] [test_not_existing_user()] [00124] [INFO] : Sending request...
+[2024-09-14 13:17:21,858] [tests.py] [test_not_existing_user()] [00129] [INFO] : The response was recived.
+[2024-09-14 13:17:21,858] [tests.py] [test_not_existing_user()] [00130] [DEBUG] : [Session key] [ywx50kjq94b1ekt2bn51u3psr249x7el]
+[2024-09-14 13:17:21,858] [tests.py] [test_not_existing_user()] [00131] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:17:21,859] [tests.py] [test_not_existing_user()] [00132] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:17:21,859] [tests.py] [test_not_existing_user()] [00133] [INFO] : Cheking values...
+[2024-09-14 13:17:21,859] [tests.py] [test_not_existing_user()] [00138] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:17:21,859] [tests.py] [test_not_existing_user()] [00139] [INFO] : End testing.
+[2024-09-14 13:18:12,844] [tests.py] [test_existing_user()] [0023] [INFO] : Start testing.
+[2024-09-14 13:18:12,844] [tests.py] [test_existing_user()] [0024] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:18:12,844] [tests.py] [test_existing_user()] [0025] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:18:12,849] [tests.py] [test_existing_user()] [0026] [DEBUG] : [Session key] [f5bt5qd8959b2jylwm9oaexznq9nvgx0]
+[2024-09-14 13:18:12,849] [tests.py] [test_existing_user()] [0027] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:18:12,849] [tests.py] [test_existing_user()] [0032] [DEBUG] : [Cookies] [Set-Cookie: sessionid=f5bt5qd8959b2jylwm9oaexznq9nvgx0]
+[2024-09-14 13:18:12,849] [tests.py] [test_existing_user()] [0033] [DEBUG] : [Session key] [f5bt5qd8959b2jylwm9oaexznq9nvgx0]
+[2024-09-14 13:18:12,851] [tests.py] [test_existing_user()] [0043] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:18:12,853] [tests.py] [test_existing_user()] [0055] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:18:12,853] [tests.py] [test_existing_user()] [0056] [INFO] : Sending request...
+[2024-09-14 13:18:12,872] [tests.py] [test_existing_user()] [0061] [INFO] : The response was recived.
+[2024-09-14 13:18:12,872] [tests.py] [test_existing_user()] [0062] [DEBUG] : [Session key] [f5bt5qd8959b2jylwm9oaexznq9nvgx0]
+[2024-09-14 13:18:12,872] [tests.py] [test_existing_user()] [0063] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:18:12,872] [tests.py] [test_existing_user()] [0064] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:18:12,872] [tests.py] [test_existing_user()] [0065] [INFO] : Cheking values...
+[2024-09-14 13:18:12,873] [tests.py] [test_existing_user()] [0081] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:18:12,873] [tests.py] [test_existing_user()] [0082] [INFO] : End testing.
+[2024-09-14 13:18:12,875] [tests.py] [test_not_existing_user()] [0094] [INFO] : Start testing.
+[2024-09-14 13:18:12,876] [tests.py] [test_not_existing_user()] [0095] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:18:12,876] [tests.py] [test_not_existing_user()] [0096] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:18:12,879] [tests.py] [test_not_existing_user()] [0097] [DEBUG] : [Session key] [39dhd4b72n3okj45i43xux9zvr3lvtds]
+[2024-09-14 13:18:12,879] [tests.py] [test_not_existing_user()] [0098] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:18:12,880] [tests.py] [test_not_existing_user()] [0103] [DEBUG] : [Cookies] [Set-Cookie: sessionid=39dhd4b72n3okj45i43xux9zvr3lvtds]
+[2024-09-14 13:18:12,880] [tests.py] [test_not_existing_user()] [0104] [DEBUG] : [Session key] [39dhd4b72n3okj45i43xux9zvr3lvtds]
+[2024-09-14 13:18:12,881] [tests.py] [test_not_existing_user()] [0113] [INFO] : User was added into a table 'users'
+[2024-09-14 13:18:12,882] [tests.py] [test_not_existing_user()] [0123] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:18:12,882] [tests.py] [test_not_existing_user()] [0124] [INFO] : Sending request...
+[2024-09-14 13:18:12,888] [tests.py] [test_not_existing_user()] [0129] [INFO] : The response was recived.
+[2024-09-14 13:18:12,888] [tests.py] [test_not_existing_user()] [0130] [DEBUG] : [Session key] [39dhd4b72n3okj45i43xux9zvr3lvtds]
+[2024-09-14 13:18:12,889] [tests.py] [test_not_existing_user()] [0131] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:18:12,889] [tests.py] [test_not_existing_user()] [0132] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:18:12,889] [tests.py] [test_not_existing_user()] [0133] [INFO] : Cheking values...
+[2024-09-14 13:18:12,889] [tests.py] [test_not_existing_user()] [0138] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:18:12,889] [tests.py] [test_not_existing_user()] [0139] [INFO] : End testing.
+[2024-09-14 13:18:58,385] [tests.py] [test_existing_user()] [23__] [INFO] : Start testing.
+[2024-09-14 13:18:58,385] [tests.py] [test_existing_user()] [24__] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:18:58,385] [tests.py] [test_existing_user()] [25__] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:18:58,391] [tests.py] [test_existing_user()] [26__] [DEBUG] : [Session key] [bhba4smhbjy9obb2o0jz17sz0st2xwzl]
+[2024-09-14 13:18:58,391] [tests.py] [test_existing_user()] [27__] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:18:58,391] [tests.py] [test_existing_user()] [32__] [DEBUG] : [Cookies] [Set-Cookie: sessionid=bhba4smhbjy9obb2o0jz17sz0st2xwzl]
+[2024-09-14 13:18:58,391] [tests.py] [test_existing_user()] [33__] [DEBUG] : [Session key] [bhba4smhbjy9obb2o0jz17sz0st2xwzl]
+[2024-09-14 13:18:58,393] [tests.py] [test_existing_user()] [43__] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:18:58,395] [tests.py] [test_existing_user()] [55__] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:18:58,395] [tests.py] [test_existing_user()] [56__] [INFO] : Sending request...
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [61__] [INFO] : The response was recived.
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [62__] [DEBUG] : [Session key] [bhba4smhbjy9obb2o0jz17sz0st2xwzl]
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [63__] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [64__] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [65__] [INFO] : Cheking values...
+[2024-09-14 13:18:58,422] [tests.py] [test_existing_user()] [81__] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:18:58,423] [tests.py] [test_existing_user()] [82__] [INFO] : End testing.
+[2024-09-14 13:18:58,426] [tests.py] [test_not_existing_user()] [94__] [INFO] : Start testing.
+[2024-09-14 13:18:58,426] [tests.py] [test_not_existing_user()] [95__] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:18:58,426] [tests.py] [test_not_existing_user()] [96__] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:18:58,431] [tests.py] [test_not_existing_user()] [97__] [DEBUG] : [Session key] [vqytapzslx1fa5609qmhr11vblhjff4d]
+[2024-09-14 13:18:58,432] [tests.py] [test_not_existing_user()] [98__] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:18:58,432] [tests.py] [test_not_existing_user()] [103_] [DEBUG] : [Cookies] [Set-Cookie: sessionid=vqytapzslx1fa5609qmhr11vblhjff4d]
+[2024-09-14 13:18:58,432] [tests.py] [test_not_existing_user()] [104_] [DEBUG] : [Session key] [vqytapzslx1fa5609qmhr11vblhjff4d]
+[2024-09-14 13:18:58,433] [tests.py] [test_not_existing_user()] [113_] [INFO] : User was added into a table 'users'
+[2024-09-14 13:18:58,435] [tests.py] [test_not_existing_user()] [123_] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:18:58,435] [tests.py] [test_not_existing_user()] [124_] [INFO] : Sending request...
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [129_] [INFO] : The response was recived.
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [130_] [DEBUG] : [Session key] [vqytapzslx1fa5609qmhr11vblhjff4d]
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [131_] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [132_] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [133_] [INFO] : Cheking values...
+[2024-09-14 13:18:58,443] [tests.py] [test_not_existing_user()] [138_] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:18:58,444] [tests.py] [test_not_existing_user()] [139_] [INFO] : End testing.
+[2024-09-14 13:20:17,266] [tests.py] [test_existing_user()] [23--] [INFO] : Start testing.
+[2024-09-14 13:20:17,267] [tests.py] [test_existing_user()] [24--] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:20:17,267] [tests.py] [test_existing_user()] [25--] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:20:17,273] [tests.py] [test_existing_user()] [26--] [DEBUG] : [Session key] [2nltimtodob69zpys0zit5y1icmkdwml]
+[2024-09-14 13:20:17,274] [tests.py] [test_existing_user()] [27--] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:20:17,274] [tests.py] [test_existing_user()] [32--] [DEBUG] : [Cookies] [Set-Cookie: sessionid=2nltimtodob69zpys0zit5y1icmkdwml]
+[2024-09-14 13:20:17,274] [tests.py] [test_existing_user()] [33--] [DEBUG] : [Session key] [2nltimtodob69zpys0zit5y1icmkdwml]
+[2024-09-14 13:20:17,276] [tests.py] [test_existing_user()] [43--] [INFO] : Two users was added into a table 'users'
+[2024-09-14 13:20:17,278] [tests.py] [test_existing_user()] [55--] [INFO] : Four notes was added into a table 'notes'
+[2024-09-14 13:20:17,278] [tests.py] [test_existing_user()] [56--] [INFO] : Sending request...
+[2024-09-14 13:20:17,297] [tests.py] [test_existing_user()] [61--] [INFO] : The response was recived.
+[2024-09-14 13:20:17,297] [tests.py] [test_existing_user()] [62--] [DEBUG] : [Session key] [2nltimtodob69zpys0zit5y1icmkdwml]
+[2024-09-14 13:20:17,297] [tests.py] [test_existing_user()] [63--] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:20:17,298] [tests.py] [test_existing_user()] [64--] [DEBUG] : [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:20:17,298] [tests.py] [test_existing_user()] [65--] [INFO] : Cheking values...
+[2024-09-14 13:20:17,298] [tests.py] [test_existing_user()] [81--] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:20:17,298] [tests.py] [test_existing_user()] [82--] [INFO] : End testing.
+[2024-09-14 13:20:17,301] [tests.py] [test_not_existing_user()] [94--] [INFO] : Start testing.
+[2024-09-14 13:20:17,301] [tests.py] [test_not_existing_user()] [95--] [DEBUG] : [Cookies] [...]
+[2024-09-14 13:20:17,301] [tests.py] [test_not_existing_user()] [96--] [DEBUG] : [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:20:17,306] [tests.py] [test_not_existing_user()] [97--] [DEBUG] : [Session key] [vboqjwiany7oga2ko90w2aic9cfnul7t]
+[2024-09-14 13:20:17,306] [tests.py] [test_not_existing_user()] [98--] [DEBUG] : [Interaction with session was occured]
+[2024-09-14 13:20:17,306] [tests.py] [test_not_existing_user()] [103-] [DEBUG] : [Cookies] [Set-Cookie: sessionid=vboqjwiany7oga2ko90w2aic9cfnul7t]
+[2024-09-14 13:20:17,306] [tests.py] [test_not_existing_user()] [104-] [DEBUG] : [Session key] [vboqjwiany7oga2ko90w2aic9cfnul7t]
+[2024-09-14 13:20:17,307] [tests.py] [test_not_existing_user()] [113-] [INFO] : User was added into a table 'users'
+[2024-09-14 13:20:17,309] [tests.py] [test_not_existing_user()] [123-] [INFO] : Two notes was added into a table 'notes'
+[2024-09-14 13:20:17,309] [tests.py] [test_not_existing_user()] [124-] [INFO] : Sending request...
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [129-] [INFO] : The response was recived.
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [130-] [DEBUG] : [Session key] [vboqjwiany7oga2ko90w2aic9cfnul7t]
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [131-] [DEBUG] : [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [132-] [DEBUG] : [response.context['notes']] [[]]
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [133-] [INFO] : Cheking values...
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [138-] [INFO] : All checks have been completed successfuly.
+[2024-09-14 13:20:17,316] [tests.py] [test_not_existing_user()] [139-] [INFO] : End testing.
+[2024-09-14 13:20:44,808] [tests.py] [test_existing_user()] [23++] [INFO] Start testing.
+[2024-09-14 13:20:44,809] [tests.py] [test_existing_user()] [24++] [DEBUG] [Cookies] [...]
+[2024-09-14 13:20:44,809] [tests.py] [test_existing_user()] [25++] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:20:44,815] [tests.py] [test_existing_user()] [26++] [DEBUG] [Session key] [4xvruawpp76mra3vabmnte41ev84uezy]
+[2024-09-14 13:20:44,816] [tests.py] [test_existing_user()] [27++] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:20:44,816] [tests.py] [test_existing_user()] [32++] [DEBUG] [Cookies] [Set-Cookie: sessionid=4xvruawpp76mra3vabmnte41ev84uezy]
+[2024-09-14 13:20:44,816] [tests.py] [test_existing_user()] [33++] [DEBUG] [Session key] [4xvruawpp76mra3vabmnte41ev84uezy]
+[2024-09-14 13:20:44,817] [tests.py] [test_existing_user()] [43++] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:20:44,819] [tests.py] [test_existing_user()] [55++] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:20:44,819] [tests.py] [test_existing_user()] [56++] [INFO] Sending request...
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [61++] [INFO] The response was recived.
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [62++] [DEBUG] [Session key] [4xvruawpp76mra3vabmnte41ev84uezy]
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [63++] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [64++] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [65++] [INFO] Cheking values...
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [81++] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:20:44,848] [tests.py] [test_existing_user()] [82++] [INFO] End testing.
+[2024-09-14 13:20:44,851] [tests.py] [test_not_existing_user()] [94++] [INFO] Start testing.
+[2024-09-14 13:20:44,852] [tests.py] [test_not_existing_user()] [95++] [DEBUG] [Cookies] [...]
+[2024-09-14 13:20:44,852] [tests.py] [test_not_existing_user()] [96++] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:20:44,857] [tests.py] [test_not_existing_user()] [97++] [DEBUG] [Session key] [3yfxiasfk88034zbmksgz00mxqrt4srx]
+[2024-09-14 13:20:44,857] [tests.py] [test_not_existing_user()] [98++] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:20:44,858] [tests.py] [test_not_existing_user()] [103+] [DEBUG] [Cookies] [Set-Cookie: sessionid=3yfxiasfk88034zbmksgz00mxqrt4srx]
+[2024-09-14 13:20:44,858] [tests.py] [test_not_existing_user()] [104+] [DEBUG] [Session key] [3yfxiasfk88034zbmksgz00mxqrt4srx]
+[2024-09-14 13:20:44,860] [tests.py] [test_not_existing_user()] [113+] [INFO] User was added into a table 'users'
+[2024-09-14 13:20:44,862] [tests.py] [test_not_existing_user()] [123+] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:20:44,863] [tests.py] [test_not_existing_user()] [124+] [INFO] Sending request...
+[2024-09-14 13:20:44,870] [tests.py] [test_not_existing_user()] [129+] [INFO] The response was recived.
+[2024-09-14 13:20:44,870] [tests.py] [test_not_existing_user()] [130+] [DEBUG] [Session key] [3yfxiasfk88034zbmksgz00mxqrt4srx]
+[2024-09-14 13:20:44,870] [tests.py] [test_not_existing_user()] [131+] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:20:44,870] [tests.py] [test_not_existing_user()] [132+] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:20:44,870] [tests.py] [test_not_existing_user()] [133+] [INFO] Cheking values...
+[2024-09-14 13:20:44,871] [tests.py] [test_not_existing_user()] [138+] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:20:44,871] [tests.py] [test_not_existing_user()] [139+] [INFO] End testing.
+[2024-09-14 13:21:01,446] [tests.py] [test_existing_user()] [23//] [INFO] Start testing.
+[2024-09-14 13:21:01,447] [tests.py] [test_existing_user()] [24//] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:01,447] [tests.py] [test_existing_user()] [25//] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:01,453] [tests.py] [test_existing_user()] [26//] [DEBUG] [Session key] [j1ee8w0ff7hlza4yxz138vmvlga1kjji]
+[2024-09-14 13:21:01,453] [tests.py] [test_existing_user()] [27//] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:01,454] [tests.py] [test_existing_user()] [32//] [DEBUG] [Cookies] [Set-Cookie: sessionid=j1ee8w0ff7hlza4yxz138vmvlga1kjji]
+[2024-09-14 13:21:01,454] [tests.py] [test_existing_user()] [33//] [DEBUG] [Session key] [j1ee8w0ff7hlza4yxz138vmvlga1kjji]
+[2024-09-14 13:21:01,455] [tests.py] [test_existing_user()] [43//] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:21:01,457] [tests.py] [test_existing_user()] [55//] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:21:01,457] [tests.py] [test_existing_user()] [56//] [INFO] Sending request...
+[2024-09-14 13:21:01,477] [tests.py] [test_existing_user()] [61//] [INFO] The response was recived.
+[2024-09-14 13:21:01,477] [tests.py] [test_existing_user()] [62//] [DEBUG] [Session key] [j1ee8w0ff7hlza4yxz138vmvlga1kjji]
+[2024-09-14 13:21:01,477] [tests.py] [test_existing_user()] [63//] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:01,478] [tests.py] [test_existing_user()] [64//] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:21:01,478] [tests.py] [test_existing_user()] [65//] [INFO] Cheking values...
+[2024-09-14 13:21:01,478] [tests.py] [test_existing_user()] [81//] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:01,478] [tests.py] [test_existing_user()] [82//] [INFO] End testing.
+[2024-09-14 13:21:01,482] [tests.py] [test_not_existing_user()] [94//] [INFO] Start testing.
+[2024-09-14 13:21:01,482] [tests.py] [test_not_existing_user()] [95//] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:01,482] [tests.py] [test_not_existing_user()] [96//] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:01,485] [tests.py] [test_not_existing_user()] [97//] [DEBUG] [Session key] [8cwlzdgn51lb0ll3cxsclsu4x0w1ep30]
+[2024-09-14 13:21:01,486] [tests.py] [test_not_existing_user()] [98//] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:01,486] [tests.py] [test_not_existing_user()] [103/] [DEBUG] [Cookies] [Set-Cookie: sessionid=8cwlzdgn51lb0ll3cxsclsu4x0w1ep30]
+[2024-09-14 13:21:01,486] [tests.py] [test_not_existing_user()] [104/] [DEBUG] [Session key] [8cwlzdgn51lb0ll3cxsclsu4x0w1ep30]
+[2024-09-14 13:21:01,487] [tests.py] [test_not_existing_user()] [113/] [INFO] User was added into a table 'users'
+[2024-09-14 13:21:01,488] [tests.py] [test_not_existing_user()] [123/] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:21:01,488] [tests.py] [test_not_existing_user()] [124/] [INFO] Sending request...
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [129/] [INFO] The response was recived.
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [130/] [DEBUG] [Session key] [8cwlzdgn51lb0ll3cxsclsu4x0w1ep30]
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [131/] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [132/] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [133/] [INFO] Cheking values...
+[2024-09-14 13:21:01,493] [tests.py] [test_not_existing_user()] [138/] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:01,494] [tests.py] [test_not_existing_user()] [139/] [INFO] End testing.
+[2024-09-14 13:21:22,438] [tests.py] [test_existing_user()] [23--] [INFO] Start testing.
+[2024-09-14 13:21:22,439] [tests.py] [test_existing_user()] [24--] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:22,439] [tests.py] [test_existing_user()] [25--] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:22,444] [tests.py] [test_existing_user()] [26--] [DEBUG] [Session key] [llq5msnu5ooepi5hbnh69s860j3udwbu]
+[2024-09-14 13:21:22,444] [tests.py] [test_existing_user()] [27--] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:22,444] [tests.py] [test_existing_user()] [32--] [DEBUG] [Cookies] [Set-Cookie: sessionid=llq5msnu5ooepi5hbnh69s860j3udwbu]
+[2024-09-14 13:21:22,445] [tests.py] [test_existing_user()] [33--] [DEBUG] [Session key] [llq5msnu5ooepi5hbnh69s860j3udwbu]
+[2024-09-14 13:21:22,446] [tests.py] [test_existing_user()] [43--] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:21:22,448] [tests.py] [test_existing_user()] [55--] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:21:22,448] [tests.py] [test_existing_user()] [56--] [INFO] Sending request...
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [61--] [INFO] The response was recived.
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [62--] [DEBUG] [Session key] [llq5msnu5ooepi5hbnh69s860j3udwbu]
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [63--] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [64--] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [65--] [INFO] Cheking values...
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [81--] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:22,470] [tests.py] [test_existing_user()] [82--] [INFO] End testing.
+[2024-09-14 13:21:22,473] [tests.py] [test_not_existing_user()] [94--] [INFO] Start testing.
+[2024-09-14 13:21:22,473] [tests.py] [test_not_existing_user()] [95--] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:22,473] [tests.py] [test_not_existing_user()] [96--] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:22,477] [tests.py] [test_not_existing_user()] [97--] [DEBUG] [Session key] [0ql53kir5n8fz73z8d7hcyw1hzh40hcr]
+[2024-09-14 13:21:22,477] [tests.py] [test_not_existing_user()] [98--] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:22,478] [tests.py] [test_not_existing_user()] [103-] [DEBUG] [Cookies] [Set-Cookie: sessionid=0ql53kir5n8fz73z8d7hcyw1hzh40hcr]
+[2024-09-14 13:21:22,478] [tests.py] [test_not_existing_user()] [104-] [DEBUG] [Session key] [0ql53kir5n8fz73z8d7hcyw1hzh40hcr]
+[2024-09-14 13:21:22,479] [tests.py] [test_not_existing_user()] [113-] [INFO] User was added into a table 'users'
+[2024-09-14 13:21:22,480] [tests.py] [test_not_existing_user()] [123-] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:21:22,480] [tests.py] [test_not_existing_user()] [124-] [INFO] Sending request...
+[2024-09-14 13:21:22,486] [tests.py] [test_not_existing_user()] [129-] [INFO] The response was recived.
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [130-] [DEBUG] [Session key] [0ql53kir5n8fz73z8d7hcyw1hzh40hcr]
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [131-] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [132-] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [133-] [INFO] Cheking values...
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [138-] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:22,487] [tests.py] [test_not_existing_user()] [139-] [INFO] End testing.
+[2024-09-14 13:21:27,753] [tests.py] [test_existing_user()] [23--] [INFO] Start testing.
+[2024-09-14 13:21:27,753] [tests.py] [test_existing_user()] [24--] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:27,753] [tests.py] [test_existing_user()] [25--] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:27,758] [tests.py] [test_existing_user()] [26--] [DEBUG] [Session key] [a6sd05r9becdopxbo2ennk9tc7cpzmo9]
+[2024-09-14 13:21:27,758] [tests.py] [test_existing_user()] [27--] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:27,759] [tests.py] [test_existing_user()] [32--] [DEBUG] [Cookies] [Set-Cookie: sessionid=a6sd05r9becdopxbo2ennk9tc7cpzmo9]
+[2024-09-14 13:21:27,759] [tests.py] [test_existing_user()] [33--] [DEBUG] [Session key] [a6sd05r9becdopxbo2ennk9tc7cpzmo9]
+[2024-09-14 13:21:27,760] [tests.py] [test_existing_user()] [43--] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:21:27,762] [tests.py] [test_existing_user()] [55--] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:21:27,762] [tests.py] [test_existing_user()] [56--] [INFO] Sending request...
+[2024-09-14 13:21:27,781] [tests.py] [test_existing_user()] [61--] [INFO] The response was recived.
+[2024-09-14 13:21:27,781] [tests.py] [test_existing_user()] [62--] [DEBUG] [Session key] [a6sd05r9becdopxbo2ennk9tc7cpzmo9]
+[2024-09-14 13:21:27,781] [tests.py] [test_existing_user()] [63--] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:27,782] [tests.py] [test_existing_user()] [64--] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:21:27,782] [tests.py] [test_existing_user()] [65--] [INFO] Cheking values...
+[2024-09-14 13:21:27,782] [tests.py] [test_existing_user()] [81--] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:27,782] [tests.py] [test_existing_user()] [82--] [INFO] End testing.
+[2024-09-14 13:21:27,784] [tests.py] [test_not_existing_user()] [94--] [INFO] Start testing.
+[2024-09-14 13:21:27,784] [tests.py] [test_not_existing_user()] [95--] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:27,784] [tests.py] [test_not_existing_user()] [96--] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:27,788] [tests.py] [test_not_existing_user()] [97--] [DEBUG] [Session key] [3leiac5sj32x6hamoyaqr0pkdtaavtdi]
+[2024-09-14 13:21:27,788] [tests.py] [test_not_existing_user()] [98--] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:27,788] [tests.py] [test_not_existing_user()] [103-] [DEBUG] [Cookies] [Set-Cookie: sessionid=3leiac5sj32x6hamoyaqr0pkdtaavtdi]
+[2024-09-14 13:21:27,788] [tests.py] [test_not_existing_user()] [104-] [DEBUG] [Session key] [3leiac5sj32x6hamoyaqr0pkdtaavtdi]
+[2024-09-14 13:21:27,789] [tests.py] [test_not_existing_user()] [113-] [INFO] User was added into a table 'users'
+[2024-09-14 13:21:27,790] [tests.py] [test_not_existing_user()] [123-] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:21:27,790] [tests.py] [test_not_existing_user()] [124-] [INFO] Sending request...
+[2024-09-14 13:21:27,796] [tests.py] [test_not_existing_user()] [129-] [INFO] The response was recived.
+[2024-09-14 13:21:27,796] [tests.py] [test_not_existing_user()] [130-] [DEBUG] [Session key] [3leiac5sj32x6hamoyaqr0pkdtaavtdi]
+[2024-09-14 13:21:27,797] [tests.py] [test_not_existing_user()] [131-] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:27,797] [tests.py] [test_not_existing_user()] [132-] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:21:27,797] [tests.py] [test_not_existing_user()] [133-] [INFO] Cheking values...
+[2024-09-14 13:21:27,797] [tests.py] [test_not_existing_user()] [138-] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:27,797] [tests.py] [test_not_existing_user()] [139-] [INFO] End testing.
+[2024-09-14 13:21:51,715] [tests.py] [test_existing_user()] [23---] [INFO] Start testing.
+[2024-09-14 13:21:51,716] [tests.py] [test_existing_user()] [24---] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:51,716] [tests.py] [test_existing_user()] [25---] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:51,725] [tests.py] [test_existing_user()] [26---] [DEBUG] [Session key] [lafmdedax4i9nyv0ogb41o2m9aj4ekuf]
+[2024-09-14 13:21:51,725] [tests.py] [test_existing_user()] [27---] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:51,726] [tests.py] [test_existing_user()] [32---] [DEBUG] [Cookies] [Set-Cookie: sessionid=lafmdedax4i9nyv0ogb41o2m9aj4ekuf]
+[2024-09-14 13:21:51,726] [tests.py] [test_existing_user()] [33---] [DEBUG] [Session key] [lafmdedax4i9nyv0ogb41o2m9aj4ekuf]
+[2024-09-14 13:21:51,728] [tests.py] [test_existing_user()] [43---] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:21:51,730] [tests.py] [test_existing_user()] [55---] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:21:51,730] [tests.py] [test_existing_user()] [56---] [INFO] Sending request...
+[2024-09-14 13:21:51,765] [tests.py] [test_existing_user()] [61---] [INFO] The response was recived.
+[2024-09-14 13:21:51,765] [tests.py] [test_existing_user()] [62---] [DEBUG] [Session key] [lafmdedax4i9nyv0ogb41o2m9aj4ekuf]
+[2024-09-14 13:21:51,766] [tests.py] [test_existing_user()] [63---] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:51,766] [tests.py] [test_existing_user()] [64---] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:21:51,767] [tests.py] [test_existing_user()] [65---] [INFO] Cheking values...
+[2024-09-14 13:21:51,767] [tests.py] [test_existing_user()] [81---] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:51,767] [tests.py] [test_existing_user()] [82---] [INFO] End testing.
+[2024-09-14 13:21:51,772] [tests.py] [test_not_existing_user()] [94---] [INFO] Start testing.
+[2024-09-14 13:21:51,772] [tests.py] [test_not_existing_user()] [95---] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:51,772] [tests.py] [test_not_existing_user()] [96---] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:51,776] [tests.py] [test_not_existing_user()] [97---] [DEBUG] [Session key] [ffv3wky0a370nrj07skw0en4ivoeyzy5]
+[2024-09-14 13:21:51,777] [tests.py] [test_not_existing_user()] [98---] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:51,778] [tests.py] [test_not_existing_user()] [103--] [DEBUG] [Cookies] [Set-Cookie: sessionid=ffv3wky0a370nrj07skw0en4ivoeyzy5]
+[2024-09-14 13:21:51,778] [tests.py] [test_not_existing_user()] [104--] [DEBUG] [Session key] [ffv3wky0a370nrj07skw0en4ivoeyzy5]
+[2024-09-14 13:21:51,780] [tests.py] [test_not_existing_user()] [113--] [INFO] User was added into a table 'users'
+[2024-09-14 13:21:51,782] [tests.py] [test_not_existing_user()] [123--] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:21:51,782] [tests.py] [test_not_existing_user()] [124--] [INFO] Sending request...
+[2024-09-14 13:21:51,791] [tests.py] [test_not_existing_user()] [129--] [INFO] The response was recived.
+[2024-09-14 13:21:51,791] [tests.py] [test_not_existing_user()] [130--] [DEBUG] [Session key] [ffv3wky0a370nrj07skw0en4ivoeyzy5]
+[2024-09-14 13:21:51,791] [tests.py] [test_not_existing_user()] [131--] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:51,792] [tests.py] [test_not_existing_user()] [132--] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:21:51,792] [tests.py] [test_not_existing_user()] [133--] [INFO] Cheking values...
+[2024-09-14 13:21:51,792] [tests.py] [test_not_existing_user()] [138--] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:51,792] [tests.py] [test_not_existing_user()] [139--] [INFO] End testing.
+[2024-09-14 13:21:54,700] [tests.py] [test_existing_user()] [23---] [INFO] Start testing.
+[2024-09-14 13:21:54,701] [tests.py] [test_existing_user()] [24---] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:54,701] [tests.py] [test_existing_user()] [25---] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:54,708] [tests.py] [test_existing_user()] [26---] [DEBUG] [Session key] [7oowh0uiouvbep8wt0nn1c31x74shell]
+[2024-09-14 13:21:54,708] [tests.py] [test_existing_user()] [27---] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:54,709] [tests.py] [test_existing_user()] [32---] [DEBUG] [Cookies] [Set-Cookie: sessionid=7oowh0uiouvbep8wt0nn1c31x74shell]
+[2024-09-14 13:21:54,709] [tests.py] [test_existing_user()] [33---] [DEBUG] [Session key] [7oowh0uiouvbep8wt0nn1c31x74shell]
+[2024-09-14 13:21:54,711] [tests.py] [test_existing_user()] [43---] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:21:54,713] [tests.py] [test_existing_user()] [55---] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:21:54,714] [tests.py] [test_existing_user()] [56---] [INFO] Sending request...
+[2024-09-14 13:21:54,745] [tests.py] [test_existing_user()] [61---] [INFO] The response was recived.
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [62---] [DEBUG] [Session key] [7oowh0uiouvbep8wt0nn1c31x74shell]
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [63---] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [64---] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [65---] [INFO] Cheking values...
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [81---] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:54,746] [tests.py] [test_existing_user()] [82---] [INFO] End testing.
+[2024-09-14 13:21:54,750] [tests.py] [test_not_existing_user()] [94---] [INFO] Start testing.
+[2024-09-14 13:21:54,750] [tests.py] [test_not_existing_user()] [95---] [DEBUG] [Cookies] [...]
+[2024-09-14 13:21:54,750] [tests.py] [test_not_existing_user()] [96---] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:21:54,755] [tests.py] [test_not_existing_user()] [97---] [DEBUG] [Session key] [0l1d8ur9ozsad6p43t6fgqza6tw36qtn]
+[2024-09-14 13:21:54,755] [tests.py] [test_not_existing_user()] [98---] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:21:54,755] [tests.py] [test_not_existing_user()] [103--] [DEBUG] [Cookies] [Set-Cookie: sessionid=0l1d8ur9ozsad6p43t6fgqza6tw36qtn]
+[2024-09-14 13:21:54,755] [tests.py] [test_not_existing_user()] [104--] [DEBUG] [Session key] [0l1d8ur9ozsad6p43t6fgqza6tw36qtn]
+[2024-09-14 13:21:54,756] [tests.py] [test_not_existing_user()] [113--] [INFO] User was added into a table 'users'
+[2024-09-14 13:21:54,758] [tests.py] [test_not_existing_user()] [123--] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:21:54,758] [tests.py] [test_not_existing_user()] [124--] [INFO] Sending request...
+[2024-09-14 13:21:54,767] [tests.py] [test_not_existing_user()] [129--] [INFO] The response was recived.
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [130--] [DEBUG] [Session key] [0l1d8ur9ozsad6p43t6fgqza6tw36qtn]
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [131--] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [132--] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [133--] [INFO] Cheking values...
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [138--] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:21:54,768] [tests.py] [test_not_existing_user()] [139--] [INFO] End testing.
+[2024-09-14 13:22:34,436] [tests.py] [test_existing_user()] [---23] [INFO] Start testing.
+[2024-09-14 13:22:34,437] [tests.py] [test_existing_user()] [---24] [DEBUG] [Cookies] [...]
+[2024-09-14 13:22:34,437] [tests.py] [test_existing_user()] [---25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:22:34,445] [tests.py] [test_existing_user()] [---26] [DEBUG] [Session key] [rk27vuka669903gwwrhlptlxicm81c8q]
+[2024-09-14 13:22:34,445] [tests.py] [test_existing_user()] [---27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:22:34,445] [tests.py] [test_existing_user()] [---32] [DEBUG] [Cookies] [Set-Cookie: sessionid=rk27vuka669903gwwrhlptlxicm81c8q]
+[2024-09-14 13:22:34,445] [tests.py] [test_existing_user()] [---33] [DEBUG] [Session key] [rk27vuka669903gwwrhlptlxicm81c8q]
+[2024-09-14 13:22:34,447] [tests.py] [test_existing_user()] [---43] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:22:34,449] [tests.py] [test_existing_user()] [---55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:22:34,449] [tests.py] [test_existing_user()] [---56] [INFO] Sending request...
+[2024-09-14 13:22:34,487] [tests.py] [test_existing_user()] [---61] [INFO] The response was recived.
+[2024-09-14 13:22:34,487] [tests.py] [test_existing_user()] [---62] [DEBUG] [Session key] [rk27vuka669903gwwrhlptlxicm81c8q]
+[2024-09-14 13:22:34,487] [tests.py] [test_existing_user()] [---63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:22:34,487] [tests.py] [test_existing_user()] [---64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:22:34,487] [tests.py] [test_existing_user()] [---65] [INFO] Cheking values...
+[2024-09-14 13:22:34,488] [tests.py] [test_existing_user()] [---81] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:22:34,488] [tests.py] [test_existing_user()] [---82] [INFO] End testing.
+[2024-09-14 13:22:34,491] [tests.py] [test_not_existing_user()] [---94] [INFO] Start testing.
+[2024-09-14 13:22:34,491] [tests.py] [test_not_existing_user()] [---95] [DEBUG] [Cookies] [...]
+[2024-09-14 13:22:34,491] [tests.py] [test_not_existing_user()] [---96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:22:34,496] [tests.py] [test_not_existing_user()] [---97] [DEBUG] [Session key] [hcv5a8wwle7j3xefd1ndhyy5v6zngq42]
+[2024-09-14 13:22:34,496] [tests.py] [test_not_existing_user()] [---98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:22:34,496] [tests.py] [test_not_existing_user()] [--103] [DEBUG] [Cookies] [Set-Cookie: sessionid=hcv5a8wwle7j3xefd1ndhyy5v6zngq42]
+[2024-09-14 13:22:34,496] [tests.py] [test_not_existing_user()] [--104] [DEBUG] [Session key] [hcv5a8wwle7j3xefd1ndhyy5v6zngq42]
+[2024-09-14 13:22:34,497] [tests.py] [test_not_existing_user()] [--113] [INFO] User was added into a table 'users'
+[2024-09-14 13:22:34,499] [tests.py] [test_not_existing_user()] [--123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:22:34,499] [tests.py] [test_not_existing_user()] [--124] [INFO] Sending request...
+[2024-09-14 13:22:34,506] [tests.py] [test_not_existing_user()] [--129] [INFO] The response was recived.
+[2024-09-14 13:22:34,506] [tests.py] [test_not_existing_user()] [--130] [DEBUG] [Session key] [hcv5a8wwle7j3xefd1ndhyy5v6zngq42]
+[2024-09-14 13:22:34,506] [tests.py] [test_not_existing_user()] [--131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:22:34,507] [tests.py] [test_not_existing_user()] [--132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:22:34,507] [tests.py] [test_not_existing_user()] [--133] [INFO] Cheking values...
+[2024-09-14 13:22:34,507] [tests.py] [test_not_existing_user()] [--138] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:22:34,507] [tests.py] [test_not_existing_user()] [--139] [INFO] End testing.
+[2024-09-14 13:23:59,556] [tests.py] [---23] [INFO] Start testing.
+[2024-09-14 13:23:59,557] [tests.py] [---24] [DEBUG] [Cookies] [...]
+[2024-09-14 13:23:59,557] [tests.py] [---25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:23:59,561] [tests.py] [---26] [DEBUG] [Session key] [mbmri6upfpdxu3a4c3blxwqng8txmhjh]
+[2024-09-14 13:23:59,561] [tests.py] [---27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:23:59,562] [tests.py] [---32] [DEBUG] [Cookies] [Set-Cookie: sessionid=mbmri6upfpdxu3a4c3blxwqng8txmhjh]
+[2024-09-14 13:23:59,562] [tests.py] [---33] [DEBUG] [Session key] [mbmri6upfpdxu3a4c3blxwqng8txmhjh]
+[2024-09-14 13:23:59,563] [tests.py] [---43] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:23:59,565] [tests.py] [---55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:23:59,566] [tests.py] [---56] [INFO] Sending request...
+[2024-09-14 13:23:59,587] [tests.py] [---61] [INFO] The response was recived.
+[2024-09-14 13:23:59,587] [tests.py] [---62] [DEBUG] [Session key] [mbmri6upfpdxu3a4c3blxwqng8txmhjh]
+[2024-09-14 13:23:59,587] [tests.py] [---63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:23:59,587] [tests.py] [---64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:23:59,588] [tests.py] [---65] [INFO] Cheking values...
+[2024-09-14 13:23:59,588] [tests.py] [---81] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:23:59,588] [tests.py] [---82] [INFO] End testing.
+[2024-09-14 13:23:59,591] [tests.py] [---94] [INFO] Start testing.
+[2024-09-14 13:23:59,591] [tests.py] [---95] [DEBUG] [Cookies] [...]
+[2024-09-14 13:23:59,591] [tests.py] [---96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:23:59,595] [tests.py] [---97] [DEBUG] [Session key] [8cfgy3fh0m490mrmqginvq8387kkocqu]
+[2024-09-14 13:23:59,595] [tests.py] [---98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:23:59,595] [tests.py] [--103] [DEBUG] [Cookies] [Set-Cookie: sessionid=8cfgy3fh0m490mrmqginvq8387kkocqu]
+[2024-09-14 13:23:59,595] [tests.py] [--104] [DEBUG] [Session key] [8cfgy3fh0m490mrmqginvq8387kkocqu]
+[2024-09-14 13:23:59,596] [tests.py] [--113] [INFO] User was added into a table 'users'
+[2024-09-14 13:23:59,598] [tests.py] [--123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:23:59,598] [tests.py] [--124] [INFO] Sending request...
+[2024-09-14 13:23:59,603] [tests.py] [--129] [INFO] The response was recived.
+[2024-09-14 13:23:59,603] [tests.py] [--130] [DEBUG] [Session key] [8cfgy3fh0m490mrmqginvq8387kkocqu]
+[2024-09-14 13:23:59,603] [tests.py] [--131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:23:59,603] [tests.py] [--132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:23:59,603] [tests.py] [--133] [INFO] Cheking values...
+[2024-09-14 13:23:59,604] [tests.py] [--138] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:23:59,604] [tests.py] [--139] [INFO] End testing.
+[2024-09-14 13:24:32,266] [tests.py] [test_existing_user()] [---23] [INFO] Start testing.
+[2024-09-14 13:24:32,266] [tests.py] [test_existing_user()] [---24] [DEBUG] [Cookies] [...]
+[2024-09-14 13:24:32,266] [tests.py] [test_existing_user()] [---25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:24:32,273] [tests.py] [test_existing_user()] [---26] [DEBUG] [Session key] [g8cfj43mx4o5xzt9qq9b51b5vcfn8s0q]
+[2024-09-14 13:24:32,273] [tests.py] [test_existing_user()] [---27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:24:32,274] [tests.py] [test_existing_user()] [---32] [DEBUG] [Cookies] [Set-Cookie: sessionid=g8cfj43mx4o5xzt9qq9b51b5vcfn8s0q]
+[2024-09-14 13:24:32,274] [tests.py] [test_existing_user()] [---33] [DEBUG] [Session key] [g8cfj43mx4o5xzt9qq9b51b5vcfn8s0q]
+[2024-09-14 13:24:32,276] [tests.py] [test_existing_user()] [---43] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:24:32,278] [tests.py] [test_existing_user()] [---55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:24:32,279] [tests.py] [test_existing_user()] [---56] [INFO] Sending request...
+[2024-09-14 13:24:32,308] [tests.py] [test_existing_user()] [---61] [INFO] The response was recived.
+[2024-09-14 13:24:32,308] [tests.py] [test_existing_user()] [---62] [DEBUG] [Session key] [g8cfj43mx4o5xzt9qq9b51b5vcfn8s0q]
+[2024-09-14 13:24:32,309] [tests.py] [test_existing_user()] [---63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:24:32,309] [tests.py] [test_existing_user()] [---64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:24:32,309] [tests.py] [test_existing_user()] [---65] [INFO] Cheking values...
+[2024-09-14 13:24:32,309] [tests.py] [test_existing_user()] [---81] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:24:32,309] [tests.py] [test_existing_user()] [---82] [INFO] End testing.
+[2024-09-14 13:24:32,313] [tests.py] [test_not_existing_user()] [---94] [INFO] Start testing.
+[2024-09-14 13:24:32,313] [tests.py] [test_not_existing_user()] [---95] [DEBUG] [Cookies] [...]
+[2024-09-14 13:24:32,314] [tests.py] [test_not_existing_user()] [---96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:24:32,320] [tests.py] [test_not_existing_user()] [---97] [DEBUG] [Session key] [vjk98d2c369pxpu7vpend956sp029bwp]
+[2024-09-14 13:24:32,320] [tests.py] [test_not_existing_user()] [---98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:24:32,320] [tests.py] [test_not_existing_user()] [--103] [DEBUG] [Cookies] [Set-Cookie: sessionid=vjk98d2c369pxpu7vpend956sp029bwp]
+[2024-09-14 13:24:32,320] [tests.py] [test_not_existing_user()] [--104] [DEBUG] [Session key] [vjk98d2c369pxpu7vpend956sp029bwp]
+[2024-09-14 13:24:32,321] [tests.py] [test_not_existing_user()] [--113] [INFO] User was added into a table 'users'
+[2024-09-14 13:24:32,323] [tests.py] [test_not_existing_user()] [--123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:24:32,323] [tests.py] [test_not_existing_user()] [--124] [INFO] Sending request...
+[2024-09-14 13:24:32,333] [tests.py] [test_not_existing_user()] [--129] [INFO] The response was recived.
+[2024-09-14 13:24:32,334] [tests.py] [test_not_existing_user()] [--130] [DEBUG] [Session key] [vjk98d2c369pxpu7vpend956sp029bwp]
+[2024-09-14 13:24:32,334] [tests.py] [test_not_existing_user()] [--131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:24:32,334] [tests.py] [test_not_existing_user()] [--132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:24:32,334] [tests.py] [test_not_existing_user()] [--133] [INFO] Cheking values...
+[2024-09-14 13:24:32,334] [tests.py] [test_not_existing_user()] [--138] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:24:32,335] [tests.py] [test_not_existing_user()] [--139] [INFO] End testing.
+[2024-09-14 13:24:38,131] [tests.py] [test_existing_user()] [---23] [INFO] Start testing.
+[2024-09-14 13:24:38,131] [tests.py] [test_existing_user()] [---24] [DEBUG] [Cookies] [...]
+[2024-09-14 13:24:38,131] [tests.py] [test_existing_user()] [---25] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:24:38,143] [tests.py] [test_existing_user()] [---26] [DEBUG] [Session key] [dtqntb7hqc3lxnu69i2ydixp5s85a5vo]
+[2024-09-14 13:24:38,144] [tests.py] [test_existing_user()] [---27] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:24:38,144] [tests.py] [test_existing_user()] [---32] [DEBUG] [Cookies] [Set-Cookie: sessionid=dtqntb7hqc3lxnu69i2ydixp5s85a5vo]
+[2024-09-14 13:24:38,144] [tests.py] [test_existing_user()] [---33] [DEBUG] [Session key] [dtqntb7hqc3lxnu69i2ydixp5s85a5vo]
+[2024-09-14 13:24:38,147] [tests.py] [test_existing_user()] [---43] [INFO] Two users was added into a table 'users'
+[2024-09-14 13:24:38,150] [tests.py] [test_existing_user()] [---55] [INFO] Four notes was added into a table 'notes'
+[2024-09-14 13:24:38,150] [tests.py] [test_existing_user()] [---56] [INFO] Sending request...
+[2024-09-14 13:24:38,179] [tests.py] [test_existing_user()] [---61] [INFO] The response was recived.
+[2024-09-14 13:24:38,179] [tests.py] [test_existing_user()] [---62] [DEBUG] [Session key] [dtqntb7hqc3lxnu69i2ydixp5s85a5vo]
+[2024-09-14 13:24:38,179] [tests.py] [test_existing_user()] [---63] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:24:38,179] [tests.py] [test_existing_user()] [---64] [DEBUG] [response.context['notes']] [[('Parot', 'Parot_button_id'), ('Smoll', 'Smoll_button_id')]]
+[2024-09-14 13:24:38,180] [tests.py] [test_existing_user()] [---65] [INFO] Cheking values...
+[2024-09-14 13:24:38,180] [tests.py] [test_existing_user()] [---81] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:24:38,180] [tests.py] [test_existing_user()] [---82] [INFO] End testing.
+[2024-09-14 13:24:38,185] [tests.py] [test_not_existing_user()] [---94] [INFO] Start testing.
+[2024-09-14 13:24:38,185] [tests.py] [test_not_existing_user()] [---95] [DEBUG] [Cookies] [...]
+[2024-09-14 13:24:38,185] [tests.py] [test_not_existing_user()] [---96] [DEBUG] [Cookies data type] [<class 'http.cookies.SimpleCookie'>]
+[2024-09-14 13:24:38,189] [tests.py] [test_not_existing_user()] [---97] [DEBUG] [Session key] [owk1z2e09cbs9ic6f0jo0jrw724r48h1]
+[2024-09-14 13:24:38,189] [tests.py] [test_not_existing_user()] [---98] [DEBUG] [Interaction with session was occured]
+[2024-09-14 13:24:38,189] [tests.py] [test_not_existing_user()] [--103] [DEBUG] [Cookies] [Set-Cookie: sessionid=owk1z2e09cbs9ic6f0jo0jrw724r48h1]
+[2024-09-14 13:24:38,189] [tests.py] [test_not_existing_user()] [--104] [DEBUG] [Session key] [owk1z2e09cbs9ic6f0jo0jrw724r48h1]
+[2024-09-14 13:24:38,190] [tests.py] [test_not_existing_user()] [--113] [INFO] User was added into a table 'users'
+[2024-09-14 13:24:38,192] [tests.py] [test_not_existing_user()] [--123] [INFO] Two notes was added into a table 'notes'
+[2024-09-14 13:24:38,193] [tests.py] [test_not_existing_user()] [--124] [INFO] Sending request...
+[2024-09-14 13:24:38,200] [tests.py] [test_not_existing_user()] [--129] [INFO] The response was recived.
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--130] [DEBUG] [Session key] [owk1z2e09cbs9ic6f0jo0jrw724r48h1]
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--131] [DEBUG] [response] [<TemplateResponse status_code=200, "text/html; charset=utf-8">]
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--132] [DEBUG] [response.context['notes']] [[]]
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--133] [INFO] Cheking values...
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--138] [INFO] All checks have been completed successfuly.
+[2024-09-14 13:24:38,201] [tests.py] [test_not_existing_user()] [--139] [INFO] End testing.
+[2024-09-15 09:41:08,337] [tests.py] [test_existing_user()] [---23] [INFO] Start testing.
+[2024-09-15 09:41:08,349] [tests.py] [test_existing_user()] [---43] [INFO] Two users was added into a table 'users'
+[2024-09-15 09:41:08,351] [tests.py] [test_existing_user()] [---55] [INFO] Four notes was added into a table 'notes'
+[2024-09-15 09:41:08,351] [tests.py] [test_existing_user()] [---56] [INFO] Sending request...
+[2024-09-15 09:41:08,382] [tests.py] [test_existing_user()] [---61] [INFO] The response was recived.
+[2024-09-15 09:41:08,382] [tests.py] [test_existing_user()] [---65] [INFO] Cheking values...
+[2024-09-15 09:41:08,382] [tests.py] [test_existing_user()] [---81] [INFO] All checks have been completed successfuly.
+[2024-09-15 09:41:08,382] [tests.py] [test_existing_user()] [---82] [INFO] End testing.
+[2024-09-15 09:41:08,385] [tests.py] [test_not_existing_user()] [---94] [INFO] Start testing.
+[2024-09-15 09:41:08,390] [tests.py] [test_not_existing_user()] [--113] [INFO] User was added into a table 'users'
+[2024-09-15 09:41:08,392] [tests.py] [test_not_existing_user()] [--123] [INFO] Two notes was added into a table 'notes'
+[2024-09-15 09:41:08,392] [tests.py] [test_not_existing_user()] [--124] [INFO] Sending request...
+[2024-09-15 09:41:08,399] [tests.py] [test_not_existing_user()] [--129] [INFO] The response was recived.
+[2024-09-15 09:41:08,399] [tests.py] [test_not_existing_user()] [--133] [INFO] Cheking values...
+[2024-09-15 09:41:08,400] [tests.py] [test_not_existing_user()] [--138] [INFO] All checks have been completed successfuly.
+[2024-09-15 09:41:08,400] [tests.py] [test_not_existing_user()] [--139] [INFO] End testing.

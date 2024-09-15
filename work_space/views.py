@@ -22,9 +22,9 @@ class WorkSpaceView(TemplateView):
         
         # Creates a list with tuples.
         # Each tuple contain note's button id and note's lable
-        notes = []
-        db_notes = Notes.objects.filter(user_id_id=session_key)
+        db_notes = Notes.objects.filter(user_id=session_key)
         print(f"[WorkSpaceView] [db_notes] [{db_notes}]")
+        notes = []
         for note in db_notes:
             note_label = note.label
             note_button_id = note.label.replace(" ", "_") + "_button_id"
@@ -53,14 +53,14 @@ class FileCreationFormView(FormView):
         # Create an object in Notes table if user with this session already exist in table Users
         # if it's not create a auser in table Users and try to create object in table Notes  
         try:
-            if Notes.objects.filter(label=label, user_id_id=session_key).exists():
+            if Notes.objects.filter(label=label, user_id=session_key).exists():
                 response_data = {"message": "The file with this label already exists."}
                 return JsonResponse(data=response_data, status=400)
             
-            Notes.objects.create(label=label, user_id_id=session_key)
+            Notes.objects.create(label=label, user_id=session_key)
         except IntegrityError:
             Users.objects.create(user=session_key)
-            Notes.objects.create(label=label, user_id_id=session_key)
+            Notes.objects.create(label=label, user_id=session_key)
 
         # Create response data and pass it to response
         response_data = {
@@ -75,7 +75,7 @@ class OpenedFileView(TemplateView):
     def get_context_data(self, **kwargs) -> dict:
         session = self.request.session.session_key
         label = self.request.GET["label"]
-        note = Notes.objects.filter(label=label, user_id_id=session).first()
+        note = Notes.objects.filter(label=label, user_id=session).first()
 
         context = super().get_context_data(**kwargs)
         context["panel_id"] = note.label.replace(" ", "_") + "_panel_id"

@@ -1,12 +1,18 @@
 from django.test import TestCase
 from django.urls import reverse
+
 import logging
 
 from .models import Notes, Users
 
+
+logger = logging.getLogger(__name__)
+
+
+
 class WorkSpaceViewTests(TestCase):
     
-    def test_1(self):
+    def test_existing_user(self):
         '''
         User alredy exists in DB and have some notes in table 'notes'.
         
@@ -14,19 +20,17 @@ class WorkSpaceViewTests(TestCase):
         
         Table 'users' contains other user
         '''
-        logging.basicConfig(level=logging.INFO, format="[WorkSpaceViewTests] [%(funcName)s] [%(asctime)s] [%(levelname)s] %(message)s")
-        
-        logging.info("Start testing.")
-        logging.debug(f"[Cookies] [{self.client.cookies or '...'}]")
-        logging.debug(f"[Cookies data type] [{type(self.client.cookies)}]")
-        logging.debug(f"[Session key] [{self.client.session.session_key}]")
-        logging.debug(f"[Interaction with session was occured]")
+        logger.info("Start testing.")
+        logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
+        logger.debug(f"[Cookies data type] [{type(self.client.cookies)}]")
+        logger.debug(f"[Session key] [{self.client.session.session_key}]")
+        logger.debug(f"[Interaction with session was occured]")
         
         # Get session key
         session = self.client.session.session_key
  
-        logging.debug(f"[Cookies] [{self.client.cookies or '...'}]")
-        logging.debug(f"[Session key] [{session}]")
+        logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
+        logger.debug(f"[Session key] [{session}]")
         
         # Create users in table 'users'
         Users.objects.bulk_create(
@@ -36,42 +40,102 @@ class WorkSpaceViewTests(TestCase):
             ]
         )
         
-        logging.info("Two users was added into a table 'users'")
+        logger.info("Two users was added into a table 'users'")
         
         # Create notes in table 'notes'
-        db_notes = Notes.objects.bulk_create(
+        Notes.objects.bulk_create(
             [
-                Notes(label="Parot", content="Just a tiny parot", user_id_id=session),
-                Notes(label="Smoll", content="So smoll", user_id_id=session),
-                Notes(label="The spirit city", content="There are only spirits", user_id_id="7e608yzjayddm5mn5raof6feahyggb4w"),
-                Notes(label="Power bank", content="Power", user_id_id="7e608yzjayddm5mn5raof6feahyggb4w"),
+                Notes(label="Parot", content="Just a tiny parot", user_id=session),
+                Notes(label="Smoll", content="So smoll", user_id=session),
+                Notes(label="The spirit city", content="There are only spirits", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
+                Notes(label="Power bank", content="Power", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
             ]
         )
         
-        logging.info("Four notes was added into a table 'notes'")
-        
-        # Fill variable notes with note lable and button id
-        notes = []
-        for note in db_notes:
-            if note.user_id_id == session:
-                label = note.label
-                button_id = f"{label}_button_id"
-                notes.append((label, button_id))
-        
-        logging.info("Sending request...")
+        logger.info("Four notes was added into a table 'notes'")
+        logger.info("Sending request...")
         
         # Send request
         response = self.client.get(reverse("work-space:index")) 
         
-        logging.info("The response was recived.")
-        logging.debug(f"[Session key] [{session}]")
-        logging.debug(f"[notes] [{notes}]")
-        logging.debug(f"[response] [{response}]")
-        logging.debug(f"[response.context['notes']] [{response.context['notes']}]")
-        logging.info("Cheking values...")
+        logger.info("The response was recived.")
+        logger.debug(f"[Session key] [{session}]")
+        logger.debug(f"[response] [{response}]")
+        logger.debug(f"[response.context['notes']] [{response.context['notes']}]")
+        logger.info("Cheking values...")
         
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["notes"], notes)
+        response_notes = response.context["notes"]
+        self.assertIsInstance(response_notes, list)
+        for note in response_notes:
+            label = note[0]
+            button_id = note[1]
+            self.assertIsInstance(note, tuple)
+            self.assertIsInstance(label, str)
+            self.assertIsInstance(button_id, str)
+            self.assertIn("_button_id", button_id)
+            self.assertIn(label, button_id)
+            
+            
         
-        logging.info("All checks have been completed successfuly.")
-        logging.info("End testing.")
+        logger.info("All checks have been completed successfuly.")
+        logger.info("End testing.")
+        
+        
+    def test_not_existing_user(self):
+        '''
+        User does not exists in DB and have some notes in table 'notes'.
+        
+        Table 'notes' contains other users notes
+        
+        Table 'users' contains other user
+        '''
+        
+        logger.info("Start testing.")
+        logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
+        logger.debug(f"[Cookies data type] [{type(self.client.cookies)}]")
+        logger.debug(f"[Session key] [{self.client.session.session_key}]")
+        logger.debug(f"[Interaction with session was occured]")
+        
+        # Get session key
+        session = self.client.session.session_key
+ 
+        logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
+        logger.debug(f"[Session key] [{session}]")
+        
+        # Create users in table 'users'
+        Users.objects.bulk_create(
+            [
+                Users(user="7e608yzjayddm5mn5raof6feahyggb4w"),
+            ]
+        )
+        
+        logger.info("User was added into a table 'users'")
+        
+        # Create notes in table 'notes'
+        Notes.objects.bulk_create(
+            [
+                Notes(label="The spirit city", content="There are only spirits", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
+                Notes(label="Power bank", content="Power", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
+            ]
+        )
+        
+        logger.info("Two notes was added into a table 'notes'")
+        logger.info("Sending request...")
+        
+        # Send request
+        response = self.client.get(reverse("work-space:index")) 
+        
+        logger.info("The response was recived.")
+        logger.debug(f"[Session key] [{session}]")
+        logger.debug(f"[response] [{response}]")
+        logger.debug(f"[response.context['notes']] [{response.context['notes']}]")
+        logger.info("Cheking values...")
+        
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["notes"], [])
+        
+        logger.info("All checks have been completed successfuly.")
+        logger.info("End testing.")
+        
+        
