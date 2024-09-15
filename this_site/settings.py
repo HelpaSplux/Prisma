@@ -152,7 +152,7 @@ LOGGING = {
     },
     "formatters": {
         "default": {
-            "format": "[{asctime}] [{filename}] [{funcName}()] [{lineno:->5}] [{levelname}] {message}",
+            "format": "[{asctime}] [{filename}] [{funcName}()] [{lineno:->5}] [{levelname}] [{message}]",
             "style": "{"
                     },
     }
