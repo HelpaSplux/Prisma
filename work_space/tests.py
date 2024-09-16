@@ -186,7 +186,7 @@ class FileCreationFormViewTests(TestCase):
         notes = Notes.objects.all()
         logger.info("Completed.")
         
-        # Debug info
+        # Debug table info
         logger.debug(f"Tabel users - {users}")
         logger.debug(f"    user - {users.first().user}")
         logger.debug(f"Table notes - {notes}")
@@ -259,7 +259,7 @@ class FileCreationFormViewTests(TestCase):
         notes = Notes.objects.filter(user_id=session)
         logger.info("Completed.")
         
-        # Debug info
+        # Debug table info
         logger.debug(f"Tabel users - {users}")
         logger.debug(f"    user - {users.first().user}")
         logger.debug(f"Table notes - {notes}")
