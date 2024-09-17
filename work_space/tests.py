@@ -4,7 +4,7 @@ from django.urls import reverse
 import logging
 
 from .models import Notes, Users
-
+from .test_utils import create_records
 
 
 logger = logging.getLogger(__name__)
@@ -94,14 +94,8 @@ class WorkSpaceViewTests(TestCase):
         logger.info("Start testing.")
         logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
         logger.debug(f"[Cookies data type] [{type(self.client.cookies)}]")
-        logger.debug(f"[Session key] [{self.client.session.session_key}]")
-        logger.debug(f"[Interaction with session was occured]")
-        
-        # Get session key
-        session = self.client.session.session_key
  
         logger.debug(f"[Cookies] [{self.client.cookies or '...'}]")
-        logger.debug(f"[Session key] [{session}]")
         
         # Create users in table 'users'
         Users.objects.bulk_create(
@@ -127,13 +121,13 @@ class WorkSpaceViewTests(TestCase):
         response = self.client.get(reverse("work-space:index")) 
         
         logger.info("The response was recived.")
-        logger.debug(f"[Session key] [{session}]")
         logger.debug(f"[response] [{response}]")
         logger.debug(f"[response.context['notes']] [{response.context['notes']}]")
         logger.info("Cheking values...")
         
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["notes"], [])
+        self.assertIn("sessionid", response.cookies)
         
         logger.info("All checks have been completed successfuly.")
         logger.info("End testing.")
@@ -141,57 +135,6 @@ class WorkSpaceViewTests(TestCase):
         
 
 class FileCreationFormViewTests(TestCase):
-    
-    def create_records(self, user: object = None, note: object = None, empty_tables: bool = False):
-        '''
-        Creates random records in tables 'users' & 'notes'.
-        
-        Can add additional records if it passes within keyword argumants
-        
-        If `all_tables_empty = True` creates only arguments you pass in.
-        '''
-        
-        
-        random_users = [
-            Users(user="8e208yajayddm5mn5raof6feahyggb4w"),
-            Users(user="7e608yzjayddm5mn5raof6feahyggb4w"),
-        ]
-        random_notes = [
-            Notes(label="Parot", content="Just a tiny parot", user_id="8e208yajayddm5mn5raof6feahyggb4w"),
-            Notes(label="Smoll", content="So smoll", user_id="8e208yajayddm5mn5raof6feahyggb4w"),
-            Notes(label="The spirit city", content="There are only spirits", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
-            Notes(label="Power bank", content="Power", user_id="7e608yzjayddm5mn5raof6feahyggb4w"),
-        ]
-
-        # Adds specified arguments to random records
-        if empty_tables:
-            logger.info("Clearing all tables...")
-            random_users.clear()
-            random_notes.clear()
-            logger.info("Complete.")
-        
-        if user:
-            logger.info(f"Adding to random_users list - {user}...")
-            random_users.append(user)
-            logger.info("Complete.")
-        if note:
-            logger.info(f"Adding to random_notes list - {note}...")
-            random_notes.append(note)
-            logger.info("Complete.")
-        
-        logger.debug(f"Variable random_users contains {len(random_users)} records - {random_users}")
-        logger.debug(f"Variable random_notes contains {len(random_notes)} records - {random_notes}")
-        
-        # Create records in table 'users'
-        logger.info("Attempting to create records in table 'users'...")
-        Users.objects.bulk_create(random_users)
-        logger.info("Complete.")
-        
-        
-        # Create records in table 'notes'
-        logger.info("Attempting to create records in table 'notes'...")
-        Notes.objects.bulk_create(random_notes)
-        logger.info("Complete.")
     
     def test_existing_user_1(self):
         '''
@@ -208,7 +151,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Creating records in DB
         logger.info("Creating records in DB...")
-        self.create_records(user=Users(user=session), empty_tables=True)
+        create_records(user=Users(user=session), empty_tables=True)
         logger.info("Complete.")
         
         
@@ -267,7 +210,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Creating records in DB
         logger.info("Creating records in DB...")
-        self.create_records(user=Users(user=session))
+        create_records(user=Users(user=session))
         logger.info("Complete.")
         
         
@@ -325,7 +268,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Creating records in DB
         logger.info("Creating records in DB...")
-        self.create_records(
+        create_records(
             user=Users(user=session), 
             note=Notes(label="label", content="content", user_id=session)
         )
@@ -393,7 +336,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Creating records in DB
         logger.info("Creating records in DB...")
-        self.create_records(
+        create_records(
             user=Users(user=session), 
             note=Notes(label="Wonderful note", content="", user_id=session)
         )
@@ -503,7 +446,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Creating records in DB
         logger.info("Creating records in DB...")
-        self.create_records()
+        create_records()
         logger.info("Complete.")
         
         form_data = {
@@ -547,4 +490,50 @@ class FileCreationFormViewTests(TestCase):
         
         logger.info("End testing.")
         
+
+
+class OpenedFileViewTests(TestCase):
     
+    def test_existing_file(self): 
+        '''
+        User requesting his existing note  
+        '''
+        logger.info("Start testing.")
+        
+        session = self.client.session.session_key
+        create_records(
+            user=Users(user=session),
+            note=Notes(label="Wonderful note", content="Wonderful content", user_id=session)
+        )
+        
+        
+        logger.info("Sending request...")
+        response = self.client.get(reverse("work-space:opened-file"), {"label": "Wonderful note"})
+        logger.info("Complete.")
+        
+        logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
+
+        self.assertContains(response, 'class="bottom_right_panel" id="Wonderful_note_panel_id"')
+        self.assertContains(response, 'Wonderful note')
+        self.assertContains(response, 'Wonderful content')
+        logger.info("All checks have been completed successfuly.")
+        
+        logger.info("End testing.")
+    
+    def test_not_existing_file(self):
+        '''
+        User requesting not existing note
+        '''
+        logger.info("Start testing.")
+
+        logger.info("Sending request...")
+        response = self.client.get(reverse("work-space:opened-file"), {"label": "Wonderful note"})
+        logger.info("Complete.")
+        
+        logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 404)
+
+        logger.info("All checks have been completed successfuly.")
+        
+        logger.info("End testing.")

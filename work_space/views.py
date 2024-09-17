@@ -1,6 +1,5 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseNotFound
 from django.views.generic import TemplateView, FormView
-from django.db.utils import IntegrityError
 
 import logging
 
@@ -16,17 +15,21 @@ class WorkSpaceView(TemplateView):
     
     # Add all notes for current session to context
     def get_context_data(self, **kwargs) -> dict:
+        logger.info("Forming context data...")
         
         # Save session data and get session key
+        session = self.request.session
+        session.save()
         logger.debug(f"[WorkSpaceView] [COOKIES] [{self.request.COOKIES}]")
         logger.debug(f"[WorkSpaceView] [session_key] [{self.request.session.session_key}]")
-        session = self.request.session
-        # session.save()
         session_key = session.session_key
         
         # Creates a list with tuples.
         # Each tuple contain note's button id and note's lable
+        logger.info("Attempting to get note from DB...")
         db_notes = Notes.objects.filter(user_id=session_key)
+        logger.info("Complete.")
+        
         logger.debug(f"[WorkSpaceView] [db_notes] [{db_notes}]")
         notes = []
         for note in db_notes:
@@ -37,6 +40,8 @@ class WorkSpaceView(TemplateView):
         # Add data to context
         context = super().get_context_data(**kwargs)
         context["notes"] = notes
+        
+        logger.info("Complete.")
         return context
     
 
@@ -92,13 +97,40 @@ class FileCreationFormView(FormView):
 class OpenedFileView(TemplateView):
     template_name = "work_space/right_panel.html"
 
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+
+        if context == None:
+            logger.info("Sending 404 error response...")
+            return HttpResponseNotFound()
+        
+        logger.info("Sending response...")
+        return self.render_to_response(context)
+    
     def get_context_data(self, **kwargs) -> dict:
+        logger.info("Forming context data...")
+        
         session = self.request.session.session_key
         label = self.request.GET["label"]
-        note = Notes.objects.filter(label=label, user_id=session).first()
-
+        logger.debug(f"User - {session}")
+        logger.debug(f"Note label - {label}")
+        logger.debug(f"Request - {self.request}")
+        
+        logger.info("Attempting to get note from DB...")
+        note = Notes.objects.filter(label=label, user_id=session).first()            
+        logger.info("Complete.")
+        
         context = super().get_context_data(**kwargs)
-        context["panel_id"] = note.label.replace(" ", "_") + "_panel_id"
+        try:
+            context["panel_id"] = note.label.replace(" ", "_") + "_panel_id"
+        except AttributeError:
+            logger.warning("File not found.")
+            return None
+        
         context["note"] = note
+        logger.debug(f"context['panel_id'] = {context['panel_id']}")
+        logger.debug(f"context['note'] = {context['note']}")
+        
+        logger.info("Complete.")
         return context
     

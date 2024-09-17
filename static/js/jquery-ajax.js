@@ -98,7 +98,7 @@ $(document).ready(function () {
     return false
   });
 
-
+  // Send get request to obtain file data and show it to user
   $(document).on("click", ".file_button, .tab_button", function(event) {
     var file_label = $(event.target).text();
 
@@ -153,7 +153,7 @@ $(document).ready(function () {
         $("#" + panel_id).fadeIn(100);
       },100);
       
-      // Makes inative all file buttons.
+      // Makes inactive all file buttons.
       // Makes active current button.
       // Scroll to active button.
       $(".file_button").removeClass("file_button_active");
