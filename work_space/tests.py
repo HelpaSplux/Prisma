@@ -82,7 +82,6 @@ class WorkSpaceViewTests(TestCase):
         logger.info("All checks have been completed successfuly.")
         logger.info("End testing.")
         
-        
     def test_not_existing_user(self):
         '''
         User does not exists in DB and have some notes in table 'notes'.
@@ -242,6 +241,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Making checks
         logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(len(users), 1)
         self.assertEqual(len(notes), 1)
         self.assertEqual(users.first().user, session)
@@ -253,26 +253,195 @@ class FileCreationFormViewTests(TestCase):
         
         logger.info("End testing.")
         
-    # def test_existing_user_2(self):
-    #     '''
-    #     User exists in database and don't have any records in table 'notes'.
+    def test_existing_user_2(self):
+        '''
+        User exists in database and don't have any records in table 'notes'.
     
-        # All tabels filled with other users data.
-    #     '''    
+        All tabels filled with other users data.
+        '''    
+        logger.info("Start testing.")
         
-    # def test_existing_user_3(self):
-    #     '''
-    #     User exists in database and do have some records in table 'notes'
+        # Get session key
+        session = self.client.session.session_key
+        logger.debug(f"Session key from Session object - {session}")
         
-        # All tabels filled with other users data.
-    #     '''    
+        # Creating records in DB
+        logger.info("Creating records in DB...")
+        self.create_records(user=Users(user=session))
+        logger.info("Complete.")
         
-    # def test_existing_user_4(self):
-    #     '''
-    #     User exists in database and trying to create a duplicate record in table 'notes'
+        
+        form_data = {
+            "label": "Wonderful note",
+        }
+        
+        
+        # Making request
+        logger.info("Sending request...")
+        response = self.client.post(reverse("work-space:file-creation-form"), data=form_data) 
+        logger.info("Completed.")
+        logger.debug(f"Response - {response}")
+        
+        
+        # Get all records from tables "users" & "notes"
+        logger.info("Making requests to DB...")
+        user = Users.objects.filter(user=session)
+        notes = Notes.objects.filter(user=session)
+        logger.info("Completed.")
+        
+        # Debug table info
+        logger.debug(f"Current user - {user}")
+        logger.debug(f"Current user notes - {notes}")
+        logger.debug(f"    label - {notes.first().label}")
+        logger.debug(f"    content- {notes.first().content}")
+        logger.debug(f"    user_id - {notes.first().user_id}")
+        
+        
+        # Making checks
+        logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(user), 1)
+        self.assertEqual(len(notes), 1)
+        self.assertEqual(user.first().user, session)
+        self.assertEqual(notes.first().user_id, session)
+        self.assertEqual(notes.first().label, form_data["label"])
+        self.assertEqual(notes.first().content, "")
+        logger.info("All checks have been completed successfuly.")
+        
+        
+        logger.info("End testing.")
+            
+    def test_existing_user_3(self):
+        '''
+        User exists in database and do have some records in table 'notes'
+        
+        All tabels filled with other users data.
+        '''    
+        logger.info("Start testing.")
+        
+        # Get session key
+        session = self.client.session.session_key
+        logger.debug(f"Session key from Session object - {session}")
+        
+        # Creating records in DB
+        logger.info("Creating records in DB...")
+        self.create_records(
+            user=Users(user=session), 
+            note=Notes(label="label", content="content", user_id=session)
+        )
+        logger.info("Complete.")
+        
+        
+        form_data = {
+            "label": "Wonderful note",
+        }
+        
+        
+        # Making request
+        logger.info("Sending request...")
+        response = self.client.post(reverse("work-space:file-creation-form"), data=form_data) 
+        logger.info("Completed.")
+        logger.debug(f"Response - {response}")
+        
+        
+        # Get all records from tables "users" & "notes"
+        logger.info("Making requests to DB...")
+        user = Users.objects.filter(user=session)
+        notes = Notes.objects.filter(user=session)
+        logger.info("Completed.")
+        
+        # Debug table info
+        logger.debug(f"Current user - {user}")
+        logger.debug(f"Current user notes - {notes}")
+        
+        for note in notes:
+            logger.debug(f"Note - {note}")
+            logger.debug(f"    label - {note.label}")
+            logger.debug(f"    content- {note.content}")
+            logger.debug(f"    user_id - {note.user_id}")
+        
+        
+        # Making checks
+        logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(user), 1)
+        self.assertEqual(len(notes), 2)
+        self.assertEqual(user.first().user, session)
+        
+        for note in notes:
+            self.assertEqual(note.user_id, session)
+            
+            if note.label != "label":
+                self.assertEqual(note.label, form_data["label"])
+                self.assertEqual(note.content, "")
+        logger.info("All checks have been completed successfuly.")
+        
+        
+        logger.info("End testing.")
+        
+    def test_existing_user_4(self):
+        '''
+        User exists in database and trying to create a duplicate record in table 'notes'
     
-        # All tabels filled with other users data.
-    #     '''    
+        All tabels filled with other users data.
+        '''    
+        logger.info("Start testing.")
+        
+        # Get session key
+        session = self.client.session.session_key
+        logger.debug(f"Session key from Session object - {session}")
+        
+        # Creating records in DB
+        logger.info("Creating records in DB...")
+        self.create_records(
+            user=Users(user=session), 
+            note=Notes(label="Wonderful note", content="", user_id=session)
+        )
+        logger.info("Complete.")
+        
+        
+        form_data = {
+            "label": "Wonderful note",
+        }
+        
+        
+        # Making request
+        logger.info("Sending request...")
+        response = self.client.post(reverse("work-space:file-creation-form"), data=form_data) 
+        logger.info("Completed.")
+        logger.debug(f"Response - {response}")
+        
+        
+        # Get all records from tables "users" & "notes"
+        logger.info("Making requests to DB...")
+        user = Users.objects.filter(user=session)
+        notes = Notes.objects.filter(user=session)
+        logger.info("Completed.")
+        
+        # Debug table info
+        logger.debug(f"Current user - {user}")
+        logger.debug(f"Current user notes - {notes}")
+        
+        for note in notes:
+            logger.debug(f"Note - {note}")
+            logger.debug(f"    label - {note.label}")
+            logger.debug(f"    content- {note.content}")
+            logger.debug(f"    user_id - {note.user_id}")
+        
+        
+        # Making checks
+        logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.content, b'{"message": "The file with this label already exists."}')
+        self.assertEqual(len(user), 1)
+        self.assertEqual(len(notes), 1)
+        self.assertEqual(user.first().user, session)
+    
+        logger.info("All checks have been completed successfuly.")
+        
+        
+        logger.info("End testing.")
+        
         
     def test_not_existing_user_no_records(self):
         '''
@@ -312,6 +481,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Making checks
         logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(len(users), 1)
         self.assertEqual(len(notes), 1)
         self.assertEqual(users.first().user, session)
@@ -321,8 +491,7 @@ class FileCreationFormViewTests(TestCase):
         logger.info("All checks have been completed successfuly.")
         
         logger.info("End testing.")
-        
-        
+         
     def test_not_existing_user_some_records(self):
         '''
         User does not exist in database and trying to create a record in table 'notes'.
@@ -367,6 +536,7 @@ class FileCreationFormViewTests(TestCase):
         
         # Making checks
         logger.info("Checking the values...")
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(len(users), 1)
         self.assertEqual(len(notes), 1)
         self.assertEqual(users.first().user, session)
