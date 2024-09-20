@@ -10,6 +10,8 @@ from .models import Notes, Users
 
 logger = logging.getLogger(__name__)
 
+
+
 class WorkSpaceView(TemplateView):
     template_name = 'work_space/work_space.html'
     
@@ -44,11 +46,11 @@ class WorkSpaceView(TemplateView):
         logger.info("Complete.")
         return context
     
+    
 
 
 class FileCreationFormView(FormView):
     form_class = FileCreationForm
-    
 
     def form_valid(self, form):
         logger.info("Form is valid")
@@ -92,6 +94,8 @@ class FileCreationFormView(FormView):
         
         logger.info("Sending response...")
         return JsonResponse(data=response_data, status=200) 
+    
+    
     
     
 class OpenedFileView(TemplateView):

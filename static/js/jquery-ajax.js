@@ -123,8 +123,8 @@ $(document).ready(function () {
           },100);
           
           // Added tab.
-          // Make inactive other tabs.
-          // Make new tab active.
+          // Makes inactive other tabs.
+          // Makes new tab active.
           // Shows current tab.
           setTimeout(function () {
             $(".tab_bar").append(`<button id="${tab_id}" class="tab_button" type="button">${file_label}</button>`);
@@ -152,7 +152,18 @@ $(document).ready(function () {
       setTimeout(function () {
         $("#" + panel_id).fadeIn(100);
       },100);
-      
+
+      // Shows tab
+      var removed_tab = $(`#${tab_id}`)[0]
+      if ($(`#${tab_id}`).css("display") == "none") {
+        setTimeout(function () {
+          removed_tab.remove()
+          $(".tab_bar").append($(removed_tab))
+          $(`#${tab_id}`).fadeIn(100)
+        }, 100);
+
+      }
+
       // Makes inactive all file buttons.
       // Makes active current button.
       // Scroll to active button.
@@ -196,58 +207,36 @@ $(document).ready(function () {
     
   });
 
+  // Makes invisible tab, right panel
+  // Makes inactive file button on the left panel
+  $(document).on("click", ".close_file_button", function() {
+    $(".bottom_right_panel").fadeOut(100);
+    $(".tab_button_active").fadeOut(100);
+
+    let all_tabs = $(".tab_button")
+    let visible_tabs = []
+    
+    for (var tab = 0; tab < all_tabs.length; tab++) {
+      var current_tab = all_tabs[tab]
+      if ($(current_tab).css("display") != "none") {
+        visible_tabs.push(current_tab);
+      }}
+    
+    let active_tab = $(".tab_button_active")
+    let button_index = $(visible_tabs).index(active_tab)
+    
+    
+    $(".file_button").removeClass("file_button_active");
+    if (visible_tabs.length > 1) {
+      if (button_index > 0) {
+        button_index -= 1
+      } else {
+        button_index += 1
+      } 
+
+      visible_tabs[button_index].click()
+    }
+  })
+
+  
 });
-
-// function autoHeight(element) {
-//   console.log("\n\n Function starts...\n\n")
-//   var step = $(element).css("min-height").replace("px", "")
-//   var scroll_height = $(element).prop("scrollHeight")
-//   var style_height = $(element).css("height").replace("px","")
-  
-
-//   var scroll = scroll_height.toString().padEnd(5);
-//   var style = style_height.toString().padEnd(5);
-//   var scroll_type = (typeof scroll_height).padEnd(9);
-//   var style_type = (typeof style_height).padEnd(9);
-//   console.log("In progress...")
-  
-//   // console.log("In progress...")
-//   console.log(`_______________________________\n\
-// | element | Value | Data type |\n\
-// |---------|-------|-----------|\n\
-// | Scroll  | ${scroll} | ${scroll_type} |\n\
-// | Style   | ${style} | ${style_type} |`)
-//   console.log(scroll_height, style_height)
-//   // console.log(`Scroll: Value - ${scroll_height}, Data type - ${typeof scroll_height}`)
-//   // console.log(`Style: Value - ${style_height}, Data type - ${typeof scroll_height}`)
-//   // console.log(scroll_height, style_height)
-  
-//   // if (scroll_height > style_height) {
-//   //   console.log("scroll_height > style_height")
-//   //   console.log(`${scroll_height}px`)
-//   //   $(element).css("height", `${scroll_height}px`)
-//   // }
-//   $(element).animate({height: `${scroll_height}px`}, 0)
-//   console.log(element.style.height)
-//   // $(element).css("height", `${scroll_height}px`)
-//   // while (scroll_height == style_height && style_height > 32) {
-    
-//   //   console.log("Комбоджо")
-    
-//   //   $(element).css("height", `${+style_height - +step}px`);
-//   //   style_height = $(element).css("height").replace("px","")
-//   //   scroll_height = $(element).prop("scrollHeight")
-    
-//   //   console.log(`After determining a new style:\n scroll height - ${scroll_height},\n style_height  - ${style_height}`)
-    
-//   //   if (scroll_height > style_height) {
-//   //     console.log("Break condition is true.")
-//   //     $(element).css("height", `${+style_height + +step}px`);
-      
-//   //     console.log(+style_height + +step)
-      
-//   //     break
-//   //   }
-//   // }
-
-// }

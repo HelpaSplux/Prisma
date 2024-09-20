@@ -386,7 +386,7 @@ class FileCreationFormViewTests(TestCase):
         logger.info("End testing.")
         
         
-    def test_not_existing_user_no_records(self):
+    def test_not_existing_user_1(self):
         '''
         User does not exist in database and trying to create a record in table 'notes'.
         
@@ -435,7 +435,7 @@ class FileCreationFormViewTests(TestCase):
         
         logger.info("End testing.")
          
-    def test_not_existing_user_some_records(self):
+    def test_not_existing_user_2(self):
         '''
         User does not exist in database and trying to create a record in table 'notes'.
         
