@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", Arial;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -187,12 +187,54 @@ button:hover {
 }
 
 
+.file-deletion-form {
+    display: none;
+    border:1px solid rgba(245, 245, 245, 0.507);
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 900px;
+    min-height: 80px;
+    white-space: nowrap;
+    border-radius: 10px;
+    background: rgba(22, 22, 22, 0.863);
+    font-size: 13px;
+    padding: 8px 12px;
+    padding-bottom: 9px;
+}
+
+.deletion-confirmation-message {
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 17px;
+    text-wrap: wrap;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.deletion-form-button-container {
+    display:inline-block;
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+#file-deletion-form-delete {
+    margin-right: 2px;
+    background: #ff2626;
+}
+
 
 .file-creation-form {
+    display: none;
+    border:1px solid rgba(245, 245, 245, 0.507);
     position: absolute;
-    top: -40%;
+    top: -50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     min-width: 300px;
     min-height: 120px;
     white-space: nowrap;

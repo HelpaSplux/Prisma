@@ -47,11 +47,20 @@
       <div class="file-creation-input">
         <input class="file-name-input" type="text" name="label" required>
         <label>File name</label>
-
       </div>
-
       <button type="submit" id="file-creation-form-submit">Create</button>
     </form>
+  </div>
+
+  <div class="file-deletion-form" href="{% url "work-space:file-deletion-form" %}">
+      <div class="deletion-confirmation-message"></div>
+
+      <div class="deletion-form-button-container">
+        <button type="button" id="file-deletion-form-cancel">Cancel</button>
+      </div>
+      <div class="deletion-form-button-container">
+        <button type="button" id="file-deletion-form-delete">Delete</button>
+      </div>
   </div>
 
   <div class="success_message" id="success_message_id"></div>

@@ -1,5 +1,5 @@
 from django.http import JsonResponse, HttpResponseNotFound
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, View
 
 import logging
 
@@ -138,3 +138,27 @@ class OpenedFileView(TemplateView):
         logger.info("Complete.")
         return context
     
+
+
+def file_deletion_form_view(request):
+    '''
+    Handles deletion request:
+        - if record exists - deletes it and returns success message.
+        - if not exists - returns failure message
+    '''
+    
+    session = request.session.session_key
+    file_name = request.GET["label"]
+    record = Notes.objects.filter(label=file_name, user_id=session)
+    
+    response_data = {"message": f"'{file_name}' was deleted successfully."}
+    status_code = 200
+    logger.debug(f"Query parameter 'label': {file_name}")
+
+    if record.exists():
+        record.delete()
+    else:
+        response_data["message"] = f"Failed to delete '{file_name}'"
+        status_code = 400
+            
+    return JsonResponse(data=response_data, status=status_code)
