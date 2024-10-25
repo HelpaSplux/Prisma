@@ -73,10 +73,8 @@ $(document).ready(function () {
 
         // Opens next file
         if (previous_sibling) {
-          console.log("[if] [Clicking on previous sibling]")
           previous_sibling.click();
         } else if (top_buttons.length >= 1) {
-          console.log("[else if] [Clicking on next sibling]")
           top_buttons[0].click();
         };
 

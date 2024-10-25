@@ -1,4 +1,8 @@
+from psycopg2.errors import UniqueViolation
+from selenium.webdriver.common.by import By
+
 import logging
+import time
 
 from .models import Notes, Users
 
@@ -7,13 +11,13 @@ from .models import Notes, Users
 logger = logging.getLogger(__name__)
 
 
-def create_records(user: object = None, note: object = None, empty_tables: bool = False):
+def create_records(user: object = None, note: object = None, only_arguments: bool = False):
         '''
         Creates random records in tables 'users' & 'notes'.
         
         Can add additional records if it passes within keyword argumants
         
-        If `all_tables_empty = True` creates only arguments you pass in.
+        If `only_arguments = True` creates only arguments you pass in.
         '''
         
         
@@ -29,7 +33,7 @@ def create_records(user: object = None, note: object = None, empty_tables: bool 
         ]
 
         # Adds specified arguments to random records
-        if empty_tables:
+        if only_arguments:
             logger.info("Clearing all tables...")
             random_users.clear()
             random_notes.clear()
@@ -39,6 +43,7 @@ def create_records(user: object = None, note: object = None, empty_tables: bool 
             logger.info(f"Adding to random_users list - {user}...")
             random_users.append(user)
             logger.info("Complete.")
+            
         if note:
             logger.info(f"Adding to random_notes list - {note}...")
             random_notes.append(note)
@@ -48,12 +53,20 @@ def create_records(user: object = None, note: object = None, empty_tables: bool 
         logger.debug(f"Variable random_notes contains {len(random_notes)} records - {random_notes}")
         
         # Create records in table 'users'
-        logger.info("Attempting to create records in table 'users'...")
-        Users.objects.bulk_create(random_users)
-        logger.info("Complete.")
-        
-        
+        try:
+            logger.info("USER | Attempting to create records in table 'users'...")
+            Users.objects.bulk_create(random_users)
+            logger.info("USER | Complete.")
+        except UniqueViolation:
+            logger.info("USER | Failed to cretae a user.")
+            logger.warning("USER | This user already exists")
+            
         # Create records in table 'notes'
-        logger.info("Attempting to create records in table 'notes'...")
-        Notes.objects.bulk_create(random_notes)
-        logger.info("Complete.")
+        try:
+            logger.info("Attempting to create records in table 'notes'...")
+            Notes.objects.bulk_create(random_notes)
+            logger.info("Complete.")
+        except UniqueViolation:
+            logger.info("NOTE | Failed to cretae a note.")
+            logger.warning("NOTE | This note already exists")
+            

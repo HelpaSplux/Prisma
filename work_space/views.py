@@ -1,5 +1,5 @@
 from django.http import JsonResponse, HttpResponseNotFound
-from django.views.generic import TemplateView, FormView, View
+from django.views.generic import TemplateView, FormView
 
 import logging
 
@@ -17,22 +17,23 @@ class WorkSpaceView(TemplateView):
     
     # Add all notes for current session to context
     def get_context_data(self, **kwargs) -> dict:
-        logger.info("Forming context data...")
+        logger.info("CONTEXT | Forming context data.")
         
         # Save session data and get session key
+        logger.debug(f"REQUEST | Session key BEFORE session was triggered: {self.request.session.session_key}")
         session = self.request.session
         session.save()
-        logger.debug(f"[WorkSpaceView] [COOKIES] [{self.request.COOKIES}]")
-        logger.debug(f"[WorkSpaceView] [session_key] [{self.request.session.session_key}]")
         session_key = session.session_key
+        logger.debug(f"REQUEST | Cookies: {self.request.COOKIES}")
+        logger.debug(f"REQUEST | Session key AFTER session was triggered: {self.request.session.session_key}")
         
         # Creates a list with tuples.
-        # Each tuple contain note's button id and note's lable
-        logger.info("Attempting to get note from DB...")
+        # Each tuple contain note's button id and lable
+        logger.info("RECORD | Requesting record from DB.")
         db_notes = Notes.objects.filter(user_id=session_key)
-        logger.info("Complete.")
+        logger.info("RECORD | Record recived.")
         
-        logger.debug(f"[WorkSpaceView] [db_notes] [{db_notes}]")
+        logger.debug(f"RECORD | Variable 'db_notes' contains: {db_notes}")
         notes = []
         for note in db_notes:
             note_label = note.label
@@ -42,8 +43,7 @@ class WorkSpaceView(TemplateView):
         # Add data to context
         context = super().get_context_data(**kwargs)
         context["notes"] = notes
-        
-        logger.info("Complete.")
+        logger.info("CONTEXT | Context data is ready.")
         return context
     
     
