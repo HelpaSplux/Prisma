@@ -8,7 +8,7 @@ import logging
 import time
 
 from .models import Notes, Users
-from .test_utils import create_records
+from .test_utils import DBImage, create_records
 
 
 
@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
     
     
 class SeleniumTest(StaticLiveServerTestCase):
-    
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.selenium = WebDriver()
@@ -28,6 +28,20 @@ class SeleniumTest(StaticLiveServerTestCase):
     def tearDownClass(cls) -> None:
         cls.selenium.close()
         return super().tearDownClass()
+    
+    @staticmethod
+    def get(test_object, url):
+         # Adding sessionid in cookies
+        session = test_object.client.session.session_key
+        logger.info(f"Requesting {url}.")
+        test_object.selenium.get(url)
+        test_object.selenium.add_cookie({"name": "sessionid", "value": session,})
+        
+        # Refreshing the page to apply cookie changes 
+        logger.info(f"Refreshing page.")
+        test_object.selenium.refresh()
+        time.sleep(1)
+    
     
     
     
@@ -107,6 +121,7 @@ class TEST_OPEN_FILES(SeleniumTest):
                 user_id=user_info["user"],
             ),
         ]
+
         
         # Creates some random records and current user
         create_records(user=user)
@@ -155,6 +170,7 @@ class TEST_OPEN_FILES(SeleniumTest):
             self.assertEqual(file_title, active_button)
             
             
+            
             # Checks whether the state of the top button has been changed to active and added to the end of the list
             active_top_buttons = self.selenium.find_elements(By.CLASS_NAME, "tab_button_active")
             self.assertEqual(len(active_top_buttons), 1)
@@ -163,6 +179,8 @@ class TEST_OPEN_FILES(SeleniumTest):
             active_top_button = active_top_buttons[-1].text
             self.assertEqual(file_title, last_top_button)
             self.assertEqual(file_title, active_top_button)
+            
+            
             
             # Checks if panel is correctly shown to user
             panel = self.selenium.find_element(By.ID, f"{file_title}_panel_id")
@@ -174,5 +192,79 @@ class TEST_OPEN_FILES(SeleniumTest):
             time.sleep(1)
         
         print("[INFO] All buttons are clicked.")
-        
         logger.info("TEST | Testing completed.")
+        
+        
+class TEST_CLOSE_FILES(SeleniumTest):
+    def test(self):
+        logger.info("Close files testing begins.")
+        target_url = self.live_server_url + reverse("work-space:index")
+        records = 10
+        
+        # Creates records in database
+        dbi = DBImage()
+        dbi.add_other_users(count=3, records=4)
+        dbi.add_tested_user(test_object=self, records=records)
+        dbi.create_records()
+        
+        # Requesting target url
+        self.get(self, target_url)
+        
+        
+        
+        # Clicks on all left buttons
+        buttons = self.selenium.find_elements(By.CLASS_NAME, "file_button")
+        logger.debug(f"Found {len(buttons)} buttons.")
+        logger.info("Opening the left buttons.")
+        for button in buttons:
+            button.click()
+              
+        # Clicks tab 5
+        tabs = self.selenium.find_elements(By.CLASS_NAME, "tab_button")
+        tabs[5].click()
+
+        
+        # Closing files and making checks
+        predictions = list(range(records)) # [0 1 2 3 4 5 6 7 8 9]
+        predictions = predictions[::-1][5:] + predictions[6:] # [4 3 2 1 0 6 7 8 9 None]
+        predictions.append(None)
+        
+        for prediction in predictions:
+            
+            # Finds components of current file
+            closed_file = dict(
+                left_button= self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
+                top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button_active"),
+                panel = self.selenium.find_element(By.XPATH, "/html/body/div[2]/div[@style='display: block;']"),
+            )
+
+            # Close current file
+            close_button = closed_file["panel"].find_element(By.CLASS_NAME, "close_file_button")
+            close_button.click()
+            
+            
+            # Break the loop on the last iteration 
+            if prediction == None:
+                break
+            
+            
+            # Finds components of current file
+            opened_file = dict(
+                left_button = self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
+                top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button_active"),
+                panel = self.selenium.find_element(By.XPATH, "/html/body/div[2]/div[@style='display: block;']/form/div[1]/textarea"),
+            )
+
+
+            # Checks if predicted file is opened
+            self.assertIn(str(prediction), opened_file["left_button"].text)
+            self.assertIn(str(prediction), opened_file["top_button"].text)
+            self.assertIn(str(prediction), opened_file["panel"].text)
+            
+            # Checks if closed file components are changed
+            self.assertEqual(closed_file["left_button"].get_attribute("class"), "file_button")
+            self.assertEqual(closed_file["top_button"].get_attribute("class"), "tab_button")
+            self.assertEqual(closed_file["top_button"].get_attribute("style"), "display: none;")
+            self.assertEqual(closed_file["panel"].get_attribute("style"), "display: none;")
+
+
