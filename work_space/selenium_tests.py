@@ -39,7 +39,6 @@ class TEST_OPEN_FILES(SeleniumTest):
         self.go_to_the_site()
         
         # Open and validate files
-        logger.info("Data validation.")
         predictions = list(range(records))
         for prediction in predictions:
             self.open_file(prediction)
@@ -71,7 +70,6 @@ class TEST_CLOSE_FILES(SeleniumTest):
         predictions.append(None)
         
         # Close and validate files
-        logger.info("Data validation.")
         for prediction in predictions:
             closed_file = self.get_current_file()
             self.close_file(closed_file)
@@ -82,7 +80,7 @@ class TEST_CLOSE_FILES(SeleniumTest):
             opened_file = self.get_current_file()
 
             self.assertPrediction(prediction, opened_file)
-            self.assertHidden(closed_file)
+            self.assertClosed(closed_file)
 
 
 class TEST_DELETE_FILES(SeleniumTest):

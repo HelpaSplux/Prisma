@@ -140,7 +140,7 @@ LOGGING = {
         "file": {
             "class": "logging.FileHandler",
             "filename": "general.log",
-            "level": "DEBUG",
+            "level": "INFO",
             "formatter": "default"
         }
     },

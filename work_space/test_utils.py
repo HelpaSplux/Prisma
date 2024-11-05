@@ -29,12 +29,16 @@ class SeleniumTest(StaticLiveServerTestCase):
         return super().tearDownClass()
 
     def go_to_the_site(self) -> None:
-        # Adding sessionid in cookies
+        """Sets a cookie and goes to the site"""
+        
+        # Reqsting url
         url = self.live_server_url + reverse("work-space:index")
-        session = self.client.session.session_key
         logger.info(f"Requesting {url}.")
         self.selenium.get(url)
-        self.selenium.add_cookie({"name": "sessionid", "value": session,})
+        
+        # Adding sessionid in cookies
+        session = self.client.session.session_key
+        self.selenium.add_cookie({"name": "sessionid", "value": session})
         
         # Refreshing the page to apply cookie changes 
         logger.info(f"Refreshing page.")
@@ -44,51 +48,67 @@ class SeleniumTest(StaticLiveServerTestCase):
 
     
     def get_current_file(self) -> dict[str: object]:
+        """Returns currently opened file."""
+        
+        logger.info("Getting current file.")
+        # Getting panel of the current file
         panel = self.selenium.find_element(By.XPATH, "/html/body/div[2]/div[@style='display: block;']")
         
+        # Getting components of the current file
         current_file = dict(
             panel = panel,
             title_field = panel.find_element(By.CLASS_NAME, "label_field"),
             content_field = panel.find_element(By.CLASS_NAME, "content_field"),
             close_button = panel.find_element(By.CLASS_NAME, "close_file_button"),
             delete_button = panel.find_element(By.CLASS_NAME, "delete_file_button"),
-            left_button= self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
+            left_button = self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
             top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button_active"),
         )
+
         return current_file
     
 
     def _find_left_buttons(self) -> list[object]:
+        """Returns all left buttons in the template."""
+        
+        logger.info("Finding left buttons.")
         button_class = "file_button"
         
         buttons = self.selenium.find_elements(By.CLASS_NAME, button_class)
         logger.debug(f"Found {len(buttons)} buttons.")
-        logger.info("File opening.")
         
         return buttons
     
     
     def _find_top_buttons(self) -> list[object]:
+        """Returns all top buttons in the template."""
+        
+        logger.info("Finding top buttons.")
         tab_class = "tab_button"
         tabs = self.selenium.find_elements(By.CLASS_NAME, tab_class)
         return tabs
     
     
-    def create_file(self, input_data: int | str) -> None:
+    def create_file(self, file_name: int | str) -> None:
+        """Created a file with chosen file name."""
+        
         logger.info("Createing a file.")
         create_button_class = "create_button"
         input_class = "file-name-input"
         submit_id = "file-creation-form-submit"
 
+        # Clicking on create button
         time.sleep(1)
         create_button = self.selenium.find_element(By.CLASS_NAME, create_button_class)
         create_button.click()
-    
+
+        # Filling input field
         time.sleep(1)
         input_field = self.selenium.find_element(By.CLASS_NAME, input_class)
         input_field.clear()   
-        input_field.send_keys(str(input_data))
-    
+        input_field.send_keys(str(file_name))
+
+        # Clicking on submit button
         submit_button = self.selenium.find_element(By.ID, submit_id)
         submit_button.click()        
         
@@ -96,7 +116,9 @@ class SeleniumTest(StaticLiveServerTestCase):
     
 
     def open_file(self, file_name: int) -> None:
-        """Clicks on selected left button"""
+        """Presses the selected left button"""
+        logger.info(f"Opening file - '{file_name}'")
+        
         buttons = self._find_left_buttons()
         
         target_button = buttons[file_name]
@@ -105,7 +127,9 @@ class SeleniumTest(StaticLiveServerTestCase):
     
     
     def open_files(self) -> None:
-        """Clicks on all left buttons"""
+        """Clicks on all the left buttons."""
+        
+        logger.info("Opening all files.")
         buttons = self._find_left_buttons()
         for button in buttons:
             button.click()
@@ -113,67 +137,120 @@ class SeleniumTest(StaticLiveServerTestCase):
         return
         
     
-    def open_tab(self, tab: int) -> None:
+    def open_tab(self, tab_number: int) -> None:
+        """Opens chosen tab."""
+        
+        logger.info(f"Opening {tab_number} tab")
         tabs = self._find_top_buttons()
-        tabs[tab].click()
+        tabs[tab_number].click()
         return
         
     
-    def delete_file(self, deleted_file: dict[str: object]) -> None:
-        """Deletes current file"""
-        deleted_file["delete_button"].click()
+    def delete_file(self, deletable_file: dict[str: object]) -> None:
+        """
+        Deletes the current file
+        
+        - `deletable_file` - Return of `get_current_file` method.
+        """
+        logger.info("Deleting current file.")
+        
+        # Clicking on delete button
+        deletable_file["delete_button"].click()
         time.sleep(1.5)
         
+        # Clicking on delete confirmation button 
         confirmation_button = self.selenium.find_element(By.ID, "file-deletion-form-delete")
         confirmation_button.click()    
         return
     
     
     def close_file(self, closable_file: dict[str: object]) -> None:
-        # Close current file
+        """
+        Closes the current file.
+        
+        - `closable_file` - Return of `get_current_file` method.
+        """
+        
+        logger.info("Closing current file.")
         closable_file["close_button"].click()
         return
 
 
 
 
-    def assertCreated(self, file_name: int | str):
+    def assertCreated(self, file_name: int | str) -> None:
+        """Checks whether the left button of the created file is displayed in the file list."""
+        
         left_buttons = self._find_left_buttons()
         left_buttons = [button.text for button in left_buttons]
         
+        logger.info("Validating data")
+        
+        # Checks if file name contains in left buttons
         self.assertIn(str(file_name), left_buttons)
         return
 
         
-    def assertOpenedTab(self, opened_file: dict[str: object]):
-        tabs = tabs = self._find_top_buttons()
+    def assertOpenedTab(self, opened_file: dict[str: object]) -> None:
+        """
+        Checks if the opened tab is at the end of the tab list.
+        
+        - `opened_file` - Return of `get_current_file` method.
+        """
+        tabs = self._find_top_buttons()
         last_tab = tabs[-1]
         current_tab = opened_file["top_button"]
         
+        logger.info("Validating data")
+        
+        # Checks if current tab is last tab.
         self.assertEqual(last_tab, current_tab)
         return
     
     
-    def assertDeleted(self, deleted_file: dict[str: object]) -> None:
-        with self.assertRaises(StaleElementReferenceException):
-            deleted_file["left_button"].get_attribute("id")
+    def assertDeleted(self, file: dict[str: object]) -> None:
+        """
+        Checks if `file` is deleted.
+        
+        - `file` - Return of `get_current_file` method.
+        """
+        
+        exception_class = StaleElementReferenceException
+        logger.info("Validating data")
+        
+        # Checks if the file components exists
+        self.assertRaises(exception_class, file["left_button"].click)
+        self.assertRaises(exception_class, file["top_button"].click)
+        self.assertRaises(exception_class, file["title_field"].click)
 
-        with self.assertRaises(StaleElementReferenceException):
-            deleted_file["top_button"].get_attribute("id")
-
-        with self.assertRaises(StaleElementReferenceException):
-            deleted_file["title_field"].get_attribute("id")
         return
     
     
     def assertPrediction(self, prediction: int | str, opened_file: dict[str: object]) -> None:
+        """
+        Checks if the prediction and the opened file is match.
+        
+        - `prediction` - Predicted file name
+        - `opened_file` - The file that is currently open.
+        """
+        logger.info("Validating data")
+        
+        # Checks if prediction in the file components
         self.assertIn(str(prediction), opened_file["title_field"].text)
         self.assertIn(str(prediction), opened_file["left_button"].text)
         self.assertIn(str(prediction), opened_file["top_button"].text)
         return
     
     
-    def assertHidden(self, suggested_file: dict[str: object]) -> None:
+    def assertClosed(self, suggested_file: dict[str: object]) -> None:
+        """
+        Checks if `suggested_file` is closed.
+        
+        `suggested_file` - Return of `get_current_file` method.
+        """
+        logger.info("Validating data")
+        
+        # Checks if the file components are changed properly 
         self.assertEqual(suggested_file["left_button"].get_attribute("class"), "file_button")
         self.assertEqual(suggested_file["top_button"].get_attribute("class"), "tab_button")
         self.assertEqual(suggested_file["top_button"].get_attribute("style"), "display: none;")
@@ -187,7 +264,8 @@ class DBImage():
     Creates database image and allows you to create DB records based on this image.
     '''
     
-    def __init__(self):
+    def __init__(self) -> None:
+        logger.info("Building database image.")
         self.users = []
         self.notes = []
         return
@@ -201,6 +279,7 @@ class DBImage():
         - `user_id` - Describes user in table `users`. It can be session key or something else.
         """
         
+        logger.info("Creating models.")
         for note_number in range(records):
             note = Notes(label=note_number, content=note_number, user_id=user_id)
             self.notes.append(note)
@@ -215,8 +294,7 @@ class DBImage():
         - `count` - number of users to be created.
         - `records` - number of records to be created for each user.
         """
-        
-        logger.info(f"Createing models for other users.")
+        logger.info("Adding other users in database image.")
         logger.debug(f"Input arguments: count = {count}, records = {records}.")        
         if count:
             for user_number in range(count):
@@ -240,7 +318,7 @@ class DBImage():
         - `records` - number of records to be created for tested user.
         """
         
-        logger.info(f"Createing models for tested user.")
+        logger.info("Adding tested user in database image.")
         
         # Creating user
         session = test_object.client.session.session_key
@@ -264,15 +342,13 @@ class DBImage():
             logger.info("Creating records in table 'users'.")
             Users.objects.bulk_create(self.users)
         except UniqueViolation:
-            logger.info("Failed to cretae a user.")
-            logger.warning("This user already exists")
+            logger.warning("Failed to cretae a user. This user already exists.")
             
         # Create records in table 'notes'
         try:
             logger.info("Creating records in table 'notes'.")
             Notes.objects.bulk_create(self.notes)
         except UniqueViolation:
-            logger.info("Failed to cretae a note.")
-            logger.warning("This note already exists")
+            logger.warning("Failed to cretae a note. This note already exists.")
         return
 
