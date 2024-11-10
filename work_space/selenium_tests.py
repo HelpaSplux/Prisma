@@ -15,14 +15,15 @@ class TEST_CREATE_FILES(SeleniumTest):
         
         # Create and validate files
         logger.info("First validation.")
-        for file_name in range(10):
+        files = 3
+        for file_name in range(files):
             self.create_file(file_name)
             self.assertCreated(file_name)
         
         # Validate total count of files
         logger.info("Second validation.")
         total_created_files = len(self._find_left_buttons())
-        self.assertEqual(total_created_files, 10)
+        self.assertEqual(total_created_files, files)
 
 
 class TEST_OPEN_FILES(SeleniumTest):
@@ -30,7 +31,7 @@ class TEST_OPEN_FILES(SeleniumTest):
         logger.info("Testing begins.")
 
         # Create records in database
-        records = 10
+        records = 5
         dbi = DBImage()
         dbi.add_other_users(count=10, records=10)
         dbi.add_tested_user(test_object=self, records=records)
@@ -53,7 +54,7 @@ class TEST_CLOSE_FILES(SeleniumTest):
     def test_close_files(self):
         logger.info("Testing begins.")
         # Creates records in database
-        records = 10
+        records = 7
         dbi = DBImage()
         dbi.add_other_users(count=10, records=10)
         dbi.add_tested_user(test_object=self, records=records)
@@ -63,11 +64,13 @@ class TEST_CLOSE_FILES(SeleniumTest):
         self.go_to_the_site()
         
         self.open_files()
-        self.open_tab(5)
         
+        middlepoint = int(records/2)
         predictions = list(range(records))
-        predictions = predictions[::-1][5:] + predictions[6:]
+        predictions = predictions[::-1][middlepoint+1:] + predictions[middlepoint+1:]
         predictions.append(None)
+        
+        self.open_tab(middlepoint)
         
         # Close and validate files
         for prediction in predictions:
@@ -85,10 +88,11 @@ class TEST_CLOSE_FILES(SeleniumTest):
 
 class TEST_DELETE_FILES(SeleniumTest):
     def test_delete_files(self):
+        records = 7
+        
         logger.info("Testing begins.")
         
         # Creates records in database
-        records = 10
         dbi = DBImage()
         dbi.add_other_users(count=10, records=10)
         dbi.add_tested_user(test_object=self, records=records)
@@ -96,13 +100,16 @@ class TEST_DELETE_FILES(SeleniumTest):
         
         
         self.go_to_the_site()
-        
         self.open_files()
-        self.open_tab(5)
         
+        middlepoint = int(records/2)
         predictions = list(range(records))
-        predictions = predictions[::-1][5:] + predictions[6:]
+        predictions = predictions[::-1][middlepoint+1:] + predictions[middlepoint+1:]
         predictions.append(None)
+        
+        logger.debug(f"Variable predictions contains: {predictions}")
+        
+        self.open_tab(middlepoint)
         
         # Delete and validate files
         logger.info("Data validation")

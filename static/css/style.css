@@ -70,36 +70,11 @@ button:hover {
 
 .context_menu_button {
     position: absolute;
-    top: 0px;
     left: 0px;
-    text-align: center;
-    font-size: 20px;
-    height: 10px;
-    width: 10px;
-    padding-left: 2px;
-    padding-right: 19px;
-    padding-top: 7px;
-    padding-bottom: 10px;
+    height: 20px;
+    width: 26px;
+    padding: 0px;
     margin: 4px;
-    margin-right:0px;
-    border-radius: 6px;
-}
-
-.context_menu_button_active {
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    text-align: center;
-    font-size: 20px;
-    height: 10px;
-    width: 10px;
-    padding-left: 2px;
-    padding-right: 19px;
-    padding-top: 7px;
-    padding-bottom: 10px;
-    margin: 4px;
-    margin-right:0px;
     border-radius: 6px;
 }
 
@@ -453,34 +428,83 @@ button:hover {
 }
 
 
-.close_file_button {
+.close-button {
     position: absolute;
+    width: 34px;
+    height: 34px;
     right: 10px;
     top: 10px;
-    font-size: 20px;
-    padding-top: 4px;
-    padding-bottom: 9px;
-    padding-right: 1px;
-    padding-left: 1px;
-    border-radius: 12px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    padding: 0px;
 
 }
 
-.delete_file_button {
+.dropdown-menu {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    font-size: 18px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    padding-right: 1px;
-    padding-left: 2px;
-    border-radius: 12px;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 250px;
 
 }
 
-.delete_file_button:hover {
-    color: rgb(253, 35, 35);
-    border-color: #fff;
+.dropdown {
+    position: relative;
+    width: 100%;
+    height: 40px;
     background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 110px;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    transition: .5s;
+    z-index: 1;
+}
+
+.dropdown.active {
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu button {
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    padding: 0px;
+}
+
+.items {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: .5s;
+}
+
+.items.active {
+    height: calc(100% - 120px);
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+}
+
+.delete-button:hover {
+    color: rgb(255, 255, 255);
+    border-color: #fff;
+    background: #fa0000bd;
 }

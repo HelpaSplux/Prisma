@@ -34,9 +34,13 @@ $(document).ready(function () {
   }
   });
 
-  $(document).on("click", ".delete_file_button, #file-deletion-form-cancel", function(event) {
+  $(document).on("click", ".delete-button, #file-deletion-form-cancel", function(event) {
     if ($(".file-deletion-form").css("top").includes("-")) {
-      var file_name = event.target.offsetParent.children[0][0].defaultValue
+      
+      var label_field = $("div[style='display: block;']")[0].childNodes[1][0]
+
+      
+      var file_name = label_field.defaultValue
       var conformation_message = $(".deletion-confirmation-message")[0].innerHTML
       if (conformation_message.indexOf(file_name) < 0) {
         $(".deletion-confirmation-message")[0].innerHTML = `Are you sure you want to delete "${file_name}"?`
@@ -115,15 +119,24 @@ $(document).ready(function () {
   // Play hide animation for the file creation form on click outside of this element 
   $(document).click(function(event) { 
   var $target = $(event.target);
+  
+  // Hide creation form
   if(!$target.closest('.file-creation-form').length && !$(".file-creation-form").css("top").includes("-")) {
     $(".file-creation-form").animate({top: "-50%"});
     $(".file-name-input").blur(); 
     $(".file-creation-form").fadeOut();
   };       
   
+  // Hide delete confirmation form
   if(!$target.closest('.file-deletion-form').length && !$(".file-deletion-form").css("top").includes("-")) {
     $(".file-deletion-form").animate({top: "-50%"});
     $(".file-deletion-form").fadeOut();
+  };
+
+  // Close dropdown menu  && !$(".dropdown-menu").css("top").includes("-")) 
+  if(!$target.closest('.dropdown-menu').length) {
+    $(".dropdown").removeClass("active");
+    $(".items").removeClass("active");
   };
   });
 
@@ -293,7 +306,7 @@ $(document).ready(function () {
 
   // Makes invisible tab, right panel
   // Makes inactive file button on the left panel
-  $(document).on("click", ".close_file_button", function() {
+  $(document).on("click", ".close-button", function() {
     $(".bottom_right_panel").fadeOut(100);
     $(".tab_button_active").fadeOut(100);
 
@@ -322,6 +335,9 @@ $(document).ready(function () {
     }
   })
 
-
+  $(document).on("click", ".dropdown", () => {
+    $(".dropdown").toggleClass("active");
+    $(".dropdown-menu .items").toggleClass("active");
+  })
   
 });

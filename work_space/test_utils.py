@@ -59,8 +59,9 @@ class SeleniumTest(StaticLiveServerTestCase):
             panel = panel,
             title_field = panel.find_element(By.CLASS_NAME, "label_field"),
             content_field = panel.find_element(By.CLASS_NAME, "content_field"),
-            close_button = panel.find_element(By.CLASS_NAME, "close_file_button"),
-            delete_button = panel.find_element(By.CLASS_NAME, "delete_file_button"),
+            close_button = panel.find_element(By.CLASS_NAME, "close-button"),
+            dropdown_menu = panel.find_element(By.CLASS_NAME, "dropdown"),
+            delete_button = panel.find_element(By.CLASS_NAME, "delete-button"),
             left_button = self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
             top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button_active"),
         )
@@ -145,6 +146,13 @@ class SeleniumTest(StaticLiveServerTestCase):
         tabs[tab_number].click()
         return
         
+        
+    def _open_dropdown_menu(self):
+        current_file = self.get_current_file
+        dropdown_menu = current_file["dropdown_menu"]
+        dropdown_menu.click()
+        return
+        
     
     def delete_file(self, deletable_file: dict[str: object]) -> None:
         """
@@ -155,6 +163,8 @@ class SeleniumTest(StaticLiveServerTestCase):
         logger.info("Deleting current file.")
         
         # Clicking on delete button
+        deletable_file["dropdown_menu"].click()
+        time.sleep(0.3)
         deletable_file["delete_button"].click()
         time.sleep(1.5)
         
