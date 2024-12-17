@@ -52,87 +52,55 @@ button:hover {
     text-align: center;
     margin-left:15px;
     margin-bottom: 5px;
-    height: 30px;
+    height: 35px;
     background-color: rgba(22, 22, 22, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(9px);
 }
 
 .tool_bar {
-    width: 231px;
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 5px;
 }
 
-.context_menu_link {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.tools {
+    display: flex;
 }
 
-.context_menu_button {
-    position: absolute;
-    left: 0px;
-    height: 20px;
-    width: 26px;
-    padding: 0px;
-    margin: 4px;
-    border-radius: 6px;
-}
-
-.search_link {
-    position: absolute;
-    top: 0px;
-    left: 29px;
-}
-
-.search_button {
-    text-align: center;
-    font-size: 17px;
-    height: 10px;
-    width: 70px;
-    padding-left: 5px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin: 4px;
-    margin-right:0px;
-    border-radius: 6px;
-}
-
-.some_link {
-    position: absolute;
-    top: 0px;
-    left: 103px;
-}
-
-.some_button {
-    text-align: center;
-    font-size: 17px;
-    height: 10px;
-    width: 75px;
-    padding-left: 7px;
-    padding-right: 10px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin: 4px;
-    margin-right:0px;
-    border-radius: 6px;
+.tool_bar button {
+    display: flex;
+    min-width: 30px;
+    height: 27px;
+    border-radius: 8px;
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 .separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
     color: #fff;
-    width: 15px;
+    width: 17px;
     font-weight: 900;
-    padding-top: 2px;
+    user-select: none;
 }
 
 .tab_bar {
     display: flex;
-    width: calc(100% - 246px);
-    
+    width: calc(100% - 248px);
+    align-items: center;
 }
 
 .tab_button {
-    display: none;
     max-width: 200px;
     max-height: 22px;
     margin: 3px;
@@ -144,26 +112,17 @@ button:hover {
     padding: 8px 12px;
     padding-bottom: 9px;
 }
-
-.tab_button_active {
-    max-width: 200px;
-    max-height: 22px;
-    margin: 3px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: "";
+.tab_button.active {
     color: #fff;
     border-color: #fff;
-    border-radius: 10px;
     background: rgba(255, 255, 255, 0.15);
-    font-size: 13px;
-    padding: 8px 12px;
-    padding-bottom: 9px;
+}
+.tab_button.hidden {
+    display: none;
 }
 
 
 .file-deletion-form {
-    display: none;
     border:1px solid rgba(245, 245, 245, 0.507);
     position: absolute;
     top: -50%;
@@ -178,6 +137,10 @@ button:hover {
     font-size: 13px;
     padding: 8px 12px;
     padding-bottom: 9px;
+    transition: 0.5s;
+}
+.file-deletion-form.active {
+    top: 50%;
 }
 
 .deletion-confirmation-message {
@@ -204,7 +167,6 @@ button:hover {
 
 
 .file-creation-form {
-    display: none;
     border:1px solid rgba(245, 245, 245, 0.507);
     position: absolute;
     top: -50%;
@@ -218,7 +180,12 @@ button:hover {
     font-size: 13px;
     padding: 8px 12px;
     padding-bottom: 9px;
+    transition: 0.5s;
 }
+.file-creation-form.active {
+    top: 50%;
+}
+
 
 .file-creation-form button {
     position: absolute;
@@ -261,14 +228,12 @@ button:hover {
     transform: translateY(-120%);
 }
 
-.success_message {
+.message {
     position: absolute;
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px rgb(73, 255, 73) solid;
     border-radius: 10px;
-    background-color: rgb(73, 255, 73);
     text-align: center;
     font-size: 17px;
     font-weight: 600;
@@ -276,23 +241,22 @@ button:hover {
     padding: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: 1s;
+    opacity: 0;
 }
 
-.error_message {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+.message.success {
+    opacity: 1;
+    bottom: 20px;
+    border: 1px rgb(73, 255, 73) solid;
+    background-color: rgb(73, 255, 73);
+}
+
+.message.error {
+    opacity: 1;
+    bottom: 20px;
     border: 1px rgb(255, 73, 73) solid;
-    border-radius: 10px;
     background-color: rgb(255, 73, 73);
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600;
-    color: rgb(34, 34, 34);
-    padding: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 
@@ -301,6 +265,7 @@ button:hover {
 }
 
 .bottom_left_panel {
+    left: 0px;
     position: absolute;
     width: 230px;
     border-radius: 8px;
@@ -312,12 +277,16 @@ button:hover {
     background-color: rgba(22, 22, 22, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(9px);
+    transition: 0.5s;
+}
+.bottom_left_panel.hidden {
+    left: -250px;
 }
 
 
 
 .bottom_right_panel {
-    display:none;
+    display: none;
     position: absolute;
     right: 0%;
     width: calc(100% - 280px);
@@ -329,7 +298,15 @@ button:hover {
     background-color: rgba(22, 22, 22, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(9px);
+    transition: 0.5s;
 }
+.bottom_right_panel.active {
+    display: block;
+}
+.bottom_right_panel.fullscreen {
+    width: calc(100% - 30px);
+}
+
 
 
 .create_button {
@@ -360,7 +337,13 @@ button:hover {
     text-overflow: "";
 }
 
-.file_button_active {
+.file_button.created {
+    color: #fff;
+    border-color: #82ff5f;
+    background: rgba(182, 253, 150, 0.15);
+}
+
+.file_button.active {
     margin-top: 10px;
     width: 190px;
     overflow: hidden;
@@ -412,7 +395,7 @@ button:hover {
     margin-top:20px;
     height: 100%;
     overflow: hidden;
-    min-height: 32px;
+    min-height: 100%;
 }
 
 .input-field textarea {
@@ -425,6 +408,10 @@ button:hover {
     resize: none;
     padding-right: 13px;
     padding-left: 13px;
+}
+
+.input-field textarea.content_field {
+    min-height: 60vh;
 }
 
 
@@ -445,7 +432,7 @@ button:hover {
     top: 10px;
     left: 10px;
     width: 40px;
-    height: 250px;
+    height: 120px;
 
 }
 
@@ -490,7 +477,6 @@ button:hover {
 }
 
 .items.active {
-    height: calc(100% - 120px);
     transform: translateX(-50%);
     margin-top: 20px;
 }
@@ -499,7 +485,7 @@ button:hover {
     position: absolute;
     top: 20px;
     width: 100%;
-    height: calc(100% - 50px);
+    height: 100%;
     overflow: hidden;
 }
 

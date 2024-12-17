@@ -76,14 +76,13 @@ class TEST_CLOSE_FILES(SeleniumTest):
         for prediction in predictions:
             closed_file = self.get_current_file()
             self.close_file(closed_file)
+            self.assertClosed(closed_file)
             
             # Break the loop on the last iteration 
             if prediction == None: break
             
             opened_file = self.get_current_file()
-
             self.assertPrediction(prediction, opened_file)
-            self.assertClosed(closed_file)
 
 
 class TEST_DELETE_FILES(SeleniumTest):

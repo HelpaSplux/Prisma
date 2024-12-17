@@ -9,41 +9,44 @@
 </head>
 <body>
   <div class="top_panel">
-    <ol class="tool_bar">
-      <button class="context_menu_button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-        </svg>
-      </button>
-      <a class="search_link" href="#">
-        <button class="search_button">Search</button>
-      </a>
-      <a class="some_link" href="#">
-        <button class="some_button">Button</button>
-      </a>
-    </ol>
+    <div class="tool_bar">
+      <ol class="tools">
+        <div class="context-menu">
+          <button class="context_menu_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+        </div>
+        <div class="account">
+          <button class="account_button">Account</button>
+        </div>
+        <div class="settings">
+          <button class="settings_button">Settings</button>
+        </div>
+      </ol>
+    </div>
 
-    <span class="separator">·</span>
+    <div class="separator">
+      <span class="dot">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+          <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+        </svg>
+      </span>
+    </div>
 
     <ol class="tab_bar"></ol>
   </div>  
 
   <div class="content">
     <div class="bottom_left_panel" id="left-panel">
-
-        <button class="create_button" type="button">+</button>
-        
-
+      <button class="create_button" type="button">+</button>
       <ol class="file_list" href="{% url "work-space:opened-file" %}">
         {% for label, id in notes %}
-          <button class="file_button" id="{{ id }}" type="button">{{ label }}</button>
+          <button class="file_button" file-id="{{ id }}" type="button">{{ label }}</button>
         {% endfor %}
       </ol>
     </div>
-
-
-
-    
   </div>
 
   <div class="file-creation-form">
@@ -67,10 +70,31 @@
       </div>
   </div>
 
-  <div class="success_message" id="success_message_id"></div>
-  <div class="error_message" id="error_message_id"></div>
-
+  <script src={% static "js/API.js" %}></script>
   <script src={% static "js/jquery/jquery-3.7.1.min.js" %}></script>
-  <script src={% static "js/jquery-ajax.js" %}></script>
+  <script src={% static "js/Listeners.js" %}></script>
+  <script src={% static "js/Panels.js" %}></script>
+  <script src={% static "js/File.js" %}></script>
+  <script src={% static "js/Forms.js" %}></script>
+  <script src={% static "js/Notification.js" %}></script>
+  
+  
+  {% comment %} Open | Close {% endcomment %}
+  <script src={% static "js/Mixins/OpenFileMixin.js" %}></script>
+  <script src={% static "js/Mixins/CloseFileMixin.js" %}></script>
+
+  {% comment %} Create | Delete {% endcomment %}
+  <script src={% static "js/Mixins/CreateFileMixin.js" %}></script>
+  <script src={% static "js/Mixins/DeleteFileMixin.js" %}></script>
+  
+  {% comment %} File else {% endcomment %}
+  <script src={% static "js/Mixins/FileMenuMixin.js" %}></script>
+  <script src={% static "js/Mixins/FilesMixin.js" %}></script>
+  <script src={% static "js/Mixins/SaveFileMixin.js" %}></script>
+  
+  {% comment %} Other {% endcomment %}
+  <script src={% static "js/Mixins/IdMixin.js" %}></script>
+  <script src={% static "js/Mixins/PanelsMixin.js" %}></script>
+
 </body>
 </html>

@@ -8,4 +8,6 @@ urlpatterns = [
     path('create-file/', views.FileCreationFormView.as_view(), name='file-creation-form'),
     path('delete-file/', views.file_deletion_form_view, name='file-deletion-form'),
     path('open-file/', views.OpenedFileView.as_view(), name='opened-file'),
+    path('save-file/', views.SaveChangesView.as_view(), name='save-file'),
+    
 ]

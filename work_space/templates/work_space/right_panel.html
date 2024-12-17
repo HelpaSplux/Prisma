@@ -1,7 +1,7 @@
 {% load static %}
 
-<div class="bottom_right_panel" id="{{ panel_id }}">
-    <form class="file-update-form" action="#" method="post">
+<div class="bottom_right_panel" file-id="{{ file_id }}">
+    <form class="file-update-form" action="{% url "work-space:save-file" %}" method="post">{% csrf_token %}
         <div class="input-field">
             <textarea class="label_field" type="textarea" name="label" >{{ note.label }}</textarea>
         </div>

@@ -51,19 +51,23 @@ class SeleniumTest(StaticLiveServerTestCase):
         """Returns currently opened file."""
         
         logger.info("Getting current file.")
-        # Getting panel of the current file
-        panel = self.selenium.find_element(By.XPATH, "/html/body/div[2]/div[@style='display: block;']")
         
-        # Getting components of the current file
+        # Getting file components
+        panel = self.selenium.find_element(By.CLASS_NAME, "bottom_right_panel.active")
+        left_button = self.selenium.find_element(By.CLASS_NAME, "file_button.active")
+        top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button.active")
+        
+        # Put the components into a dict
         current_file = dict(
+            left_button = left_button,
+            top_button = top_button,
             panel = panel,
+            
             title_field = panel.find_element(By.CLASS_NAME, "label_field"),
             content_field = panel.find_element(By.CLASS_NAME, "content_field"),
             close_button = panel.find_element(By.CLASS_NAME, "close-button"),
             dropdown_menu = panel.find_element(By.CLASS_NAME, "dropdown"),
             delete_button = panel.find_element(By.CLASS_NAME, "delete-button"),
-            left_button = self.selenium.find_element(By.CLASS_NAME, "file_button_active"),
-            top_button = self.selenium.find_element(By.CLASS_NAME, "tab_button_active"),
         )
 
         return current_file
@@ -76,6 +80,7 @@ class SeleniumTest(StaticLiveServerTestCase):
         button_class = "file_button"
         
         buttons = self.selenium.find_elements(By.CLASS_NAME, button_class)
+
         logger.debug(f"Found {len(buttons)} buttons.")
         
         return buttons
@@ -111,7 +116,8 @@ class SeleniumTest(StaticLiveServerTestCase):
 
         # Clicking on submit button
         submit_button = self.selenium.find_element(By.ID, submit_id)
-        submit_button.click()        
+        submit_button.click()            
+
         
         return
     
@@ -259,12 +265,13 @@ class SeleniumTest(StaticLiveServerTestCase):
         `suggested_file` - Return of `get_current_file` method.
         """
         logger.info("Validating data")
+        logger.debug(f"Left button class is: '{suggested_file['left_button'].get_attribute('class')}'.")
         
         # Checks if the file components are changed properly 
         self.assertEqual(suggested_file["left_button"].get_attribute("class"), "file_button")
-        self.assertEqual(suggested_file["top_button"].get_attribute("class"), "tab_button")
-        self.assertEqual(suggested_file["top_button"].get_attribute("style"), "display: none;")
-        self.assertEqual(suggested_file["panel"].get_attribute("style"), "display: none;")
+        self.assertIn("hidden", suggested_file["top_button"].get_attribute("class"))
+        self.assertIn("tab_button", suggested_file["top_button"].get_attribute("class"))
+        self.assertEqual(suggested_file["panel"].get_attribute("class"), "bottom_right_panel")
         return
 
 
