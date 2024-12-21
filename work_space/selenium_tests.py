@@ -123,3 +123,8 @@ class TEST_DELETE_FILES(SeleniumTest):
 
             self.assertPrediction(prediction, opened_file)
             self.assertDeleted(deleted_file)
+
+
+class TEST_SAVING_FILE():
+    def test_saving_file(self):
+        pass

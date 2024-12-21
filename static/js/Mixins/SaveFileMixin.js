@@ -3,12 +3,12 @@ const SaveFileMixin = {
         const files = this.files.all
         const id = this.get_id(object)
         const file = files.get(id)
-
+        
         const file_changed = this.is_changed(file)
         if (!file_changed) return 
 
         const response = this.post(file)
-        
+
         response
         .always((data) => {new Notification(data)})
         .done(() => {this.change_file(file)})
@@ -17,11 +17,14 @@ const SaveFileMixin = {
     },
 
     change_file(file) {
-        const name = file.new_name
-        const content = file.new_content
+        const name = file.name
+        const new_name = file.new_name
+        const content = file.content
+        const new_content = file.new_content
 
-        file.name = name
-        file.content = content
+        if (name != new_name) file.name = new_name
+        if (content != new_content) file.content = new_content
+
         return
     },
 
