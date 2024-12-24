@@ -124,7 +124,7 @@ class TEST_DELETE_FILES(SeleniumTest):
             self.assertPrediction(prediction, opened_file)
             self.assertDeleted(deleted_file)
 
-
+import time
 class TEST_SAVING_FILE(SeleniumTest):
     
     def default_behavior(self):
@@ -141,14 +141,54 @@ class TEST_SAVING_FILE(SeleniumTest):
         self.open_file(0)
     
     
+    
     def test_title_changed(self):
         self.default_behavior()
+        
+        new_title = "New_title"
+        
+        self.change_title(new_title)
+        
+        self.save_file()
+        
+        # Validation
+        self.assert_title_changed(new_title)
+        self.selenium.refresh()
+        self.open_file(0)
+        self.assert_title_changed(new_title)
+        return
     
-    def test_content_changed(self):
-        pass
     
-    def test_everything_changed(self):
-        pass
     
-    def test_nothing_changed(self):
-        pass
+    # def test_content_changed(self):
+    #     self.default_behavior()
+        
+    #     self.change_content()
+        
+    #     self.save_file()
+    
+    #     self.assert_content_changed()
+    #     return
+        
+        
+    
+    # def test_everything_changed(self):
+    #     self.default_behavior()
+        
+    #     self.change_title()
+    #     self.change_content()
+        
+    #     self.save_file()
+        
+    #     self.assert_everything_changed()
+    #     return
+    
+    
+    
+    # def test_nothing_changed(self):
+    #     self.default_behavior()
+        
+    #     self.save_file()
+        
+    #     self.asser_nothing_changed()
+    #     return

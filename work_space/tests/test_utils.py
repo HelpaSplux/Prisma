@@ -9,13 +9,14 @@ import time
 import logging
 
 from ..models import Notes, Users
-
+from .Mixins.SaveMixin import SaveMixin
+from .Mixins.AssertMixin import AssertMixin
 
 
 
 logger = logging.getLogger(__name__)
 
-class SeleniumTest(StaticLiveServerTestCase):
+class SeleniumTest(StaticLiveServerTestCase, SaveMixin, AssertMixin):
     
     @classmethod
     def setUpClass(cls) -> None:
@@ -68,9 +69,18 @@ class SeleniumTest(StaticLiveServerTestCase):
             close_button = panel.find_element(By.CLASS_NAME, "close-button"),
             dropdown_menu = panel.find_element(By.CLASS_NAME, "dropdown"),
             delete_button = panel.find_element(By.CLASS_NAME, "delete-button"),
+            save_button = panel.find_element(By.CLASS_NAME, "save-button"),
         )
 
         return current_file
+    
+    
+    def get_panels(self):
+        panels: dict = {
+            "left": self.selenium.find_element(By.CLASS_NAME, "bottom_left_panel"),
+            "top": self.selenium.find_element(By.CLASS_NAME, "top_panel"),
+        }
+        return panels
     
 
     def _find_left_buttons(self) -> list[object]:
