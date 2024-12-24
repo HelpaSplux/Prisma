@@ -3,10 +3,9 @@ from django.urls import reverse
 
 import logging
 
-from .models import Notes, Users
+
+from ..models import Notes, Users
 from .test_utils import create_records
-
-
 logger = logging.getLogger(__name__)
 
 

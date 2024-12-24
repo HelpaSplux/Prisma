@@ -8,7 +8,7 @@ from psycopg2.errors import UniqueViolation
 import time
 import logging
 
-from .models import Notes, Users
+from ..models import Notes, Users
 
 
 
