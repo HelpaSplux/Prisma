@@ -123,13 +123,20 @@ class SeleniumTest(StaticLiveServerTestCase):
     
 
     def open_file(self, file_name: int) -> None:
-        """Presses the selected left button"""
+        """
+        Presses the selected left button
+        
+        - file_name - index of left button.
+        """
         logger.info(f"Opening file - '{file_name}'")
         
         buttons = self._find_left_buttons()
         
+        if not buttons: raise IndexError("Fail to open a file.")
+
         target_button = buttons[file_name]
         target_button.click()
+
         return
     
     

@@ -125,6 +125,30 @@ class TEST_DELETE_FILES(SeleniumTest):
             self.assertDeleted(deleted_file)
 
 
-class TEST_SAVING_FILE():
-    def test_saving_file(self):
+class TEST_SAVING_FILE(SeleniumTest):
+    
+    def default_behavior(self):
+        records = 3
+        
+        logger.info("Testing begins.")
+        
+        # Creates records in database
+        dbi = DBImage()
+        dbi.add_tested_user(test_object=self, records=records)
+        dbi.create_records()
+        
+        self.go_to_the_site()
+        self.open_file(0)
+    
+    
+    def test_title_changed(self):
+        self.default_behavior()
+    
+    def test_content_changed(self):
+        pass
+    
+    def test_everything_changed(self):
+        pass
+    
+    def test_nothing_changed(self):
         pass
