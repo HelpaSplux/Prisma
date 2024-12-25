@@ -9,7 +9,10 @@ class AssertMixin:
         return
     
     
-    def assert_nothing_changed(self): pass
+    def assert_nothing_changed(self, value: int | str): 
+        value = str(value)
+        self.assert_everything_changed(new_title=value, new_content=value)
+        return
     
     
     def assert_content_changed(self, new_content): 
