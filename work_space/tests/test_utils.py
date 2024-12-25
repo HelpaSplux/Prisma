@@ -17,6 +17,11 @@ from .Mixins.AssertMixin import AssertMixin
 logger = logging.getLogger(__name__)
 
 class SeleniumTest(StaticLiveServerTestCase, SaveMixin, AssertMixin):
+    new_title = "New_title"
+    new_content = "New_content"
+    first_file = 0
+    next_file = "1"
+    
     
     @classmethod
     def setUpClass(cls) -> None:

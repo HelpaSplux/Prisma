@@ -2,20 +2,25 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class AssertMixin:
+    def assert_with_refresh(func):
+        def inner(self: object, new_content: str | int):
+            new_content = str(new_content)
+            func(self, new_content)
+            
+            # Refresh
+            self.selenium.refresh()
+            self.open_file(self.first_file)
+            func(self, new_content)
+            
+            # Check if changes are unique
+            self.open_file(self.next_file)
+            func(self, self.next_file)
+            return
+        return inner
     
-    def assert_everything_changed(self, new_title: str, new_content: str): 
-        self.assert_title_changed(new_title)
-        self.assert_content_changed(new_content)
-        return
-    
-    
-    def assert_nothing_changed(self, value: int | str): 
-        value = str(value)
-        self.assert_everything_changed(new_title=value, new_content=value)
-        return
-    
-    
-    def assert_content_changed(self, new_content): 
+
+    @assert_with_refresh
+    def assert_content_changed(self, new_content: str | int): 
         file: dict = self.get_current_file()
         field: WebElement = file["content_field"]
         field_text = field.get_attribute("value")
@@ -24,7 +29,8 @@ class AssertMixin:
         return
     
     
-    def assert_title_changed(self, new_title: str): 
+    @assert_with_refresh
+    def assert_title_changed(self, new_title: str | int): 
         file: dict = self.get_current_file()
         field: WebElement = file["title_field"]
         left_button: WebElement = file["left_button"]

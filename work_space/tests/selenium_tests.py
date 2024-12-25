@@ -126,12 +126,6 @@ class TEST_DELETE_FILES(SeleniumTest):
 
 
 class TEST_SAVING_FILE(SeleniumTest):
-    new_title = "New_title"
-    new_content = "New_content"
-    first_file = 0
-    next_file = "1"
-    
-    
     def default_behavior(self):
         records = 3
         
@@ -157,9 +151,6 @@ class TEST_SAVING_FILE(SeleniumTest):
         
         # Validation
         self.assert_title_changed(self.new_title)
-        self.selenium.refresh()
-        self.open_file(self.first_file)
-        self.assert_title_changed(self.new_title)
         return
     
     
@@ -168,19 +159,10 @@ class TEST_SAVING_FILE(SeleniumTest):
         self.default_behavior()
         
         self.change_field(field="content", value=self.new_content)
-
         self.save_file()
     
-    
         # Validation
-        self.assert_content_changed(self.new_content)
-        self.selenium.refresh()
-        self.open_file(self.first_file)
-        self.assert_content_changed(self.new_content)
-        
-        # Check if nothing else is changed
-        self.open_file(self.next_file)
-        self.assert_content_changed(self.next_file)
+        self.assert_content_changed(self.new_content)   
         return
         
         
@@ -194,14 +176,10 @@ class TEST_SAVING_FILE(SeleniumTest):
         self.save_file()
         
         # Validation
-        self.assert_everything_changed(self.new_title, self.new_content)
-        self.selenium.refresh()
+        self.assert_title_changed(self.new_title)
         self.open_file(self.first_file)
-        self.assert_everything_changed(self.new_title, self.new_content)
+        self.assert_content_changed(self.new_content)
         
-        # Check if nothing else is changed
-        self.open_file(self.next_file)
-        self.assert_everything_changed(self.next_file, self.next_file)
         return
     
     
@@ -212,12 +190,7 @@ class TEST_SAVING_FILE(SeleniumTest):
         self.save_file()
         
         # Validation
-        self.assert_nothing_changed(self.first_file)
-        self.selenium.refresh()
+        self.assert_title_changed(self.first_file)
         self.open_file(self.first_file)
-        self.assert_nothing_changed(self.first_file)
-        
-        # Check if nothing else is changed
-        self.open_file(self.next_file)
-        self.assert_everything_changed(self.next_file, self.next_file)
+        self.assert_content_changed(self.first_file)
         return
