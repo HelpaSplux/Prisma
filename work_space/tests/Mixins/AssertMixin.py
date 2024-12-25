@@ -3,7 +3,12 @@ from selenium.webdriver.remote.webelement import WebElement
 
 class AssertMixin:
     
-    def assert_everything_changed(self): pass
+    def assert_everything_changed(self, new_title: str, new_content: str): 
+        self.assert_title_changed(new_title)
+        self.assert_content_changed(new_content)
+        return
+    
+    
     def assert_nothing_changed(self): pass
     
     

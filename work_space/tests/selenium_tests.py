@@ -128,6 +128,7 @@ class TEST_DELETE_FILES(SeleniumTest):
 class TEST_SAVING_FILE(SeleniumTest):
     new_title = "New_title"
     new_content = "New_content"
+    next_file = "1"
     
     
     def default_behavior(self):
@@ -163,9 +164,6 @@ class TEST_SAVING_FILE(SeleniumTest):
     
     
     def test_content_changed(self):
-        next_file = "1"
-        
-        
         self.default_behavior()
         
         self.change_field(field="content", value=self.new_content)
@@ -180,22 +178,29 @@ class TEST_SAVING_FILE(SeleniumTest):
         self.assert_content_changed(self.new_content)
         
         # Check if nothing else is changed
-        self.open_file(next_file)
-        self.assert_content_changed(next_file)
+        self.open_file(self.next_file)
+        self.assert_content_changed(self.next_file)
         return
         
         
     
-    # def test_everything_changed(self):
-    #     self.default_behavior()
+    def test_everything_changed(self):
+        self.default_behavior()
         
-    #     self.change_title()
-    #     self.change_content()
+        self.change_field(field="title", value=self.new_title)
+        self.change_field(field="content", value=self.new_content)
         
-    #     self.save_file()
+        self.save_file()
         
-    #     self.assert_everything_changed()
-    #     return
+        self.assert_everything_changed(self.new_title, self.new_content)
+        self.selenium.refresh()
+        self.open_file(0)
+        self.assert_everything_changed(self.new_title, self.new_content)
+        
+        
+        self.open_file(self.next_file)
+        self.assert_everything_changed(self.next_file, self.next_file)
+        return
     
     
     
