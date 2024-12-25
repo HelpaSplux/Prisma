@@ -6,15 +6,27 @@ import time
 
 class SaveMixin():
     
-    def change_content(self): pass
-    
-    
-    def change_title(self, new_title): 
+    def change_field(self, field: str, value: str):
+        """
+        Change field value.
+        
+        Valid field names:
+            - title
+            - content
+        """
+        
         file: dict = self.get_current_file()
-        field: WebElement = file["title_field"]
+        
+        if field == "title": 
+            field: WebElement = file["title_field"]
+            
+        elif field == "content": 
+            field: WebElement = file["content_field"]
+        
+        else: raise ValueError("Invalid field name.")
         
         field.clear()
-        field.send_keys(new_title)
+        field.send_keys(value)
         return
 
 
@@ -28,7 +40,7 @@ class SaveMixin():
         if not buttons["save"]: raise ValueError("Fail to click save button.")
         
         buttons["menu"].click()
-        time.sleep(0.7)
+        time.sleep(1)
         buttons["save"].click()
         return
         

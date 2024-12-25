@@ -5,7 +5,15 @@ class AssertMixin:
     
     def assert_everything_changed(self): pass
     def assert_nothing_changed(self): pass
-    def assert_content_changed(self): pass
+    
+    
+    def assert_content_changed(self, new_content): 
+        file: dict = self.get_current_file()
+        field: WebElement = file["content_field"]
+        field_text = field.get_attribute("value")
+    
+        self.assertEqual(field_text, new_content)    
+        return
     
     
     def assert_title_changed(self, new_title: str): 
@@ -34,6 +42,5 @@ class AssertMixin:
     
     def assert_unique_title(self, panel, title):
         title_count = panel.text.count(title)
-        print(title_count)
         self.assertEqual(title_count, 1)
         return

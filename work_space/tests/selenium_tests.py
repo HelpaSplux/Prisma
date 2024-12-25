@@ -124,8 +124,11 @@ class TEST_DELETE_FILES(SeleniumTest):
             self.assertPrediction(prediction, opened_file)
             self.assertDeleted(deleted_file)
 
-import time
+
 class TEST_SAVING_FILE(SeleniumTest):
+    new_title = "New_title"
+    new_content = "New_content"
+    
     
     def default_behavior(self):
         records = 3
@@ -138,37 +141,48 @@ class TEST_SAVING_FILE(SeleniumTest):
         dbi.create_records()
         
         self.go_to_the_site()
-        self.open_file(0)
+        self.open_file(0)   
+        return
     
     
     
     def test_title_changed(self):
         self.default_behavior()
         
-        new_title = "New_title"
-        
-        self.change_title(new_title)
+        self.change_field(field="title", value=self.new_title)
         
         self.save_file()
         
         # Validation
-        self.assert_title_changed(new_title)
+        self.assert_title_changed(self.new_title)
         self.selenium.refresh()
         self.open_file(0)
-        self.assert_title_changed(new_title)
+        self.assert_title_changed(self.new_title)
         return
     
     
     
-    # def test_content_changed(self):
-    #     self.default_behavior()
+    def test_content_changed(self):
+        next_file = "1"
         
-    #     self.change_content()
         
-    #     self.save_file()
+        self.default_behavior()
+        
+        self.change_field(field="content", value=self.new_content)
+
+        self.save_file()
     
-    #     self.assert_content_changed()
-    #     return
+    
+        # Validation
+        self.assert_content_changed(self.new_content)
+        self.selenium.refresh()
+        self.open_file(0)
+        self.assert_content_changed(self.new_content)
+        
+        # Check if nothing else is changed
+        self.open_file(next_file)
+        self.assert_content_changed(next_file)
+        return
         
         
     

@@ -132,7 +132,7 @@ class SeleniumTest(StaticLiveServerTestCase, SaveMixin, AssertMixin):
         return
     
 
-    def open_file(self, file_name: int) -> None:
+    def open_file(self, file_name: int | str) -> None:
         """
         Presses the selected left button
         
@@ -140,6 +140,8 @@ class SeleniumTest(StaticLiveServerTestCase, SaveMixin, AssertMixin):
         """
         logger.info(f"Opening file - '{file_name}'")
         
+        file_name = int(file_name)
+
         buttons = self._find_left_buttons()
         
         if not buttons: raise IndexError("Fail to open a file.")
